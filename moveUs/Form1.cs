@@ -84,7 +84,7 @@ namespace moveUs
         public Form1()
         {
             InitializeComponent();
-            //btn8.Left = 150;
+            //btn8.Left = 150; deneme
             //btn8.Top = 150;
             //this.TransparencyKey = (BackColor);
             Rectangle workingArea = Screen.GetWorkingArea(this);
