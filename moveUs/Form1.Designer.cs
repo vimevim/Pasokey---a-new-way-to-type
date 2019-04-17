@@ -103,6 +103,7 @@
             this.btn8.Click += new System.EventHandler(this.btn8_Click);
             this.btn8.MouseDown += new System.Windows.Forms.MouseEventHandler(this.ortak_MouseDown);
             this.btn8.MouseMove += new System.Windows.Forms.MouseEventHandler(this.button1_MouseMove);
+            this.btn8.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btn8_MouseUp);
             // 
             // btn3
             // 
