@@ -84,9 +84,6 @@ namespace moveUs
         public Form1()
         {
             InitializeComponent();
-            //btn8.Left = 150; deneme
-            //btn8.Top = 150;
-            //this.TransparencyKey = (BackColor);
             Rectangle workingArea = Screen.GetWorkingArea(this);
             this.Location = new Point(workingArea.Right - Size.Width, workingArea.Bottom - Size.Height);
         }
@@ -104,17 +101,14 @@ namespace moveUs
         {
             int myXValue = btn8.Left - 150;//butonun değerleri x ve y ekseninde formun sol üst köşesindeki konumuna göre veriyor
             int myYValue = btn8.Top - 150;//bende bu değerleri buton üzerinden sıfır alıp görmek istediğim için buton konumunu düştüm
-            double hipotenus = Math.Sqrt(myXValue * myXValue + myYValue * myYValue);// çapraz olanların merkeze uzaklığını aldık
             if (e.Button == System.Windows.Forms.MouseButtons.Left)//butona basılı olduğu sürece çalışıyor
             {
                 btn8.Left = e.X + btn8.Left - MouseDownLocation.X;
                 btn8.Top = e.Y + btn8.Top - MouseDownLocation.Y;
-                buttonPos.Text = ("X = " + (myXValue) + "\nY = " + (myYValue) + "\nHipotenüs = " + hipotenus);
             }
             else//butona basmayı bırakınca buton orjinal konumuna dönüyorr.
             {
                 btn8_MouseUp(null, null);
-                buttonPos.Text = ("X = " + (btn8.Left - 150) + "\nY = " + (btn8.Top - 150) + "\nHipotenüs = 0");
             }
         }
         private void btnSpace_MouseMove(object sender, MouseEventArgs e)
@@ -296,21 +290,6 @@ namespace moveUs
         {
             btn8.Left = 150;
             btn8.Top = 150;
-        }
-        //mouse konumunu veriyor
-        protected override void OnMouseMove(MouseEventArgs e)
-        {
-            //if (e.Button == System.Windows.Forms.MouseButtons.Left)
-            {
-                base.OnMouseMove(e);
-                int x = e.X;
-                int y = e.Y;
-                mousePos.Text = "x degeri = " + x + " y degeri = " + y + " \nMouse Position = " + MousePosition.X + "\nmouse cos " + Math.Sqrt(y * y + x * x);
-                /*if (e.Button == MouseButtons.Left)
-                {
-                    btn0.Text = ("Mouse clicked");
-                }*/
-            }
         }
     }
 }
