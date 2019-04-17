@@ -115,7 +115,6 @@
             this.btn3.TabIndex = 7;
             this.btn3.Text = "X";
             this.btn3.UseVisualStyleBackColor = true;
-            this.btn3.Click += new System.EventHandler(this.btn3_Click);
             // 
             // btn2
             // 
@@ -127,7 +126,6 @@
             this.btn2.TabIndex = 7;
             this.btn2.Text = "X";
             this.btn2.UseVisualStyleBackColor = true;
-            this.btn2.Click += new System.EventHandler(this.btn2_Click);
             // 
             // btn1
             // 
@@ -139,7 +137,6 @@
             this.btn1.TabIndex = 7;
             this.btn1.Text = "X";
             this.btn1.UseVisualStyleBackColor = true;
-            this.btn1.Click += new System.EventHandler(this.btn1_Click);
             // 
             // btn4
             // 
@@ -151,7 +148,6 @@
             this.btn4.TabIndex = 7;
             this.btn4.Text = "X";
             this.btn4.UseVisualStyleBackColor = true;
-            this.btn4.Click += new System.EventHandler(this.btn4_Click);
             // 
             // btn0
             // 
@@ -163,7 +159,6 @@
             this.btn0.TabIndex = 7;
             this.btn0.Text = "X";
             this.btn0.UseVisualStyleBackColor = true;
-            this.btn0.Click += new System.EventHandler(this.btn0_Click);
             // 
             // btn5
             // 
@@ -175,7 +170,6 @@
             this.btn5.TabIndex = 6;
             this.btn5.Text = "X";
             this.btn5.UseVisualStyleBackColor = true;
-            this.btn5.Click += new System.EventHandler(this.btn5_Click);
             // 
             // btn6
             // 
@@ -187,7 +181,6 @@
             this.btn6.TabIndex = 6;
             this.btn6.Text = "X";
             this.btn6.UseVisualStyleBackColor = true;
-            this.btn6.Click += new System.EventHandler(this.btn6_Click);
             // 
             // btn7
             // 
@@ -199,7 +192,6 @@
             this.btn7.TabIndex = 6;
             this.btn7.Text = "X";
             this.btn7.UseVisualStyleBackColor = true;
-            this.btn7.Click += new System.EventHandler(this.btn7_Click);
             // 
             // Form1
             // 
