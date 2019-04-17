@@ -80,11 +80,6 @@ namespace moveUs
                 i = false;
             }
         }
-        private void centrelize()
-        {
-            btn8.Left = 150;
-            btn8.Top = 150;
-        }
         public Form1()
         {
             InitializeComponent();
@@ -117,7 +112,7 @@ namespace moveUs
             }
             else//butona basmayı bırakınca buton orjinal konumuna dönüyorr.
             {
-                centrelize();
+                btn8_MouseUp(null, null);
                 buttonPos.Text = ("X = " + (btn8.Left - 150) + "\nY = " + (btn8.Top - 150) + "\nHipotenüs = 0");
             }
         }
@@ -189,8 +184,6 @@ namespace moveUs
                     i = false;
                 }
             }
-
-
             else if (centreButtonY > btn1.Top && centreButtonY < (btn1.Top + 50) && centreButtonX > btn1.Left && centreButtonX < (btn1.Left + 50))
             {
                 if (i == true)
@@ -257,81 +250,10 @@ namespace moveUs
             }
             else
             {
-                centrelize();
+                btn8_MouseUp(null, null);
             }
         }
 
-        private void btn0_Click(object sender, EventArgs e)
-        {
-            writer(0, 0);
-        }
-
-        private void btn1_Click(object sender, EventArgs e)
-        {
-            if (i == true)
-            {
-                writer(1, 1);
-            }
-            else
-            {
-                stepOne();
-                i = false;
-            }
-        }
-
-        private void btn2_Click(object sender, EventArgs e)
-        {
-            writer(1, 2);
-        }
-
-        private void btn3_Click(object sender, EventArgs e)
-        {
-            if (i == true)
-            {
-                writer(3, 3);
-            }
-            else
-            {
-                stepOne();
-                i = false;
-            }
-        }
-
-        private void btn4_Click(object sender, EventArgs e)
-        {
-            writer(2, 4);
-        }
-
-        private void btn5_Click(object sender, EventArgs e)
-        {
-            if (i == true)
-            {
-                writer(5, 5);
-            }
-            else
-            {
-                stepOne();
-                i = false;
-            }
-        }
-
-        private void btn6_Click(object sender, EventArgs e)
-        {
-            writer(3, 6);
-        }
-
-        private void btn7_Click(object sender, EventArgs e)
-        {
-            if (i == true)
-            {
-                writer(7, 7);
-            }
-            else
-            {
-                stepOne();
-                i = false;
-            }
-        }
         //mouse konumunu veriyor
         protected override void OnMouseMove(MouseEventArgs e)
         {
@@ -346,6 +268,12 @@ namespace moveUs
                     btn0.Text = ("Mouse clicked");
                 }*/
             }
+        }
+
+        private void btn8_MouseUp(object sender, MouseEventArgs e)
+        {
+            btn8.Left = 150;
+            btn8.Top = 150;
         }
     }
 }
