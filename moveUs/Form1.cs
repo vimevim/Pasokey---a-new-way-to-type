@@ -88,29 +88,26 @@ namespace moveUs
             this.Location = new Point(workingArea.Right - Size.Width, workingArea.Bottom - Size.Height);
         }
 
-        public Point MouseDownLocation;
+        public Point MouseDownLocation;//genel amaçlı point değişkeni oluşturuldu ve mouseDown olduğundaki konumu atandı
+        
         private void ortak_MouseDown(object sender, MouseEventArgs e)
-        {
-            if (e.Button == System.Windows.Forms.MouseButtons.Left)
-            {
-                MouseDownLocation = e.Location;
-            }
+        {//butona basıldığı anda çalışan komut, basılıp çekince değil basılır basılmaz çalışır.
+            MouseDownLocation = e.Location;
         }
 
-        public void button1_MouseMove(object sender, MouseEventArgs e)
-        {
-            int myXValue = btn8.Left - 150;//butonun değerleri x ve y ekseninde formun sol üst köşesindeki konumuna göre veriyor
-            int myYValue = btn8.Top - 150;//bende bu değerleri buton üzerinden sıfır alıp görmek istediğim için buton konumunu düştüm
-            if (e.Button == System.Windows.Forms.MouseButtons.Left)//butona basılı olduğu sürece çalışıyor
+        private void btn8_MouseMove(object sender, MouseEventArgs e)
+        {//if the cursor moves on top of the button
+            if (e.Button == System.Windows.Forms.MouseButtons.Left)//if the button click continous
             {
                 btn8.Left = e.X + btn8.Left - MouseDownLocation.X;
                 btn8.Top = e.Y + btn8.Top - MouseDownLocation.Y;
             }
             else//butona basmayı bırakınca buton orjinal konumuna dönüyorr.
             {
-                btn8_MouseUp(null, null);
+                ortak_MouseUp(null, null);
             }
         }
+
         private void btnSpace_MouseMove(object sender, MouseEventArgs e)
         {
             if (e.Button == System.Windows.Forms.MouseButtons.Left)//butona basılı olduğu sürece çalışıyor
@@ -120,8 +117,7 @@ namespace moveUs
             }
             else//butona basmayı bırakınca buton orjinal konumuna dönüyorr.
             {
-                btnSpace.Left = 115;
-                btnSpace.Top = 320;
+                ortak_MouseUp(null, null);
             }
         }
         private void btnSpace_Click(object sender, EventArgs e)
@@ -138,15 +134,14 @@ namespace moveUs
 
         private void btnBackSpace_MouseMove(object sender, MouseEventArgs e)
         {
-            if (e.Button == System.Windows.Forms.MouseButtons.Left)//butona basılı olduğu sürece çalışıyor
+            if (e.Button == System.Windows.Forms.MouseButtons.Left)
             {
                 btnBackSpace.Left = e.X + btnBackSpace.Left - MouseDownLocation.X;
                 btnBackSpace.Top = e.Y + btnBackSpace.Top - MouseDownLocation.Y;
             }
-            else//butona basmayı bırakınca buton orjinal konumuna dönüyorr.
+            else
             {
-                btnBackSpace.Left = 320;
-                btnBackSpace.Top = 115;
+                ortak_MouseUp(null, null);
             }
         }
         private void btnBackSpace_Click(object sender, EventArgs e)
@@ -211,7 +206,7 @@ namespace moveUs
             }
             else
             {
-                btn8_MouseUp(null, null);
+                ortak_MouseUp(null, null);
             }
         }
 
@@ -286,10 +281,14 @@ namespace moveUs
                 i = false;
             }
         }
-        private void btn8_MouseUp(object sender, MouseEventArgs e)
+        private void ortak_MouseUp(object sender, MouseEventArgs e)
         {
             btn8.Left = 150;
             btn8.Top = 150;
+            btnBackSpace.Left = 320;
+            btnBackSpace.Top = 115;
+            btnSpace.Left = 115;
+            btnSpace.Top = 320;
         }
     }
 }
