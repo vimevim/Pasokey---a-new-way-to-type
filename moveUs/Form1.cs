@@ -24,6 +24,7 @@ namespace moveUs
 
         int firstStep = 5;//ilk basamağımız
         int secondStep = 10;//ikinci basamağımız
+        bool i = false; //değişken parametre oluşturuldu ve false olarak atandı
         //5*8 dizi oluşturuyorum
         string[,] keyPad = new string[5, 8] {
             {"a","b","c","d","e","f","g","h"},
@@ -32,9 +33,8 @@ namespace moveUs
             {"y","z","1","2","3","4","5","6"},
             {"7","8","9","0",".",",","!","?"}
         };
-        bool i = false;
 
-        private void writer(int birinciDeger, int ikinciDeger)
+        private void Writer(int birinciDeger, int ikinciDeger)
         {//burada gerçekten iyi bir şey kullan ve bu kod hammallığından kurtul.
             if (i == false)
             {
@@ -46,15 +46,15 @@ namespace moveUs
                 btn5.Text = keyPad[birinciDeger, 5];
                 btn6.Text = keyPad[birinciDeger, 6];
                 btn7.Text = keyPad[birinciDeger, 7];
-                activate(i, birinciDeger, ikinciDeger);
+                Activate(i, birinciDeger, ikinciDeger);
             }
             else
             {
-                stepOne();
-                activate(i, birinciDeger, ikinciDeger);
+                StepOne();
+                Activate(i, birinciDeger, ikinciDeger);
             }
         }
-        private void stepOne()
+        private void StepOne()
         {
             btn0.Text = "X";
             btn1.Text = "X";
@@ -66,7 +66,7 @@ namespace moveUs
             btn7.Text = "X";
             btn8.Text = "<";
         }
-        private void activate(bool sayac, int birinciDeger, int ikinciDeger)
+        private void Activate(bool sayac, int birinciDeger, int ikinciDeger)
         {
             if (sayac == false)
             {
@@ -80,40 +80,34 @@ namespace moveUs
                 i = false;
             }
         }
+
         public Form1()
         {
             InitializeComponent();
-            //this.TransparencyKey = (BackColor);
             Rectangle workingArea = Screen.GetWorkingArea(this);
             this.Location = new Point(workingArea.Right - Size.Width, workingArea.Bottom - Size.Height);
         }
 
-        public Point MouseDownLocation;
+        public Point MouseDownLocation;//genel amaçlı point değişkeni oluşturuldu ve mouseDown olduğundaki konumu atandı
+        
         private void ortak_MouseDown(object sender, MouseEventArgs e)
-        {
-            if (e.Button == System.Windows.Forms.MouseButtons.Left)
-            {
-                MouseDownLocation = e.Location;
-            }
+        {//butona basıldığı anda çalışan komut, basılıp çekince değil basılır basılmaz çalışır.
+            MouseDownLocation = e.Location;
         }
 
-        public void button1_MouseMove(object sender, MouseEventArgs e)
-        {
-            int myXValue = btn8.Left - 150;//butonun değerleri x ve y ekseninde formun sol üst köşesindeki konumuna göre veriyor
-            int myYValue = btn8.Top - 150;//bende bu değerleri buton üzerinden sıfır alıp görmek istediğim için buton konumunu düştüm
-            double hipotenus = Math.Sqrt(myXValue * myXValue + myYValue * myYValue);// çapraz olanların merkeze uzaklığını aldık
-            if (e.Button == System.Windows.Forms.MouseButtons.Left)//butona basılı olduğu sürece çalışıyor
+        private void btn8_MouseMove(object sender, MouseEventArgs e)
+        {//if the cursor moves on top of the button
+            if (e.Button == System.Windows.Forms.MouseButtons.Left)//if the button click continous
             {
                 btn8.Left = e.X + btn8.Left - MouseDownLocation.X;
                 btn8.Top = e.Y + btn8.Top - MouseDownLocation.Y;
-                buttonPos.Text = ("X = " + (myXValue) + "\nY = " + (myYValue) + "\nHipotenüs = " + hipotenus);
             }
             else//butona basmayı bırakınca buton orjinal konumuna dönüyorr.
             {
-                btn8_MouseUp(null, null);//formdan çıkıldığı durumda çalışan kod
-                buttonPos.Text = ("X = " + (btn8.Left - 150) + "\nY = " + (btn8.Top - 150) + "\nHipotenüs = 0");
+                ortak_MouseUp(null, null);
             }
         }
+
         private void btnSpace_MouseMove(object sender, MouseEventArgs e)
         {
             if (e.Button == System.Windows.Forms.MouseButtons.Left)//butona basılı olduğu sürece çalışıyor
@@ -123,14 +117,13 @@ namespace moveUs
             }
             else//butona basmayı bırakınca buton orjinal konumuna dönüyorr.
             {
-                btn8_MouseUp(null, null);//formdan çıkıldığı durumda çalışan kod
+                ortak_MouseUp(null, null);
             }
         }
         private void btnSpace_Click(object sender, EventArgs e)
         {
             if (btnSpace.Top <= 300)
             {
-
                 SendKeys.Send(" ");
             }
             else if (btnSpace.Top >= 320 && btnSpace.Top <= 360 && btnSpace.Left >= 15 && btnSpace.Left <= 235)
@@ -141,21 +134,20 @@ namespace moveUs
 
         private void btnBackSpace_MouseMove(object sender, MouseEventArgs e)
         {
-            if (e.Button == System.Windows.Forms.MouseButtons.Left)//butona basılı olduğu sürece çalışıyor
+            if (e.Button == System.Windows.Forms.MouseButtons.Left)
             {
                 btnBackSpace.Left = e.X + btnBackSpace.Left - MouseDownLocation.X;
                 btnBackSpace.Top = e.Y + btnBackSpace.Top - MouseDownLocation.Y;
             }
-            else//butona basmayı bırakınca buton orjinal konumuna dönüyorr.
+            else
             {
-                btn8_MouseUp(null, null);
+                ortak_MouseUp(null, null);
             }
         }
         private void btnBackSpace_Click(object sender, EventArgs e)
         {
             if (btnBackSpace.Left <= 300)
             {
-
                 SendKeys.Send("{BS}");
             }
             else if (btnBackSpace.Left >= 320 && btnBackSpace.Left <= 360 && btnBackSpace.Top >= 15 && btnBackSpace.Top <= 235)
@@ -172,108 +164,131 @@ namespace moveUs
             {
                 if (i == false)
                 {
-                    writer(4, 9);
+                    Writer(4, 9);
                 }
                 else
                 {
-                    stepOne();
+                    StepOne();
                     i = false;
                 }
             }
             else if (centreButtonY > btn1.Top && centreButtonY < (btn1.Top + 50) && centreButtonX > btn1.Left && centreButtonX < (btn1.Left + 50))
             {
-                if (i == true)
-                {
-                    writer(1, 1);
-                }
-                else
-                {
-                    stepOne();
-                    i = false;
-                }
+                btn1_Click(null, null);
             }
             else if (centreButtonY > btn3.Top && centreButtonY < (btn3.Top + 50) && centreButtonX > btn3.Left && centreButtonX < (btn3.Left + 50))
             {
-                if (i == true)
-                {
-                    writer(3, 3);
-                }
-                else
-                {
-                    stepOne();
-                    i = false;
-                }
+                btn3_Click(null, null);
             }
             else if (centreButtonY > btn5.Top && centreButtonY < (btn5.Top + 50) && centreButtonX > btn5.Left && centreButtonX < (btn5.Left + 50))
             {
-                if (i == true)
-                {
-                    writer(5, 5);
-                }
-                else
-                {
-                    stepOne();
-                    i = false;
-                }
+                btn5_Click(null, null);
             }
             else if (centreButtonY > btn7.Top && centreButtonY < (btn7.Top + 50) && centreButtonX > btn7.Left && centreButtonX < (btn7.Left + 50))
             {
-                if (i == true)
-                {
-                    writer(7, 7);
-                }
-                else
-                {
-                    stepOne();
-                    i = false;
-                }
+                btn7_Click(null, null);
             }
             else if (centreButtonY > btn6.Top && centreButtonY < (btn6.Top + 50) && centreButtonX > btn6.Left && centreButtonX < (btn6.Left + 50))
             {
-                writer(3, 6);
+                btn6_Click(null, null);
             }
             else if (centreButtonY > btn4.Top && centreButtonY < (btn4.Top + 50) && centreButtonX > btn4.Left && centreButtonX < (btn4.Left + 50))
             {
-                writer(2, 4);
+                btn4_Click(null, null);
             }
             else if (centreButtonY > btn2.Top && centreButtonY < (btn2.Top + 50) && centreButtonX > btn2.Left && centreButtonX < (btn2.Left + 50))
             {
-                writer(1, 2);
+                btn2_Click(null, null);
             }
             else if (centreButtonY > btn0.Top && centreButtonY < (btn0.Top + 50) && centreButtonX > btn0.Left && centreButtonX < (btn0.Left + 50))
             {
-                writer(0, 0);
+                btn0_Click(null, null);
             }
             else
             {
-                btn8_MouseUp(null, null);
+                ortak_MouseUp(null, null);
             }
         }
 
-        //mouse konumunu veriyor
-        protected override void OnMouseMove(MouseEventArgs e)
+        private void btn0_Click(object sender, EventArgs e)
         {
-            //if (e.Button == System.Windows.Forms.MouseButtons.Left)
+            Writer(0, 0);
+        }
+
+        private void btn1_Click(object sender, EventArgs e)
+        {
+            if (i == true)
             {
-                base.OnMouseMove(e);
-                int x = e.X;
-                int y = e.Y;
-                mousePos.Text = "x degeri = " + x + " y degeri = " + y + " \nMouse Position = " + MousePosition.X + "\nmouse cos " + Math.Sqrt(y * y + x * x);
-                /*if (e.Button == MouseButtons.Left)
-                {
-                    btn0.Text = ("Mouse clicked");
-                }*/
+                Writer(1, 1);
+            }
+            else
+            {
+                StepOne();
+                i = false;
             }
         }
 
-        private void btn8_MouseUp(object sender, MouseEventArgs e)
+        private void btn2_Click(object sender, EventArgs e)
         {
-            btnSpace.Left = 115;
-            btnSpace.Top = 320;
-            btnBackSpace.Left = 320;
-            btnBackSpace.Top = 115;
+            Writer(1, 2);
+        }
+
+        private void btn3_Click(object sender, EventArgs e)
+        {
+            if (i == true)
+            {
+                Writer(3, 3);
+            }
+            else
+            {
+                StepOne();
+                i = false;
+            }
+        }
+
+        private void btn4_Click(object sender, EventArgs e)
+        {
+            Writer(2, 4);
+        }
+
+        private void btn5_Click(object sender, EventArgs e)
+        {
+            if (i == true)
+            {
+                Writer(5, 5);
+            }
+            else
+            {
+                StepOne();
+                i = false;
+            }
+        }
+
+        private void btn6_Click(object sender, EventArgs e)
+        {
+            Writer(3, 6);
+        }
+
+        private void btn7_Click(object sender, EventArgs e)
+        {
+            if (i == true)
+            {
+                Writer(7, 7);
+            }
+            else
+            {
+                StepOne();
+                i = false;
+            }
+        }
+        private void ortak_MouseUp(object sender, MouseEventArgs e)
+        {
             btn8.Left = 150;
             btn8.Top = 150;
+            btnBackSpace.Left = 320;
+            btnBackSpace.Top = 115;
+            btnSpace.Left = 115;
+            btnSpace.Top = 320;
         }
     }
 }

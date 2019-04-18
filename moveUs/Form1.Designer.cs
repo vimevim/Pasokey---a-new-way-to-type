@@ -28,8 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.mousePos = new System.Windows.Forms.Label();
-            this.buttonPos = new System.Windows.Forms.Label();
             this.btnBackSpace = new moveUs.ButtonElipse();
             this.btnSpace = new moveUs.ButtonElipse();
             this.btn8 = new moveUs.ButtonElipse();
@@ -42,28 +40,6 @@
             this.btn6 = new moveUs.ButtonElipse();
             this.btn7 = new moveUs.ButtonElipse();
             this.SuspendLayout();
-            // 
-            // mousePos
-            // 
-            this.mousePos.AutoSize = true;
-            this.mousePos.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.mousePos.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.mousePos.Location = new System.Drawing.Point(416, 61);
-            this.mousePos.Name = "mousePos";
-            this.mousePos.Size = new System.Drawing.Size(74, 17);
-            this.mousePos.TabIndex = 1;
-            this.mousePos.Text = "mousePos";
-            // 
-            // buttonPos
-            // 
-            this.buttonPos.AutoSize = true;
-            this.buttonPos.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.buttonPos.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.buttonPos.Location = new System.Drawing.Point(416, 102);
-            this.buttonPos.Name = "buttonPos";
-            this.buttonPos.Size = new System.Drawing.Size(72, 17);
-            this.buttonPos.TabIndex = 2;
-            this.buttonPos.Text = "buttonPos";
             // 
             // btnBackSpace
             // 
@@ -102,8 +78,8 @@
             this.btn8.UseVisualStyleBackColor = true;
             this.btn8.Click += new System.EventHandler(this.btn8_Click);
             this.btn8.MouseDown += new System.Windows.Forms.MouseEventHandler(this.ortak_MouseDown);
-            this.btn8.MouseMove += new System.Windows.Forms.MouseEventHandler(this.button1_MouseMove);
-            this.btn8.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btn8_MouseUp);
+            this.btn8.MouseMove += new System.Windows.Forms.MouseEventHandler(this.btn8_MouseMove);
+            this.btn8.MouseUp += new System.Windows.Forms.MouseEventHandler(this.ortak_MouseUp);
             // 
             // btn3
             // 
@@ -209,21 +185,16 @@
             this.Controls.Add(this.btn5);
             this.Controls.Add(this.btn6);
             this.Controls.Add(this.btn7);
-            this.Controls.Add(this.buttonPos);
-            this.Controls.Add(this.mousePos);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "Form1";
             this.TopMost = true;
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
-        private System.Windows.Forms.Label mousePos;
-        private System.Windows.Forms.Label buttonPos;
         private ButtonElipse btn7;
         private ButtonElipse btn0;
         private ButtonElipse btn1;
