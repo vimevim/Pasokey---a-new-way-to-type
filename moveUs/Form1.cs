@@ -84,12 +84,13 @@ namespace moveUs
         public Form1()
         {
             InitializeComponent();
+            this.TransparencyKey = (BackColor);
             Rectangle workingArea = Screen.GetWorkingArea(this);
             this.Location = new Point(workingArea.Right - Size.Width, workingArea.Bottom - Size.Height);
         }
 
         public Point MouseDownLocation;//genel amaçlı point değişkeni oluşturuldu ve mouseDown olduğundaki konumu atandı
-        
+
         private void ortak_MouseDown(object sender, MouseEventArgs e)
         {//butona basıldığı anda çalışan komut, basılıp çekince değil basılır basılmaz çalışır.
             MouseDownLocation = e.Location;
@@ -283,6 +284,10 @@ namespace moveUs
         }
         private void ortak_MouseUp(object sender, MouseEventArgs e)
         {
+            btnSpace.Left = 115;
+            btnSpace.Top = 320;
+            btnBackSpace.Left = 320;
+            btnBackSpace.Top = 115;
             btn8.Left = 150;
             btn8.Top = 150;
             btnBackSpace.Left = 320;
