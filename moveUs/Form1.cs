@@ -83,8 +83,6 @@ namespace moveUs
         public Form1()
         {
             InitializeComponent();
-            //btn8.Left = 150;
-            //btn8.Top = 150;
             //this.TransparencyKey = (BackColor);
             Rectangle workingArea = Screen.GetWorkingArea(this);
             this.Location = new Point(workingArea.Right - Size.Width, workingArea.Bottom - Size.Height);
@@ -112,7 +110,7 @@ namespace moveUs
             }
             else//butona basmayı bırakınca buton orjinal konumuna dönüyorr.
             {
-                btn8_MouseUp(null, null);
+                btn8_MouseUp(null, null);//formdan çıkıldığı durumda çalışan kod
                 buttonPos.Text = ("X = " + (btn8.Left - 150) + "\nY = " + (btn8.Top - 150) + "\nHipotenüs = 0");
             }
         }
@@ -125,8 +123,7 @@ namespace moveUs
             }
             else//butona basmayı bırakınca buton orjinal konumuna dönüyorr.
             {
-                btnSpace.Left = 115;
-                btnSpace.Top = 320;
+                btn8_MouseUp(null, null);//formdan çıkıldığı durumda çalışan kod
             }
         }
         private void btnSpace_Click(object sender, EventArgs e)
@@ -151,8 +148,7 @@ namespace moveUs
             }
             else//butona basmayı bırakınca buton orjinal konumuna dönüyorr.
             {
-                btnBackSpace.Left = 320;
-                btnBackSpace.Top = 115;
+                btn8_MouseUp(null, null);
             }
         }
         private void btnBackSpace_Click(object sender, EventArgs e)
@@ -272,6 +268,10 @@ namespace moveUs
 
         private void btn8_MouseUp(object sender, MouseEventArgs e)
         {
+            btnSpace.Left = 115;
+            btnSpace.Top = 320;
+            btnBackSpace.Left = 320;
+            btnBackSpace.Top = 115;
             btn8.Left = 150;
             btn8.Top = 150;
         }
