@@ -46,15 +46,15 @@ namespace moveUs
                 btn5.Text = keyPad[birinciDeger, 5];
                 btn6.Text = keyPad[birinciDeger, 6];
                 btn7.Text = keyPad[birinciDeger, 7];
-                Activate(i, birinciDeger, ikinciDeger);
+                btn8.Text = "X";
             }
             else
             {
-                StepOne();
-                Activate(i, birinciDeger, ikinciDeger);
+                ResetText();
             }
+            TypeTheLetter(i, birinciDeger, ikinciDeger);
         }
-        private void StepOne()
+        private void ResetText()
         {
             btn0.Text = "X";
             btn1.Text = "X";
@@ -66,7 +66,7 @@ namespace moveUs
             btn7.Text = "X";
             btn8.Text = "<";
         }
-        private void Activate(bool sayac, int birinciDeger, int ikinciDeger)
+        private void TypeTheLetter(bool sayac, int birinciDeger, int ikinciDeger)
         {
             if (sayac == false)
             {
@@ -89,7 +89,7 @@ namespace moveUs
         }
 
         public Point MouseDownLocation;//genel amaçlı point değişkeni oluşturuldu ve mouseDown olduğundaki konumu atandı
-        
+
         private void ortak_MouseDown(object sender, MouseEventArgs e)
         {//butona basıldığı anda çalışan komut, basılıp çekince değil basılır basılmaz çalışır.
             MouseDownLocation = e.Location;
@@ -168,7 +168,7 @@ namespace moveUs
                 }
                 else
                 {
-                    StepOne();
+                    ResetText();
                     i = false;
                 }
             }
@@ -223,7 +223,7 @@ namespace moveUs
             }
             else
             {
-                StepOne();
+                ResetText();
                 i = false;
             }
         }
@@ -241,7 +241,7 @@ namespace moveUs
             }
             else
             {
-                StepOne();
+                ResetText();
                 i = false;
             }
         }
@@ -259,7 +259,7 @@ namespace moveUs
             }
             else
             {
-                StepOne();
+                ResetText();
                 i = false;
             }
         }
@@ -277,7 +277,7 @@ namespace moveUs
             }
             else
             {
-                StepOne();
+                ResetText();
                 i = false;
             }
         }
