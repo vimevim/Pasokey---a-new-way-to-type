@@ -85,7 +85,7 @@ namespace moveUs
         {
             InitializeComponent();
             Rectangle workingArea = Screen.GetWorkingArea(this);
-            this.Location = new Point(workingArea.Right - Size.Width, workingArea.Bottom - Size.Height);
+            this.Location = new Point(workingArea.Right - this.Width, workingArea.Bottom - this.Height);
         }
 
         public Point MouseDownLocation;//genel amaçlı point değişkeni oluşturuldu ve mouseDown olduğundaki konumu atandı
@@ -289,6 +289,13 @@ namespace moveUs
             btnBackSpace.Top = 115;
             btnSpace.Left = 115;
             btnSpace.Top = 320;
+        }
+
+        private void switchForm_Click(object sender, EventArgs e)
+        {
+            RealJoystick js = new RealJoystick();
+            js.Show();
+            this.Hide();
         }
     }
 }
