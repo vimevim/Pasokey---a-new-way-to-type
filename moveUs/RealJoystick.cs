@@ -131,13 +131,13 @@ namespace moveUs
             //if the cursor moves on top of the button
             if (e.Button == System.Windows.Forms.MouseButtons.Left)//if the button click continous
             {
-                if (hypotenuse < 150)//daire içerisinden çıkartmıyor
+                if (hypotenuse < 100)//daire içerisinden çıkartmıyor
                 {
-                    if (cursorOriginX < 150 && cursorOriginX > -150)//x ekseninde 100 ile -100 arasından çıkartmıyor
+                    if (cursorOriginX < 100 && cursorOriginX > -100)//x ekseninde 100 ile -100 arasından çıkartmıyor
                     {
                         btn8.Left = btn8X;
                     }
-                    if (cursorOriginY < 150 && cursorOriginY > -150)//y ekseninde 100 ile -100 arasından çıkartmıyor
+                    if (cursorOriginY < 100 && cursorOriginY > -100)//y ekseninde 100 ile -100 arasından çıkartmıyor
                     {
                         btn8.Top = btn8Y;
                     }

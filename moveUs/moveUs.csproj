@@ -50,11 +50,23 @@
     <Compile Include="ButtonElipse.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="DualPanel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DualPanel.Designer.cs">
+      <DependentUpon>DualPanel.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MarkingMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MarkingMenu.Designer.cs">
+      <DependentUpon>MarkingMenu.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -64,8 +76,14 @@
     <Compile Include="RealJoystick.Designer.cs">
       <DependentUpon>RealJoystick.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="DualPanel.resx">
+      <DependentUpon>DualPanel.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MarkingMenu.resx">
+      <DependentUpon>MarkingMenu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
