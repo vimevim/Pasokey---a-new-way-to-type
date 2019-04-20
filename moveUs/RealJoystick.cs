@@ -94,7 +94,7 @@ namespace moveUs
 
         private void switchForm_Click(object sender, EventArgs e)
         {
-            Form1 frm1 = new Form1();
+            SingleForm frm1 = new SingleForm();
             frm1.Show();
             this.Hide();
         }

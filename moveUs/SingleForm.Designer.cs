@@ -1,6 +1,6 @@
 ﻿namespace moveUs
 {
-    partial class Form1
+    partial class SingleForm
     {
         /// <summary>
         ///Gerekli tasarımcı değişkeni.

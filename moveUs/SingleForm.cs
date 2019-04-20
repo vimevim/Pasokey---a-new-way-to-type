@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace moveUs
 {
-    public partial class Form1 : Form
+    public partial class SingleForm : Form
     {
         protected override CreateParams CreateParams
         {
@@ -22,8 +22,7 @@ namespace moveUs
             }
         }//Klavye kodları.
 
-        int firstStep = 5;//ilk basamağımız
-        int secondStep = 10;//ikinci basamağımız
+        int firstStep = 5, secondStep = 10;//ikinci basamağımız
         bool i = false; //değişken parametre oluşturuldu ve false olarak atandı
         //5*8 dizi oluşturuyorum
         string[,] keyPad = new string[5, 8] {
@@ -81,7 +80,7 @@ namespace moveUs
             }
         }
 
-        public Form1()
+        public SingleForm()
         {
             InitializeComponent();
             Rectangle workingArea = Screen.GetWorkingArea(this);
