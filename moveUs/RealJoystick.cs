@@ -39,7 +39,7 @@ namespace moveUs
             {"7","8","9","0",".",",","!","?"}
         };
 
-        private void Writer(int birinciDeger, int ikinciDeger)
+        private void WriteFirstStepToLbl(int birinciDeger, int ikinciDeger)
         {//burada gerçekten iyi bir şey kullan ve bu kod hammallığından kurtul.
             if (i == false)
             {
@@ -85,6 +85,7 @@ namespace moveUs
                 i = false;
             }
         }
+
         public RealJoystick()
         {
             InitializeComponent();
@@ -155,7 +156,7 @@ namespace moveUs
             {
                 if (i == false)
                 {
-                    Writer(4, 9);
+                    WriteFirstStepToLbl(4, 9);
                 }
                 else
                 {
@@ -167,13 +168,13 @@ namespace moveUs
             {
                 if (angle > 337.5 || angle < 22.5)
                 {
-                    Writer(2, 4);
+                    WriteFirstStepToLbl(2, 4);
                 }
                 else if (angle > 22.5 && angle < 67.5)
                 {
                     if (i == true)
                     {
-                        Writer(5, 5);
+                        WriteFirstStepToLbl(5, 5);
                     }
                     else
                     {
@@ -183,13 +184,13 @@ namespace moveUs
                 }
                 else if (angle > 67.5 && angle < 112.5)
                 {
-                    Writer(3, 6);
+                    WriteFirstStepToLbl(3, 6);
                 }
                 else if (angle > 112.5 && angle < 157.5)
                 {
                     if (i == true)
                     {
-                        Writer(7, 7);
+                        WriteFirstStepToLbl(7, 7);
                     }
                     else
                     {
@@ -199,13 +200,13 @@ namespace moveUs
                 }
                 else if (angle > 157.5 && angle < 202.5)
                 {
-                    Writer(0, 0);
+                    WriteFirstStepToLbl(0, 0);
                 }
                 else if (angle > 202.5 && angle < 247.5)
                 {
                     if (i == true)
                     {
-                        Writer(1, 1);
+                        WriteFirstStepToLbl(1, 1);
                     }
                     else
                     {
@@ -215,13 +216,13 @@ namespace moveUs
                 }
                 else if (angle > 247.5 && angle < 292.5)
                 {
-                    Writer(1, 2);
+                    WriteFirstStepToLbl(1, 2);
                 }
                 else if (angle > 292.5 && angle < 337.5)
                 {
                     if (i == true)
                     {
-                        Writer(3, 3);
+                        WriteFirstStepToLbl(3, 3);
                     }
                     else
                     {

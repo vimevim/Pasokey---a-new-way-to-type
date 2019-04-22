@@ -47,15 +47,15 @@ namespace moveUs
                 lblDownLeft.Text = keyPad[birinciDeger, 5];
                 lblMidLeft.Text = keyPad[birinciDeger, 6];
                 lblUpLeft.Text = keyPad[birinciDeger, 7];
-                SendKey(i, birinciDeger, ikinciDeger);
+                TypeTheLetter(i, birinciDeger, ikinciDeger);
             }
             else
             {
-                WriteXToLbl();
-                SendKey(i, birinciDeger, ikinciDeger);
+                ResetText();
+                TypeTheLetter(i, birinciDeger, ikinciDeger);
             }
         }
-        private void WriteXToLbl()
+        private void ResetText()
         {
             lblUp.Text = "X";
             lblUpRight.Text = "X";
@@ -70,7 +70,7 @@ namespace moveUs
 
 
 
-        private void SendKey(bool sayac, int birinciDeger, int ikinciDeger)
+        private void TypeTheLetter(bool sayac, int birinciDeger, int ikinciDeger)
         {
             if (sayac == false)
             {
@@ -99,7 +99,7 @@ namespace moveUs
             Point pt = new Point(screenCentreX / 2, screenCentreY / 2);// değerleri ikiye bölüp
             Cursor.Position = (pt);//merkeze atadık
         }
-        public void Form1_MouseMove(object sender, MouseEventArgs e)
+        public void MarkingMenuMouseMove(object sender, MouseEventArgs e)
         {
             //Varsayılan orijin ataması yapılıyor
             defaultOriginX = e.X;
@@ -153,7 +153,7 @@ namespace moveUs
             }
         }
 
-        private void Form1_MouseUp(object sender, MouseEventArgs e)
+        private void MarkingMenuMouseUp(object sender, MouseEventArgs e)
         {
             //Form1_Click(null, null);//formun dışına çıkınca çalışmasını sağlıyor ama hata var
             FormFollowsCursor();
@@ -168,7 +168,7 @@ namespace moveUs
         {//formun bonumu 2 ye bölünüp farenin konumundan çıkartıldı,doğal olarak form farenin merkezine geçmiş oldu
             this.Location = new Point(MousePosition.X - formCentreX, MousePosition.Y - formCentreY);
         }
-        private void Form1_Click(object sender, EventArgs e)
+        private void MarkingMenu_Click(object sender, EventArgs e)
         {
             if (hypotenuse <= 50)
             {
@@ -178,7 +178,7 @@ namespace moveUs
                 }
                 else
                 {
-                    WriteXToLbl();
+                    ResetText();
                     i = false;
                 }
 
@@ -197,7 +197,7 @@ namespace moveUs
                     }
                     else
                     {
-                        WriteXToLbl();
+                        ResetText();
                         i = false;
                     }
                 }
@@ -213,7 +213,7 @@ namespace moveUs
                     }
                     else
                     {
-                        WriteXToLbl();
+                        ResetText();
                         i = false;
                     }
                 }
@@ -229,7 +229,7 @@ namespace moveUs
                     }
                     else
                     {
-                        WriteXToLbl();
+                        ResetText();
                         i = false;
                     }
 
@@ -246,7 +246,7 @@ namespace moveUs
                     }
                     else
                     {
-                        WriteXToLbl();
+                        ResetText();
                         i = false;
                     }
                 }

@@ -70,6 +70,7 @@
             this.btnLeftUniter.TabIndex = 41;
             this.btnLeftUniter.Text = ">>>";
             this.btnLeftUniter.UseVisualStyleBackColor = true;
+            this.btnLeftUniter.Click += new System.EventHandler(this.btnLeftUniter_Click);
             // 
             // panel1
             // 
@@ -105,6 +106,7 @@
             this.leftGuide.TabIndex = 53;
             this.leftGuide.Text = "X";
             this.leftGuide.UseVisualStyleBackColor = true;
+            this.leftGuide.Click += new System.EventHandler(this.leftGuide_Click);
             this.leftGuide.MouseDown += new System.Windows.Forms.MouseEventHandler(this.ortak_MouseDown);
             this.leftGuide.MouseMove += new System.Windows.Forms.MouseEventHandler(this.leftGuide_MouseMove);
             this.leftGuide.MouseUp += new System.Windows.Forms.MouseEventHandler(this.general_MouseUp);
@@ -223,6 +225,7 @@
             this.btnUpper.TabIndex = 42;
             this.btnUpper.Text = "upper";
             this.btnUpper.UseVisualStyleBackColor = true;
+            this.btnUpper.Click += new System.EventHandler(this.btnUpper_Click);
             this.btnUpper.MouseDown += new System.Windows.Forms.MouseEventHandler(this.ortak_MouseDown);
             this.btnUpper.MouseMove += new System.Windows.Forms.MouseEventHandler(this.btnUpper_MouseMove);
             this.btnUpper.MouseUp += new System.Windows.Forms.MouseEventHandler(this.general_MouseUp);
@@ -236,6 +239,7 @@
             this.btnLeftDivider.TabIndex = 40;
             this.btnLeftDivider.Text = "<<<";
             this.btnLeftDivider.UseVisualStyleBackColor = true;
+            this.btnLeftDivider.Click += new System.EventHandler(this.btnLeftDivider_Click);
             // 
             // panel2
             // 
@@ -269,6 +273,7 @@
             this.btnBackSpace.TabIndex = 54;
             this.btnBackSpace.Text = "<";
             this.btnBackSpace.UseVisualStyleBackColor = true;
+            this.btnBackSpace.Click += new System.EventHandler(this.btnBackSpace_Click);
             this.btnBackSpace.MouseDown += new System.Windows.Forms.MouseEventHandler(this.ortak_MouseDown);
             this.btnBackSpace.MouseMove += new System.Windows.Forms.MouseEventHandler(this.btnBackSpace_MouseMove);
             this.btnBackSpace.MouseUp += new System.Windows.Forms.MouseEventHandler(this.general_MouseUp);
@@ -284,6 +289,7 @@
             this.rightGuide.TabIndex = 53;
             this.rightGuide.Text = "X";
             this.rightGuide.UseVisualStyleBackColor = true;
+            this.rightGuide.Click += new System.EventHandler(this.rightGuide_Click);
             this.rightGuide.MouseDown += new System.Windows.Forms.MouseEventHandler(this.ortak_MouseDown);
             this.rightGuide.MouseMove += new System.Windows.Forms.MouseEventHandler(this.rightGuide_MouseMove);
             this.rightGuide.MouseUp += new System.Windows.Forms.MouseEventHandler(this.general_MouseUp);
@@ -402,6 +408,7 @@
             this.btnSpace.TabIndex = 42;
             this.btnSpace.Text = "space";
             this.btnSpace.UseVisualStyleBackColor = true;
+            this.btnSpace.Click += new System.EventHandler(this.btnUpper_Click);
             this.btnSpace.MouseDown += new System.Windows.Forms.MouseEventHandler(this.ortak_MouseDown);
             this.btnSpace.MouseMove += new System.Windows.Forms.MouseEventHandler(this.btnSpace_MouseMove);
             this.btnSpace.MouseUp += new System.Windows.Forms.MouseEventHandler(this.general_MouseUp);

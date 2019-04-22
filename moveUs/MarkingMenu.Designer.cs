@@ -138,7 +138,7 @@
             this.lblCenter.Size = new System.Drawing.Size(48, 48);
             this.lblCenter.TabIndex = 15;
             this.lblCenter.Text = "X";
-            this.lblCenter.Click += new System.EventHandler(this.Form1_Click);
+            this.lblCenter.Click += new System.EventHandler(this.MarkingMenu_Click);
             // 
             // lblUp
             // 
@@ -289,9 +289,9 @@
             this.Name = "MarkingMenu";
             this.Text = "MarkingMenu";
             this.Load += new System.EventHandler(this.MarkingMenu_Load);
-            this.Click += new System.EventHandler(this.Form1_Click);
-            this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseMove);
-            this.MouseUp += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseUp);
+            this.Click += new System.EventHandler(this.MarkingMenu_Click);
+            this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.MarkingMenuMouseMove);
+            this.MouseUp += new System.Windows.Forms.MouseEventHandler(this.MarkingMenuMouseUp);
             this.ResumeLayout(false);
             this.PerformLayout();
 

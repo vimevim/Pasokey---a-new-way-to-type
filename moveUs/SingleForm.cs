@@ -130,7 +130,6 @@ namespace moveUs
                 SendKeys.Send(" ");
             }
         }
-
         private void btnBackSpace_MouseMove(object sender, MouseEventArgs e)
         {
             if (e.Button == System.Windows.Forms.MouseButtons.Left)
@@ -154,7 +153,6 @@ namespace moveUs
                 SendKeys.Send("{BS}");
             }
         }
-
         private void btn8_Click(object sender, EventArgs e)
         {
             int centreButtonX = btn8.Left + 25;//left değeri bize butonun merkezinden değil sol başlangıcından değer veriyor 
@@ -208,12 +206,10 @@ namespace moveUs
                 ortak_MouseUp(null, null);
             }
         }
-
         private void btn0_Click(object sender, EventArgs e)
         {
             Writer(0, 0);
         }
-
         private void btn1_Click(object sender, EventArgs e)
         {
             if (i == true)
@@ -226,12 +222,10 @@ namespace moveUs
                 i = false;
             }
         }
-
         private void btn2_Click(object sender, EventArgs e)
         {
             Writer(1, 2);
         }
-
         private void btn3_Click(object sender, EventArgs e)
         {
             if (i == true)
@@ -244,12 +238,10 @@ namespace moveUs
                 i = false;
             }
         }
-
         private void btn4_Click(object sender, EventArgs e)
         {
             Writer(2, 4);
         }
-
         private void btn5_Click(object sender, EventArgs e)
         {
             if (i == true)
@@ -262,12 +254,10 @@ namespace moveUs
                 i = false;
             }
         }
-
         private void btn6_Click(object sender, EventArgs e)
         {
             Writer(3, 6);
         }
-
         private void btn7_Click(object sender, EventArgs e)
         {
             if (i == true)
@@ -289,7 +279,6 @@ namespace moveUs
             btnSpace.Left = 115;
             btnSpace.Top = 320;
         }
-
         private void switchForm_Click(object sender, EventArgs e)
         {
             RealJoystick js = new RealJoystick();

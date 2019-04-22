@@ -12,10 +12,16 @@ namespace moveUs
 {
     public partial class DualPanel : Form
     {
+        int leftGuideX, leftGuideY, rightGuideX, rightGuideY;
+        int cursorOriginX, cursorOriginY;
+        double leftHypotenuse, leftAngle, rightHypotenuse, rightAngle;
+        Point mouseDownLocation;
+
         public DualPanel()
         {
             InitializeComponent();
         }
+
         protected override CreateParams CreateParams
         {
             get
@@ -25,8 +31,6 @@ namespace moveUs
                 return param;
             }
         }
-
-        Point mouseDownLocation;
 
         //Klavye kodları.
         int firstStep = 5;//ilk basamağımız
@@ -49,38 +53,38 @@ namespace moveUs
             {"7","8","9","0",".",",","!","?"}
         };
         //İlk girdiye göre ikinci panele yansıtma yapıyorum.
-        private void Writer()
+        private void WriteFirstStepToLbl()
         {
             if (firstStep != 5)//buton hareket etse bile bir değer atandı mı emin oluyorum
             {
                 if (upOrLow == "low")//büyük küçük harf kümesini seçiyorum
                 {
-                    btn0.Text = keyPadLower[firstStep, 0];
-                    btn1.Text = keyPadLower[firstStep, 1];
-                    btn2.Text = keyPadLower[firstStep, 2];
-                    btn3.Text = keyPadLower[firstStep, 3];
-                    btn4.Text = keyPadLower[firstStep, 4];
-                    btn5.Text = keyPadLower[firstStep, 5];
-                    btn6.Text = keyPadLower[firstStep, 6];
-                    btn7.Text = keyPadLower[firstStep, 7];
+                    btnLbl0.Text = keyPadLower[firstStep, 0];
+                    btnLbl1.Text = keyPadLower[firstStep, 1];
+                    btnLbl2.Text = keyPadLower[firstStep, 2];
+                    btnLbl3.Text = keyPadLower[firstStep, 3];
+                    btnLbl4.Text = keyPadLower[firstStep, 4];
+                    btnLbl5.Text = keyPadLower[firstStep, 5];
+                    btnLbl6.Text = keyPadLower[firstStep, 6];
+                    btnLbl7.Text = keyPadLower[firstStep, 7];
                 }
                 else
                 {
-                    btn0.Text = keyPadUpper[firstStep, 0];
-                    btn1.Text = keyPadUpper[firstStep, 1];
-                    btn2.Text = keyPadUpper[firstStep, 2];
-                    btn3.Text = keyPadUpper[firstStep, 3];
-                    btn4.Text = keyPadUpper[firstStep, 4];
-                    btn5.Text = keyPadUpper[firstStep, 5];
-                    btn6.Text = keyPadUpper[firstStep, 6];
-                    btn7.Text = keyPadUpper[firstStep, 7];
+                    btnLbl0.Text = keyPadUpper[firstStep, 0];
+                    btnLbl1.Text = keyPadUpper[firstStep, 1];
+                    btnLbl2.Text = keyPadUpper[firstStep, 2];
+                    btnLbl3.Text = keyPadUpper[firstStep, 3];
+                    btnLbl4.Text = keyPadUpper[firstStep, 4];
+                    btnLbl5.Text = keyPadUpper[firstStep, 5];
+                    btnLbl6.Text = keyPadUpper[firstStep, 6];
+                    btnLbl7.Text = keyPadUpper[firstStep, 7];
                 }
                 panel2.BringToFront();//panel2 yi ön plana çıkartıyorum
                 general_MouseUp(null, null);//tüm butonların konumunu başlangıca çekiyorum
             }
         }
         //yansıtma yapılmış paneldeki aksiyona göre klavye girdisi veriyorum
-        private void Write()
+        private void TypeTheLetter()
         {
             if (firstStep == 5)//ilk aksiyonumuz gerçekleşmediyse ikinci aksiyona geçmeyi engelliyorum
             {
@@ -125,24 +129,84 @@ namespace moveUs
 
         private void leftGuide_MouseMove(object sender, MouseEventArgs e)
         {
-            if (e.Button == MouseButtons.Left)
+            //orijine göre leftHypotenuse hesaplaması
+            leftHypotenuse = Math.Sqrt(cursorOriginX * cursorOriginX + cursorOriginY * cursorOriginY);
+
+            //orijin ve hipotenüs ile açı hesaplaması - 360 ve 0 derece çakışınca bize 360 veriyor
+            leftAngle = Math.Acos(cursorOriginY / leftHypotenuse);
+            if (cursorOriginX < 0)
             {
-                leftGuide.Left = e.X + leftGuide.Left - mouseDownLocation.X;
-                leftGuide.Top = e.Y + leftGuide.Top - mouseDownLocation.Y;
+                leftAngle = leftAngle * 180 / Math.PI;
             }
             else
+            {
+                leftAngle -= leftAngle * 180 / Math.PI;
+                leftAngle += 360;
+            }
+
+            leftGuideX = e.X + leftGuide.Left - mouseDownLocation.X;
+            leftGuideY = e.Y + leftGuide.Top - mouseDownLocation.Y;
+            cursorOriginX = leftGuideX + 25 - (panel1.Width / 2);
+            cursorOriginY = leftGuideY + 25 - (panel1.Height / 2);
+
+            //if the cursor moves on top of the button
+            if (e.Button == System.Windows.Forms.MouseButtons.Left)//if the button click continous
+            {
+                if (leftHypotenuse < 100)//daire içerisinden çıkartmıyor
+                {
+                    if (cursorOriginX < 100 && cursorOriginX > -100)//x ekseninde 100 ile -100 arasından çıkartmıyor
+                    {
+                        leftGuide.Left = leftGuideX;
+                    }
+                    if (cursorOriginY < 100 && cursorOriginY > -100)//y ekseninde 100 ile -100 arasından çıkartmıyor
+                    {
+                        leftGuide.Top = leftGuideY;
+                    }
+                }
+            }
+            else//butona basmayı bırakınca buton orjinal konumuna dönüyorr.
             {
                 general_MouseUp(null, null);
             }
         }
         private void rightGuide_MouseMove(object sender, MouseEventArgs e)
         {
-            if (e.Button == MouseButtons.Left)
+            //orijine göre leftHypotenuse hesaplaması
+            rightHypotenuse = Math.Sqrt(cursorOriginX * cursorOriginX + cursorOriginY * cursorOriginY);
+
+            //orijin ve hipotenüs ile açı hesaplaması - 360 ve 0 derece çakışınca bize 360 veriyor
+            rightAngle = Math.Acos(cursorOriginY / rightHypotenuse);
+            if (cursorOriginX < 0)
             {
-                rightGuide.Left = e.X + rightGuide.Left - mouseDownLocation.X;
-                rightGuide.Top = e.Y + rightGuide.Top - mouseDownLocation.Y;
+                rightAngle = rightAngle * 180 / Math.PI;
             }
             else
+            {
+                rightAngle -= rightAngle * 180 / Math.PI;
+                rightAngle += 360;
+            }
+
+            rightGuideX = e.X + rightGuide.Left - mouseDownLocation.X;
+            rightGuideY = e.Y + rightGuide.Top - mouseDownLocation.Y;
+            cursorOriginX = rightGuideX + 25 - (panel2.Width / 2);//left değeri bize butonun merkezinden değil sol başlangıcından değer veriyor 
+            cursorOriginY = rightGuideY + 25 - (panel2.Height / 2);// top ta öyle, bende butonun yarısı kadar değer verip butonun merkezini simüle ediyorum.
+
+            //if the cursor moves on top of the button
+            if (e.Button == System.Windows.Forms.MouseButtons.Left)//if the button click continous
+            {
+                if (rightHypotenuse < 100)//daire içerisinden çıkartmıyor
+                {
+                    if (cursorOriginX < 100 && cursorOriginX > -100)//x ekseninde 100 ile -100 arasından çıkartmıyor
+                    {
+                        rightGuide.Left = rightGuideX;
+                    }
+                    if (cursorOriginY < 100 && cursorOriginY > -100)//y ekseninde 100 ile -100 arasından çıkartmıyor
+                    {
+                        rightGuide.Top = rightGuideY;
+                    }
+                }
+            }
+            else//butona basmayı bırakınca buton orjinal konumuna dönüyorr.
             {
                 general_MouseUp(null, null);
             }
@@ -158,6 +222,40 @@ namespace moveUs
             {
                 general_MouseUp(null, null);
             }
+        }
+
+        private void btnUpper_Click(object sender, EventArgs e)
+        {
+            if (btnUpper.Top <= 300)
+            {
+                if (upOrLow == "low")
+                {
+                    upOrLow = "up";
+                }
+                else
+                {
+                    upOrLow = "low";
+                }
+            }
+            WriteFirstStepToLbl();
+        }
+
+        private void btnLeftUniter_Click(object sender, EventArgs e)
+        {
+            this.Width = panel1.Width;//formun boyutu bir panel boyutuyla eşitlenir
+            this.Location = new Point(screenWidth - this.Width, screenHeight - this.Height);//formun konumu sağ alta sabitlenir
+            panel2.Location = new Point(0, 0);//panel2 konumu panel1 ile üst üste getirilir
+            btnLeftDivider.Visible = true;
+            btnLeftUniter.Visible = false;
+            panel1.BringToFront();
+        }
+
+        private void btnLeftDivider_Click(object sender, EventArgs e)
+        {
+            //formu yeniden yükler, başlangıç konumuna döner
+            this.Controls.Clear();
+            this.InitializeComponent();
+            DualPanel_Load(null, null);
         }
 
         private void btnSpace_MouseMove(object sender, MouseEventArgs e)
@@ -208,6 +306,7 @@ namespace moveUs
             {
                 SendKeys.Send(" ");
             }
+
         }
         private void general_MouseUp(object sender, MouseEventArgs e)
         {
@@ -216,11 +315,106 @@ namespace moveUs
             rightGuide.Left = 150;
             rightGuide.Top = 150;
             btnUpper.Left = 115;
-            btnUpper.Top = 325;
+            btnUpper.Top = 320;
             btnSpace.Left = 115;
-            btnSpace.Top = 325;
-            btnBackSpace.Left = 325;
+            btnSpace.Top = 320;
+            btnBackSpace.Left = 320;
             btnBackSpace.Top = 115;
+        }
+        private void leftGuide_Click(object sender, EventArgs e)
+        {
+            if (leftHypotenuse <= 50)
+            {
+                firstStep = 4;
+            }
+            else
+            {
+                if (leftAngle > 337.5 || leftAngle < 22.5)
+                {
+                    firstStep = 2;
+                }
+                else if (leftAngle > 22.5 && leftAngle < 67.5)
+                {
+
+                }
+                else if (leftAngle > 67.5 && leftAngle < 112.5)
+                {
+                    firstStep = 3;
+                }
+                else if (leftAngle > 112.5 && leftAngle < 157.5)
+                {
+
+                }
+                else if (leftAngle > 157.5 && leftAngle < 202.5)
+                {
+                    firstStep = 0;
+                }
+                else if (leftAngle > 202.5 && leftAngle < 247.5)
+                {
+
+                }
+                else if (leftAngle > 247.5 && leftAngle < 292.5)
+                {
+                    firstStep = 1;
+                }
+                else if (leftAngle > 292.5 && leftAngle < 337.5)
+                {
+
+                }
+                else
+                {//gereksiz ama olsun :D 
+                    general_MouseUp(null, null);
+                }
+            }
+            WriteFirstStepToLbl();
+        }
+
+        private void rightGuide_Click(object sender, EventArgs e)
+        {
+            if (rightHypotenuse <= 50)
+            {
+                panel1.BringToFront();
+            }
+            else
+            {
+                if (rightAngle > 337.5 || rightAngle < 22.5)
+                {
+                    secondStep = 4;
+                }
+                else if (rightAngle > 22.5 && rightAngle < 67.5)
+                {
+                    secondStep = 5;
+                }
+                else if (rightAngle > 67.5 && rightAngle < 112.5)
+                {
+                    secondStep = 6;
+                }
+                else if (rightAngle > 112.5 && rightAngle < 157.5)
+                {
+                    secondStep = 7;
+                }
+                else if (rightAngle > 157.5 && rightAngle < 202.5)
+                {
+                    secondStep = 0;
+                }
+                else if (rightAngle > 202.5 && rightAngle < 247.5)
+                {
+                    secondStep = 1;
+                }
+                else if (rightAngle > 247.5 && rightAngle < 292.5)
+                {
+                    secondStep = 2;
+                }
+                else if (rightAngle > 292.5 && rightAngle < 337.5)
+                {
+                    secondStep = 3;
+                }
+                else
+                {
+                    general_MouseUp(null, null);
+                }
+            }
+            TypeTheLetter();
         }
     }
 }
