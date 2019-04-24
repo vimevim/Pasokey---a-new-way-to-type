@@ -12,9 +12,7 @@ namespace moveUs
 {
     public partial class RealJoystick : Form
     {
-        int btn8X;
-        int btn8Y;
-        int cursorOriginX, cursorOriginY;
+        int btn8X, btn8Y, cursorOriginX, cursorOriginY;
         double hypotenuse, angle;
 
         protected override CreateParams CreateParams

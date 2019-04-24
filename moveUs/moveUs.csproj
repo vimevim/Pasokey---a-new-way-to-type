@@ -56,12 +56,6 @@
     <Compile Include="DualPanel.Designer.cs">
       <DependentUpon>DualPanel.cs</DependentUpon>
     </Compile>
-    <Compile Include="SingleForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="SingleForm.Designer.cs">
-      <DependentUpon>SingleForm.cs</DependentUpon>
-    </Compile>
     <Compile Include="MarkingMenu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -78,9 +72,6 @@
     </Compile>
     <EmbeddedResource Include="DualPanel.resx">
       <DependentUpon>DualPanel.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="SingleForm.resx">
-      <DependentUpon>SingleForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MarkingMenu.resx">
       <DependentUpon>MarkingMenu.cs</DependentUpon>

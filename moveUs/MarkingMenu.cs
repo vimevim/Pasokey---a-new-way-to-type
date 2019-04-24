@@ -12,6 +12,15 @@ namespace moveUs
 {
     public partial class MarkingMenu : Form
     {
+        //?? this.WindowState = FormWindowState.Minimized; bu kod kullanılacak
+        //cursor.position için atama yaparak imleçi, imleç merkezde olduğu için paneli merkeze alıyırouz
+        private void CursorInTheCentre()
+        {
+            Point pt = new Point(screenCentreX / 2, screenCentreY / 2);// değerleri ikiye bölüp
+            Cursor.Position = (pt);//merkeze atadık
+        }
+
+
         int screenCentreX, screenCentreY, defaultOriginX, defaultOriginY, formOriginX, formOriginY, formCentreX, formCentreY;
         double hypotenuse, angle;
         bool i = false;
@@ -93,12 +102,6 @@ namespace moveUs
             screenCentreY = Screen.PrimaryScreen.WorkingArea.Height;//ekran yüksekliğini aldık
         }
 
-        //cursor.position için atama yaparak imleçi, imleç merkezde olduğu için paneli merkeze alıyırouz
-        private void CursorInTheCentre()
-        {
-            Point pt = new Point(screenCentreX / 2, screenCentreY / 2);// değerleri ikiye bölüp
-            Cursor.Position = (pt);//merkeze atadık
-        }
         public void MarkingMenuMouseMove(object sender, MouseEventArgs e)
         {
             //Varsayılan orijin ataması yapılıyor
