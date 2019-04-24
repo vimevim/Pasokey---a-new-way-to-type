@@ -14,6 +14,7 @@ namespace moveUs
     {
         //?? this.WindowState = FormWindowState.Minimized; bu kod kullanılacak
         //cursor.position için atama yaparak imleçi, imleç merkezde olduğu için paneli merkeze alıyırouz
+
         private void CursorInTheCentre()
         {
             Point pt = new Point(screenCentreX / 2, screenCentreY / 2);// değerleri ikiye bölüp

@@ -16,7 +16,7 @@ namespace moveUs
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new MarkingMenu());
+            Application.Run(new RealJoystick());
         }
     }
 }

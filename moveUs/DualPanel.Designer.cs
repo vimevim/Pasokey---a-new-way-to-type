@@ -408,7 +408,7 @@
             this.btnSpace.TabIndex = 42;
             this.btnSpace.Text = "space";
             this.btnSpace.UseVisualStyleBackColor = true;
-            this.btnSpace.Click += new System.EventHandler(this.btnUpper_Click);
+            this.btnSpace.Click += new System.EventHandler(this.btnSpace_Click);
             this.btnSpace.MouseDown += new System.Windows.Forms.MouseEventHandler(this.ortak_MouseDown);
             this.btnSpace.MouseMove += new System.Windows.Forms.MouseEventHandler(this.btnSpace_MouseMove);
             this.btnSpace.MouseUp += new System.Windows.Forms.MouseEventHandler(this.general_MouseUp);
