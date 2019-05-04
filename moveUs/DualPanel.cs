@@ -210,35 +210,8 @@ namespace moveUs
             {
                 general_MouseUp(null, null);
             }
-        }
-        private void btnUpper_MouseMove(object sender, MouseEventArgs e)
-        {
-            if (e.Button == MouseButtons.Left)
-            {
-                btnUpper.Left = e.X + btnUpper.Left - mouseDownLocation.X;
-                btnUpper.Top = e.Y + btnUpper.Top - mouseDownLocation.Y;
-            }
-            else
-            {
-                general_MouseUp(null, null);
-            }
-        }
-
-        private void btnUpper_Click(object sender, EventArgs e)
-        {
-            if (btnUpper.Top <= 300)
-            {
-                if (upOrLow == "low")
-                {
-                    upOrLow = "up";
-                }
-                else
-                {
-                    upOrLow = "low";
-                }
-            }
-            WriteFirstStepToLbl();
-        }
+        }       
+        
 
         private void btnLeftUniter_Click(object sender, EventArgs e)
         {
@@ -258,68 +231,14 @@ namespace moveUs
             DualPanel_Load(null, null);
         }
 
-        private void btnSpace_MouseMove(object sender, MouseEventArgs e)
-        {
-            if (e.Button == MouseButtons.Left)
-            {
-                btnSpace.Left = e.X + btnSpace.Left - mouseDownLocation.X;
-                btnSpace.Top = e.Y + btnSpace.Top - mouseDownLocation.Y;
-            }
-            else
-            {
-                general_MouseUp(null, null);
-            }
-        }
-
-        private void btnBackSpace_MouseMove(object sender, MouseEventArgs e)
-        {
-            if (e.Button == MouseButtons.Left)
-            {
-                btnBackSpace.Left = e.X + btnBackSpace.Left - mouseDownLocation.X;
-                btnBackSpace.Top = e.Y + btnBackSpace.Top - mouseDownLocation.Y;
-            }
-            else
-            {
-                general_MouseUp(null, null);
-            }
-        }
         //buton hareketleri için olan komutlar burada bitiyor
-        private void btnBackSpace_Click(object sender, EventArgs e)
-        {
-            if (btnBackSpace.Left <= 300)
-            {
-                SendKeys.Send("{BS}");
-            }
-            else if (btnBackSpace.Left >= 320 && btnBackSpace.Left <= 360 && btnBackSpace.Top >= 15 && btnBackSpace.Top <= 235)
-            {
-                SendKeys.Send("{BS}");
-            }
-        }
 
-        private void btnSpace_Click(object sender, EventArgs e)
-        {
-            if (btnUpper.Top <= 300)
-            {
-                SendKeys.Send(" ");
-            }
-            else if (btnUpper.Top >= 320 && btnUpper.Top <= 360 && btnUpper.Left >= 15 && btnUpper.Left <= 235)
-            {
-                SendKeys.Send(" ");
-            }
-
-        }
         private void general_MouseUp(object sender, MouseEventArgs e)
         {
             leftGuide.Left = 150;
             leftGuide.Top = 150;
             rightGuide.Left = 150;
             rightGuide.Top = 150;
-            btnUpper.Left = 115;
-            btnUpper.Top = 320;
-            btnSpace.Left = 115;
-            btnSpace.Top = 320;
-            btnBackSpace.Left = 320;
-            btnBackSpace.Top = 115;
         }
         private void leftGuide_Click(object sender, EventArgs e)
         {
@@ -336,6 +255,15 @@ namespace moveUs
                 else if (leftAngle > 22.5 && leftAngle < 67.5)
                 {
 
+                    if (upOrLow == "low")
+                    {
+                        upOrLow = "up";
+                    }
+                    else
+                    {
+                        upOrLow = "low";
+                    }
+                    WriteFirstStepToLbl();
                 }
                 else if (leftAngle > 67.5 && leftAngle < 112.5)
                 {
@@ -343,7 +271,7 @@ namespace moveUs
                 }
                 else if (leftAngle > 112.5 && leftAngle < 157.5)
                 {
-
+                    SendKeys.Send(" ");
                 }
                 else if (leftAngle > 157.5 && leftAngle < 202.5)
                 {
@@ -351,7 +279,7 @@ namespace moveUs
                 }
                 else if (leftAngle > 202.5 && leftAngle < 247.5)
                 {
-
+                    SendKeys.Send("{BS}");
                 }
                 else if (leftAngle > 247.5 && leftAngle < 292.5)
                 {
