@@ -13,12 +13,13 @@ namespace moveUs
     public partial class MarkingMenu : Form
     {
         //?? this.WindowState = FormWindowState.Minimized; bu kod kullanılacak
-        //cursor.position için atama yaparak imleçi, imleç merkezde olduğu için paneli merkeze alıyırouz
+        //cursor.position için atama yaparak imleçi, imleç merkezde olduğu için paneli merkeze alıyoruz
 
         private void CursorInTheCentre()
         {
             Point pt = new Point(screenCentreX / 2, screenCentreY / 2);// değerleri ikiye bölüp
             Cursor.Position = (pt);//merkeze atadık
+
         }
 
 
@@ -65,6 +66,7 @@ namespace moveUs
                 TypeTheLetter(i, birinciDeger, ikinciDeger);
             }
         }
+               
         private void ResetText()
         {
             lblUp.Text = "X";
@@ -78,7 +80,10 @@ namespace moveUs
             lblCenter.Text = "<";
         }
 
-
+        private void MarkingMenu_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            this.Hide();
+        }
 
         private void TypeTheLetter(bool sayac, int birinciDeger, int ikinciDeger)
         {
@@ -144,8 +149,8 @@ namespace moveUs
 
             //çizgi başlangıcı
             Graphics g = CreateGraphics();
-            Pen d = new Pen(Color.Red);//çizici kalem
-            Pen s = new Pen(Color.White);//iz silici kalem, sıkıntısı var
+            Pen d = new Pen(Color.Black,5);//çizici kalem
+            Pen s = new Pen(Color.White,5);//iz silici kalem, sıkıntısı var
             if (e.Button == MouseButtons.Right)
             {
                 g.DrawLine(d, formCentreX, formCentreY, defaultOriginX, defaultOriginY);//çiziliyor
@@ -166,10 +171,11 @@ namespace moveUs
         private void MarkingMenu_Load(object sender, EventArgs e)
         {
             FormFollowsCursor();
+            Cursor.Hide();//imleci gizle
         }
 
         private void FormFollowsCursor()
-        {//formun bonumu 2 ye bölünüp farenin konumundan çıkartıldı,doğal olarak form farenin merkezine geçmiş oldu
+        {//formun konumu 2 ye bölünüp farenin konumundan çıkartıldı,doğal olarak form farenin merkezine geçmiş oldu
             this.Location = new Point(MousePosition.X - formCentreX, MousePosition.Y - formCentreY);
         }
         private void MarkingMenu_Click(object sender, EventArgs e)
@@ -254,6 +260,14 @@ namespace moveUs
                         i = false;
                     }
                 }
+            }
+        }
+        //form içerisinde çalışan kısayol
+        private void MarkingMenu_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.X)
+            {
+                this.Hide();
             }
         }
     }

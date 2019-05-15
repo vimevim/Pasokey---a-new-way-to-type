@@ -10,14 +10,14 @@ using System.Windows.Forms;
 
 namespace moveUs
 {
-    public partial class DualPanel : Form
+    public partial class Joystick : Form
     {
         int leftGuideX, leftGuideY, rightGuideX, rightGuideY;
         int cursorOriginX, cursorOriginY;
         double leftHypotenuse, leftAngle, rightHypotenuse, rightAngle;
         Point mouseDownLocation;
 
-        public DualPanel()
+        public Joystick()
         {
             InitializeComponent();
         }
@@ -88,7 +88,7 @@ namespace moveUs
         {
             if (firstStep == 5)//ilk aksiyonumuz gerçekleşmediyse ikinci aksiyona geçmeyi engelliyorum
             {
-                MessageBox.Show("Lütfen ilk adımı giriniz.");
+                //MessageBox.Show("Lütfen ilk adımı giriniz.");
             }
             else
             {
@@ -210,8 +210,8 @@ namespace moveUs
             {
                 general_MouseUp(null, null);
             }
-        }       
-        
+        }
+
 
         private void btnLeftUniter_Click(object sender, EventArgs e)
         {

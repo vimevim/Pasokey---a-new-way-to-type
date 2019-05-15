@@ -54,8 +54,10 @@
             // lblDownLeft
             // 
             this.lblDownLeft.AutoSize = true;
+            this.lblDownLeft.BackColor = System.Drawing.Color.Transparent;
             this.lblDownLeft.Enabled = false;
             this.lblDownLeft.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblDownLeft.ForeColor = System.Drawing.Color.Black;
             this.lblDownLeft.Location = new System.Drawing.Point(175, 477);
             this.lblDownLeft.Name = "lblDownLeft";
             this.lblDownLeft.Size = new System.Drawing.Size(48, 48);
@@ -65,8 +67,10 @@
             // lblDownMid
             // 
             this.lblDownMid.AutoSize = true;
+            this.lblDownMid.BackColor = System.Drawing.Color.Transparent;
             this.lblDownMid.Enabled = false;
             this.lblDownMid.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblDownMid.ForeColor = System.Drawing.Color.Black;
             this.lblDownMid.Location = new System.Drawing.Point(326, 513);
             this.lblDownMid.Name = "lblDownMid";
             this.lblDownMid.Size = new System.Drawing.Size(48, 48);
@@ -76,8 +80,10 @@
             // lblDownRight
             // 
             this.lblDownRight.AutoSize = true;
+            this.lblDownRight.BackColor = System.Drawing.Color.Transparent;
             this.lblDownRight.Enabled = false;
             this.lblDownRight.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblDownRight.ForeColor = System.Drawing.Color.Black;
             this.lblDownRight.Location = new System.Drawing.Point(477, 477);
             this.lblDownRight.Name = "lblDownRight";
             this.lblDownRight.Size = new System.Drawing.Size(48, 48);
@@ -87,8 +93,10 @@
             // lblUpLeft
             // 
             this.lblUpLeft.AutoSize = true;
+            this.lblUpLeft.BackColor = System.Drawing.Color.Transparent;
             this.lblUpLeft.Enabled = false;
             this.lblUpLeft.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblUpLeft.ForeColor = System.Drawing.Color.Black;
             this.lblUpLeft.Location = new System.Drawing.Point(175, 175);
             this.lblUpLeft.Name = "lblUpLeft";
             this.lblUpLeft.Size = new System.Drawing.Size(48, 48);
@@ -98,8 +106,10 @@
             // lblMidLeft
             // 
             this.lblMidLeft.AutoSize = true;
+            this.lblMidLeft.BackColor = System.Drawing.Color.Transparent;
             this.lblMidLeft.Enabled = false;
             this.lblMidLeft.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblMidLeft.ForeColor = System.Drawing.Color.Black;
             this.lblMidLeft.Location = new System.Drawing.Point(139, 326);
             this.lblMidLeft.Name = "lblMidLeft";
             this.lblMidLeft.Size = new System.Drawing.Size(48, 48);
@@ -109,8 +119,10 @@
             // lblMidRight
             // 
             this.lblMidRight.AutoSize = true;
+            this.lblMidRight.BackColor = System.Drawing.Color.Transparent;
             this.lblMidRight.Enabled = false;
             this.lblMidRight.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblMidRight.ForeColor = System.Drawing.Color.Black;
             this.lblMidRight.Location = new System.Drawing.Point(513, 326);
             this.lblMidRight.Name = "lblMidRight";
             this.lblMidRight.Size = new System.Drawing.Size(48, 48);
@@ -120,8 +132,10 @@
             // lblUpRight
             // 
             this.lblUpRight.AutoSize = true;
+            this.lblUpRight.BackColor = System.Drawing.Color.Transparent;
             this.lblUpRight.Enabled = false;
             this.lblUpRight.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblUpRight.ForeColor = System.Drawing.Color.Black;
             this.lblUpRight.Location = new System.Drawing.Point(477, 175);
             this.lblUpRight.Name = "lblUpRight";
             this.lblUpRight.Size = new System.Drawing.Size(48, 48);
@@ -131,9 +145,11 @@
             // lblCenter
             // 
             this.lblCenter.AutoSize = true;
+            this.lblCenter.BackColor = System.Drawing.Color.Transparent;
             this.lblCenter.Enabled = false;
             this.lblCenter.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblCenter.Location = new System.Drawing.Point(326, 363);
+            this.lblCenter.ForeColor = System.Drawing.Color.Black;
+            this.lblCenter.Location = new System.Drawing.Point(326, 326);
             this.lblCenter.Name = "lblCenter";
             this.lblCenter.Size = new System.Drawing.Size(48, 48);
             this.lblCenter.TabIndex = 15;
@@ -143,8 +159,10 @@
             // lblUp
             // 
             this.lblUp.AutoSize = true;
+            this.lblUp.BackColor = System.Drawing.Color.Transparent;
             this.lblUp.Enabled = false;
             this.lblUp.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblUp.ForeColor = System.Drawing.Color.Black;
             this.lblUp.Location = new System.Drawing.Point(326, 139);
             this.lblUp.Name = "lblUp";
             this.lblUp.Size = new System.Drawing.Size(48, 48);
@@ -154,6 +172,8 @@
             // label3
             // 
             this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.ForeColor = System.Drawing.Color.Black;
             this.label3.Location = new System.Drawing.Point(111, 10);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(55, 17);
@@ -163,6 +183,8 @@
             // lblAngle
             // 
             this.lblAngle.AutoSize = true;
+            this.lblAngle.BackColor = System.Drawing.Color.Transparent;
+            this.lblAngle.ForeColor = System.Drawing.Color.Black;
             this.lblAngle.Location = new System.Drawing.Point(320, 40);
             this.lblAngle.Name = "lblAngle";
             this.lblAngle.Size = new System.Drawing.Size(46, 17);
@@ -172,6 +194,8 @@
             // labelHipotenus
             // 
             this.labelHipotenus.AutoSize = true;
+            this.labelHipotenus.BackColor = System.Drawing.Color.Transparent;
+            this.labelHipotenus.ForeColor = System.Drawing.Color.Black;
             this.labelHipotenus.Location = new System.Drawing.Point(320, 10);
             this.labelHipotenus.Name = "labelHipotenus";
             this.labelHipotenus.Size = new System.Drawing.Size(46, 17);
@@ -181,6 +205,8 @@
             // labelEYH
             // 
             this.labelEYH.AutoSize = true;
+            this.labelEYH.BackColor = System.Drawing.Color.Transparent;
+            this.labelEYH.ForeColor = System.Drawing.Color.Black;
             this.labelEYH.Location = new System.Drawing.Point(170, 40);
             this.labelEYH.Name = "labelEYH";
             this.labelEYH.Size = new System.Drawing.Size(46, 17);
@@ -190,6 +216,8 @@
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.ForeColor = System.Drawing.Color.Black;
             this.label1.Location = new System.Drawing.Point(12, 10);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(29, 17);
@@ -199,6 +227,8 @@
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.ForeColor = System.Drawing.Color.Black;
             this.label2.Location = new System.Drawing.Point(12, 40);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(29, 17);
@@ -208,6 +238,8 @@
             // labelEY
             // 
             this.labelEY.AutoSize = true;
+            this.labelEY.BackColor = System.Drawing.Color.Transparent;
+            this.labelEY.ForeColor = System.Drawing.Color.Black;
             this.labelEY.Location = new System.Drawing.Point(50, 40);
             this.labelEY.Name = "labelEY";
             this.labelEY.Size = new System.Drawing.Size(46, 17);
@@ -217,6 +249,8 @@
             // label5
             // 
             this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.Transparent;
+            this.label5.ForeColor = System.Drawing.Color.Black;
             this.label5.Location = new System.Drawing.Point(232, 40);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(55, 17);
@@ -226,6 +260,8 @@
             // labelEXW
             // 
             this.labelEXW.AutoSize = true;
+            this.labelEXW.BackColor = System.Drawing.Color.Transparent;
+            this.labelEXW.ForeColor = System.Drawing.Color.Black;
             this.labelEXW.Location = new System.Drawing.Point(170, 10);
             this.labelEXW.Name = "labelEXW";
             this.labelEXW.Size = new System.Drawing.Size(46, 17);
@@ -235,6 +271,8 @@
             // label4
             // 
             this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.Transparent;
+            this.label4.ForeColor = System.Drawing.Color.Black;
             this.label4.Location = new System.Drawing.Point(232, 10);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(84, 17);
@@ -244,6 +282,8 @@
             // labelEX
             // 
             this.labelEX.AutoSize = true;
+            this.labelEX.BackColor = System.Drawing.Color.Transparent;
+            this.labelEX.ForeColor = System.Drawing.Color.Black;
             this.labelEX.Location = new System.Drawing.Point(50, 10);
             this.labelEX.Name = "labelEX";
             this.labelEX.Size = new System.Drawing.Size(46, 17);
@@ -253,6 +293,8 @@
             // label7
             // 
             this.label7.AutoSize = true;
+            this.label7.BackColor = System.Drawing.Color.Transparent;
+            this.label7.ForeColor = System.Drawing.Color.Black;
             this.label7.Location = new System.Drawing.Point(111, 40);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(55, 17);
@@ -262,7 +304,7 @@
             // MarkingMenu
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
-            this.BackColor = System.Drawing.SystemColors.Window;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(700, 700);
             this.Controls.Add(this.lblDownLeft);
             this.Controls.Add(this.lblDownMid);
@@ -285,11 +327,17 @@
             this.Controls.Add(this.label4);
             this.Controls.Add(this.labelEX);
             this.Controls.Add(this.label7);
+            this.ForeColor = System.Drawing.SystemColors.Window;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.KeyPreview = true;
             this.Name = "MarkingMenu";
+            this.ShowIcon = false;
+            this.ShowInTaskbar = false;
             this.Text = "MarkingMenu";
             this.Load += new System.EventHandler(this.MarkingMenu_Load);
             this.Click += new System.EventHandler(this.MarkingMenu_Click);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.MarkingMenu_KeyDown);
+            this.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.MarkingMenu_MouseDoubleClick);
             this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.MarkingMenuMouseMove);
             this.MouseUp += new System.Windows.Forms.MouseEventHandler(this.MarkingMenuMouseUp);
             this.ResumeLayout(false);
