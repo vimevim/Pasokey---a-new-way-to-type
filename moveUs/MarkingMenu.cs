@@ -151,7 +151,7 @@ namespace moveUs
             Graphics g = CreateGraphics();
             Pen d = new Pen(Color.Black,5);//çizici kalem
             Pen s = new Pen(Color.White,5);//iz silici kalem, sıkıntısı var
-            if (e.Button == MouseButtons.Right)
+            if (e.Button == MouseButtons.Middle)
             {
                 g.DrawLine(d, formCentreX, formCentreY, defaultOriginX, defaultOriginY);//çiziliyor
                 g.DrawLine(s, formCentreX, formCentreY, defaultOriginX, defaultOriginY);//çizginin izi siliniyor
@@ -171,7 +171,6 @@ namespace moveUs
         private void MarkingMenu_Load(object sender, EventArgs e)
         {
             FormFollowsCursor();
-            Cursor.Hide();//imleci gizle
         }
 
         private void FormFollowsCursor()

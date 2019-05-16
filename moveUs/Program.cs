@@ -22,7 +22,7 @@ namespace moveUs
                 MessageBox.Show("Bu program zaten çalışıyor.");
                 return;
             }
-            Application.Run(new popUpPanel());
+            Application.Run(new main());
             GC.KeepAlive(mutex); //Nesneyi kaldırıyoruz. 
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);

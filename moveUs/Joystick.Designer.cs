@@ -370,15 +370,17 @@
             this.buttonElipse11.TabIndex = 44;
             this.buttonElipse11.UseVisualStyleBackColor = false;
             // 
-            // DualPanel
+            // Joystick
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.ClientSize = new System.Drawing.Size(700, 350);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
-            this.ForeColor = System.Drawing.Color.Coral;
+            this.ForeColor = System.Drawing.Color.Black;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "DualPanel";
+            this.Name = "Joystick";
+            this.ShowIcon = false;
+            this.ShowInTaskbar = false;
             this.Text = "DualPanel";
             this.TopMost = true;
             this.Load += new System.EventHandler(this.DualPanel_Load);

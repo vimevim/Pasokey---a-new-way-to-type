@@ -33,23 +33,20 @@ namespace moveUs
         public void MouseMoved(object sender, MouseEventArgs e)
         {
             if (e.Clicks > 0)
-            {
+            {/*
                 if (e.Button == MouseButtons.Right)
                 {
-                    this.Show();
-                    this.TopMost = true;
-                    this.Location = new Point(MousePosition.X, MousePosition.Y);
-
-                    /*contextMenuStrip1.Show();
-                    contextMenuStrip1.Left = MousePosition.X;
-                    contextMenuStrip1.Top = MousePosition.Y;*/
+                    contextMenuStrip1.Show();
+                    contextMenuStrip1.Left = e.X- 94;
+                    contextMenuStrip1.Top = e.Y-208;
                 }
                 else
                 {
-                    this.Hide();
-                }
+                    contextMenuStrip1.Hide();
+                }*/
             }
         }
+
         Joystick joystick = new Joystick();
 
         MarkingMenu mMenu = new MarkingMenu();

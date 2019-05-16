@@ -46,14 +46,14 @@
             this.joystickToolStripMenuItem,
             this.closeToolStripMenuItem});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(208, 94);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(211, 122);
             // 
             // markingMenuToolStripMenuItem
             // 
             this.markingMenuToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.markingMenuToolStripMenuItem.Name = "markingMenuToolStripMenuItem";
             this.markingMenuToolStripMenuItem.Padding = new System.Windows.Forms.Padding(0);
-            this.markingMenuToolStripMenuItem.Size = new System.Drawing.Size(207, 30);
+            this.markingMenuToolStripMenuItem.Size = new System.Drawing.Size(210, 30);
             this.markingMenuToolStripMenuItem.Text = "marking menu";
             this.markingMenuToolStripMenuItem.Click += new System.EventHandler(this.markingMenuToolStripMenuItem_Click);
             // 
@@ -62,7 +62,7 @@
             this.joystickToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.joystickToolStripMenuItem.Name = "joystickToolStripMenuItem";
             this.joystickToolStripMenuItem.Padding = new System.Windows.Forms.Padding(0);
-            this.joystickToolStripMenuItem.Size = new System.Drawing.Size(207, 30);
+            this.joystickToolStripMenuItem.Size = new System.Drawing.Size(210, 30);
             this.joystickToolStripMenuItem.Text = "joystick";
             this.joystickToolStripMenuItem.Click += new System.EventHandler(this.joystickToolStripMenuItem_Click);
             // 
@@ -71,7 +71,7 @@
             this.closeToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.closeToolStripMenuItem.Name = "closeToolStripMenuItem";
             this.closeToolStripMenuItem.Padding = new System.Windows.Forms.Padding(0);
-            this.closeToolStripMenuItem.Size = new System.Drawing.Size(207, 30);
+            this.closeToolStripMenuItem.Size = new System.Drawing.Size(210, 30);
             this.closeToolStripMenuItem.Text = "close";
             this.closeToolStripMenuItem.Click += new System.EventHandler(this.closeToolStripMenuItem_Click);
             // 
@@ -79,20 +79,23 @@
             // 
             this.notifyIcon1.ContextMenuStrip = this.contextMenuStrip1;
             this.notifyIcon1.Icon = ((System.Drawing.Icon)(resources.GetObject("notifyIcon1.Icon")));
-            this.notifyIcon1.Text = "Sistem Tepsisi";
+            this.notifyIcon1.Text = "Pasoyaz";
             this.notifyIcon1.Visible = true;
             this.notifyIcon1.Click += new System.EventHandler(this.notifyIcon1_Click);
             // 
             // main
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(150, 150);
+            this.ForeColor = System.Drawing.SystemColors.Window;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.KeyPreview = true;
             this.Name = "main";
             this.ShowIcon = false;
             this.ShowInTaskbar = false;
             this.Text = "main";
+            this.TopMost = true;
             this.WindowState = System.Windows.Forms.FormWindowState.Minimized;
             this.Load += new System.EventHandler(this.main_Load);
             this.contextMenuStrip1.ResumeLayout(false);
