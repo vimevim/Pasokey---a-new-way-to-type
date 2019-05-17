@@ -16,10 +16,10 @@ namespace moveUs
         {
             bool kontrol;
 
-            Mutex mutex = new Mutex(true, "Program", out kontrol); //Örnek Mutex nesnesi oluşturalım. 
+            Mutex mutex = new Mutex(true, "PasoKey", out kontrol); //Örnek Mutex nesnesi oluşturalım. 
             if (kontrol == false)
             {
-                MessageBox.Show("Bu program zaten çalışıyor.");
+                MessageBox.Show("PasoKey zaten çalışmakta.");
                 return;
             }
             Application.Run(new main());

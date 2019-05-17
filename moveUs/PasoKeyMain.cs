@@ -7,12 +7,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using gma.System.Windows;
+using Microsoft.Win32;
 
 namespace moveUs
 {
-    public partial class Marking : Form
+    public partial class PasoKeyMain : Form
     {
-        public Marking()
+        public PasoKeyMain()
         {
             InitializeComponent();
         }

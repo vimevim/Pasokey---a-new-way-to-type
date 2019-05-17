@@ -10,12 +10,13 @@ using System.Windows.Forms;
 
 namespace moveUs
 {
-    public partial class MarkingMenu : Form
+    public partial class MarkingMenuFixed : Form
     {
-        private void CursorInTheCentre()
+        public MarkingMenuFixed()
         {
-            Point pt = new Point(Screen.PrimaryScreen.WorkingArea.Width / 2, Screen.PrimaryScreen.WorkingArea.Height / 2);// değerleri ikiye bölüp
-            Cursor.Position = (pt);//merkeze atadık
+            InitializeComponent();
+            formCentreX = this.Width / 2;
+            formCentreY = this.Height / 2;
         }
 
         int defaultOriginX, defaultOriginY;
@@ -23,6 +24,13 @@ namespace moveUs
         int formCentreX, formCentreY;
         double hypotenuse, angle;
         bool i = false;
+
+        private void CursorInTheCentre()
+        {
+            Point pt = new Point(Screen.PrimaryScreen.WorkingArea.Width / 2, Screen.PrimaryScreen.WorkingArea.Height / 2);// değerleri ikiye bölüp
+            Cursor.Position = (pt);//merkeze atadık
+        }
+
         protected override CreateParams CreateParams
         {
             get
@@ -64,19 +72,6 @@ namespace moveUs
             }
         }
 
-        private void ResetText()
-        {
-            lblUp.Text = "X";
-            lblUpRight.Text = "X";
-            lblMidRight.Text = "X";
-            lblDownRight.Text = "X";
-            lblDownMid.Text = "X";
-            lblDownLeft.Text = "X";
-            lblMidLeft.Text = "X";
-            lblUpLeft.Text = "X";
-            lblCenter.Text = "<";
-        }
-
         private void TypeTheLetter(bool sayac, int birinciDeger, int ikinciDeger)
         {
             if (sayac == false)
@@ -92,20 +87,25 @@ namespace moveUs
             }
         }
 
-        private void MarkingMenu_MouseDoubleClick(object sender, MouseEventArgs e)
+        private void ResetText()
         {
-            this.Hide();
+            lblUp.Text = "X";
+            lblUpRight.Text = "X";
+            lblMidRight.Text = "X";
+            lblDownRight.Text = "X";
+            lblDownMid.Text = "X";
+            lblDownLeft.Text = "X";
+            lblMidLeft.Text = "X";
+            lblUpLeft.Text = "X";
+            lblCenter.Text = "<";
         }
 
-        public MarkingMenu()
+        private void MarkingMenuFixed_Load(object sender, EventArgs e)
         {
-            InitializeComponent();
-            formCentreX = this.Width / 2;
-            formCentreY = this.Height / 2;
             CursorInTheCentre();
         }
 
-        public void MarkingMenuMouseMove(object sender, MouseEventArgs e)
+        private void MarkingMenuFixed_MouseMove(object sender, MouseEventArgs e)
         {
             //Varsayılan orijin ataması yapılıyor
             defaultOriginX = e.X;
@@ -130,19 +130,7 @@ namespace moveUs
             }
             ////*Farenin konumları yazdırılıyor*////
 
-            //farenin normal konumu
-            labelEX.Text = Convert.ToString(defaultOriginX);
-            labelEY.Text = Convert.ToString(defaultOriginY);
 
-            //farenin orijine göre konumu
-            labelEXW.Text = Convert.ToString(formOriginX);
-            labelEYH.Text = Convert.ToString(formOriginY);
-
-            //farenin açısı
-            lblAngle.Text = Convert.ToString(angle);
-
-            //hypotenuse kontrolü ve yazdırılması
-            labelHipotenus.Text = Convert.ToString(hypotenuse);
 
             //çizgi başlangıcı
             Graphics g = CreateGraphics();
@@ -199,28 +187,11 @@ namespace moveUs
             }
             else
             {
-                FormFollowsCursor();
+                CursorInTheCentre();
             }
         }
 
-        private void MarkingMenuMouseUp(object sender, MouseEventArgs e)
-        {
-            //Form1_Click(null, null);//formun dışına çıkınca çalışmasını sağlıyor ama hata var
-            FormFollowsCursor();
-        }
-
-        private void MarkingMenu_Load(object sender, EventArgs e)
-        {
-            FormFollowsCursor();
-            //this.TransparencyKey = BackColor;
-        }
-
-        private void FormFollowsCursor()
-        {//formun konumu 2 ye bölünüp farenin konumundan çıkartıldı,doğal olarak form farenin merkezine geçmiş oldu
-            this.Location = new Point(MousePosition.X - formCentreX, MousePosition.Y - formCentreY);
-        }
-
-        private void MarkingMenu_Click(object sender, EventArgs e)
+        private void MarkingMenuFixed_Click(object sender, EventArgs e)
         {
             if (hypotenuse <= 50)
             {
@@ -304,14 +275,94 @@ namespace moveUs
             }
         }
 
-        //form içerisinde çalışan kısayol
-        private void MarkingMenu_KeyDown(object sender, KeyEventArgs e)
+        private void MarkingMenuFixed_MouseDoubleClick(object sender, MouseEventArgs e)
         {
-            if (e.KeyCode == Keys.X)
+            this.Hide();
+        }
+
+        private void MarkingMenuFixed_MouseUp(object sender, MouseEventArgs e)
+        {
+            if (hypotenuse <= 50)
             {
-                this.Hide();
+                if (i == false)
+                {
+                    WriteFirstStepToLbl(4, 9);
+                }
+                else
+                {
+                    ResetText();
+                    i = false;
+                }
             }
+            else
+            {
+                if (angle > 337.5 || angle < 22.5)
+                {
+                    WriteFirstStepToLbl(2, 4);
+                }
+                else if (angle > 22.5 && angle < 67.5)
+                {
+                    if (i == true)
+                    {
+                        WriteFirstStepToLbl(5, 5);
+                    }
+                    else
+                    {
+                        ResetText();
+                        i = false;
+                    }
+                }
+                else if (angle > 67.5 && angle < 112.5)
+                {
+                    WriteFirstStepToLbl(3, 6);
+                }
+                else if (angle > 112.5 && angle < 157.5)
+                {
+                    if (i == true)
+                    {
+                        WriteFirstStepToLbl(7, 7);
+                    }
+                    else
+                    {
+                        ResetText();
+                        i = false;
+                    }
+                }
+                else if (angle > 157.5 && angle < 202.5)
+                {
+                    WriteFirstStepToLbl(0, 0);
+                }
+                else if (angle > 202.5 && angle < 247.5)
+                {
+                    if (i == true)
+                    {
+                        WriteFirstStepToLbl(1, 1);
+                    }
+                    else
+                    {
+                        ResetText();
+                        i = false;
+                    }
+
+                }
+                else if (angle > 247.5 && angle < 292.5)
+                {
+                    WriteFirstStepToLbl(1, 2);
+                }
+                else if (angle > 292.5 && angle < 337.5)
+                {
+                    if (i == true)
+                    {
+                        WriteFirstStepToLbl(3, 3);
+                    }
+                    else
+                    {
+                        ResetText();
+                        i = false;
+                    }
+                }
+            }
+            CursorInTheCentre();
         }
     }
 }
-

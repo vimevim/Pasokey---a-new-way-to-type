@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using gma.System.Windows;
+using Microsoft.Win32;
 
 namespace moveUs
 {
@@ -33,17 +34,16 @@ namespace moveUs
         public void MouseMoved(object sender, MouseEventArgs e)
         {
             if (e.Clicks > 0)
-            {/*
-                if (e.Button == MouseButtons.Right)
+            {
+                
+                 if (e.Button == MouseButtons.Right)
                 {
-                    contextMenuStrip1.Show();
-                    contextMenuStrip1.Left = e.X- 94;
-                    contextMenuStrip1.Top = e.Y-208;
+
                 }
                 else
                 {
-                    contextMenuStrip1.Hide();
-                }*/
+                }
+                
             }
         }
 

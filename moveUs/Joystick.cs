@@ -103,7 +103,7 @@ namespace moveUs
                     rightGuide.Text = keyPadUpper[firstStep, secondStep];
                 }
             }
-            panel1.BringToFront();//panel1 ön plana çıkıyor
+            //panel1.BringToFront();
             general_MouseUp(null, null);
         }
 
@@ -152,13 +152,13 @@ namespace moveUs
             //if the cursor moves on top of the button
             if (e.Button == System.Windows.Forms.MouseButtons.Left)//if the button click continous
             {
-                if (leftHypotenuse < 100)//daire içerisinden çıkartmıyor
+                if (leftHypotenuse < 125)//daire içerisinden çıkartmıyor
                 {
-                    if (cursorOriginX < 100 && cursorOriginX > -100)//x ekseninde 100 ile -100 arasından çıkartmıyor
+                    if (cursorOriginX < 125 && cursorOriginX > -125)//x ekseninde 100 ile -100 arasından çıkartmıyor
                     {
                         leftGuide.Left = leftGuideX;
                     }
-                    if (cursorOriginY < 100 && cursorOriginY > -100)//y ekseninde 100 ile -100 arasından çıkartmıyor
+                    if (cursorOriginY < 125 && cursorOriginY > -125)//y ekseninde 100 ile -100 arasından çıkartmıyor
                     {
                         leftGuide.Top = leftGuideY;
                     }
@@ -287,7 +287,7 @@ namespace moveUs
                 }
                 else if (leftAngle > 292.5 && leftAngle < 337.5)
                 {
-
+                    SendKeys.Send("{ENTER}");
                 }
                 else
                 {//gereksiz ama olsun :D 
@@ -341,8 +341,9 @@ namespace moveUs
                 {
                     general_MouseUp(null, null);
                 }
+                TypeTheLetter();
             }
-            TypeTheLetter();
+
         }
     }
 }
