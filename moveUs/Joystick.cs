@@ -79,7 +79,7 @@ namespace moveUs
                     btnLbl6.Text = keyPadUpper[firstStep, 6];
                     btnLbl7.Text = keyPadUpper[firstStep, 7];
                 }
-                panel2.BringToFront();//panel2 yi ön plana çıkartıyorum
+                rightGuide.BringToFront();//panel2 yi ön plana çıkartıyorum
                 general_MouseUp(null, null);//tüm butonların konumunu başlangıca çekiyorum
             }
         }
@@ -95,12 +95,12 @@ namespace moveUs
                 if (upOrLow == "low")
                 {
                     SendKeys.Send(keyPadLower[firstStep, secondStep]);//klavye girdisi gönderiliyor
-                    rightGuide.Text = keyPadLower[firstStep, secondStep];//seçilen karakter hafızada buton değeri olarak tutuluyor
+                    movingPartRight.Text = keyPadLower[firstStep, secondStep];//seçilen karakter hafızada buton değeri olarak tutuluyor
                 }
                 else
                 {
                     SendKeys.Send(keyPadUpper[firstStep, secondStep]);
-                    rightGuide.Text = keyPadUpper[firstStep, secondStep];
+                    movingPartRight.Text = keyPadUpper[firstStep, secondStep];
                 }
             }
             //panel1.BringToFront();
@@ -114,133 +114,33 @@ namespace moveUs
         {
             this.Width = Screen.PrimaryScreen.Bounds.Width;//formun genişliğini ekranın genişliğiyle eşitleyen komut
             this.Location = new Point(screenWidth - this.Width, screenHeight - this.Height);//formun konumunu ekranın altına sabitleyen komut
-            panel2.Location = new Point(this.Width - panel2.Width, 0);//panel2 konumunu başlangıçta sağa yaslayan komut.
+            rightGuide.Location = new Point(this.Width - rightGuide.Width, 0);//panel2 konumunu başlangıçta sağa yaslayan komut.
             this.TransparencyKey = BackColor;
             btnLeftDivider.Visible = false;
         }
         //butonları hareket ettirme komutları burada başlıyor
-        private void ortak_MouseDown(object sender, MouseEventArgs e)
+
+        private void leftGuide_MouseDown(object sender, MouseEventArgs e)
         {
             if (e.Button == MouseButtons.Left)
             {
                 mouseDownLocation = e.Location;
+                movingPartLeft.Left = leftGuideX;
+                movingPartLeft.Top = leftGuideY;
             }
         }
 
-        private void leftGuide_MouseMove(object sender, MouseEventArgs e)
+        private void rightGuide_MouseDown(object sender, MouseEventArgs e)
         {
-            //orijine göre leftHypotenuse hesaplaması
-            leftHypotenuse = Math.Sqrt(cursorOriginX * cursorOriginX + cursorOriginY * cursorOriginY);
-
-            //orijin ve hipotenüs ile açı hesaplaması - 360 ve 0 derece çakışınca bize 360 veriyor
-            leftAngle = Math.Acos(cursorOriginY / leftHypotenuse);
-            if (cursorOriginX < 0)
+            if (e.Button == MouseButtons.Left)
             {
-                leftAngle = leftAngle * 180 / Math.PI;
-            }
-            else
-            {
-                leftAngle -= leftAngle * 180 / Math.PI;
-                leftAngle += 360;
-            }
-
-            leftGuideX = e.X + leftGuide.Left - mouseDownLocation.X;
-            leftGuideY = e.Y + leftGuide.Top - mouseDownLocation.Y;
-            cursorOriginX = leftGuideX + 25 - (panel1.Width / 2);
-            cursorOriginY = leftGuideY + 25 - (panel1.Height / 2);
-
-            //if the cursor moves on top of the button
-            if (e.Button == System.Windows.Forms.MouseButtons.Left)//if the button click continous
-            {
-                if (leftHypotenuse < 125)//daire içerisinden çıkartmıyor
-                {
-                    if (cursorOriginX < 125 && cursorOriginX > -125)//x ekseninde 100 ile -100 arasından çıkartmıyor
-                    {
-                        leftGuide.Left = leftGuideX;
-                    }
-                    if (cursorOriginY < 125 && cursorOriginY > -125)//y ekseninde 100 ile -100 arasından çıkartmıyor
-                    {
-                        leftGuide.Top = leftGuideY;
-                    }
-                }
-            }
-            else//butona basmayı bırakınca buton orjinal konumuna dönüyorr.
-            {
-                general_MouseUp(null, null);
-            }
-        }
-        private void rightGuide_MouseMove(object sender, MouseEventArgs e)
-        {
-            //orijine göre leftHypotenuse hesaplaması
-            rightHypotenuse = Math.Sqrt(cursorOriginX * cursorOriginX + cursorOriginY * cursorOriginY);
-
-            //orijin ve hipotenüs ile açı hesaplaması - 360 ve 0 derece çakışınca bize 360 veriyor
-            rightAngle = Math.Acos(cursorOriginY / rightHypotenuse);
-            if (cursorOriginX < 0)
-            {
-                rightAngle = rightAngle * 180 / Math.PI;
-            }
-            else
-            {
-                rightAngle -= rightAngle * 180 / Math.PI;
-                rightAngle += 360;
-            }
-
-            rightGuideX = e.X + rightGuide.Left - mouseDownLocation.X;
-            rightGuideY = e.Y + rightGuide.Top - mouseDownLocation.Y;
-            cursorOriginX = rightGuideX + 25 - (panel2.Width / 2);//left değeri bize butonun merkezinden değil sol başlangıcından değer veriyor 
-            cursorOriginY = rightGuideY + 25 - (panel2.Height / 2);// top ta öyle, bende butonun yarısı kadar değer verip butonun merkezini simüle ediyorum.
-
-            //if the cursor moves on top of the button
-            if (e.Button == System.Windows.Forms.MouseButtons.Left)//if the button click continous
-            {
-                if (rightHypotenuse < 100)//daire içerisinden çıkartmıyor
-                {
-                    if (cursorOriginX < 100 && cursorOriginX > -100)//x ekseninde 100 ile -100 arasından çıkartmıyor
-                    {
-                        rightGuide.Left = rightGuideX;
-                    }
-                    if (cursorOriginY < 100 && cursorOriginY > -100)//y ekseninde 100 ile -100 arasından çıkartmıyor
-                    {
-                        rightGuide.Top = rightGuideY;
-                    }
-                }
-            }
-            else//butona basmayı bırakınca buton orjinal konumuna dönüyorr.
-            {
-                general_MouseUp(null, null);
+                mouseDownLocation = e.Location;
+                movingPartRight.Left = rightGuideX;
+                movingPartRight.Top = rightGuideY;
             }
         }
 
-
-        private void btnLeftUniter_Click(object sender, EventArgs e)
-        {
-            this.Width = panel1.Width;//formun boyutu bir panel boyutuyla eşitlenir
-            this.Location = new Point(screenWidth - this.Width, screenHeight - this.Height);//formun konumu sağ alta sabitlenir
-            panel2.Location = new Point(0, 0);//panel2 konumu panel1 ile üst üste getirilir
-            btnLeftDivider.Visible = true;
-            btnLeftUniter.Visible = false;
-            panel1.BringToFront();
-        }
-
-        private void btnLeftDivider_Click(object sender, EventArgs e)
-        {
-            //formu yeniden yükler, başlangıç konumuna döner
-            this.Controls.Clear();
-            this.InitializeComponent();
-            DualPanel_Load(null, null);
-        }
-
-        //buton hareketleri için olan komutlar burada bitiyor
-
-        private void general_MouseUp(object sender, MouseEventArgs e)
-        {
-            leftGuide.Left = 150;
-            leftGuide.Top = 150;
-            rightGuide.Left = 150;
-            rightGuide.Top = 150;
-        }
-        private void leftGuide_Click(object sender, EventArgs e)
+        private void leftGuide_MouseUp(object sender, MouseEventArgs e)
         {
             if (leftHypotenuse <= 50)
             {
@@ -297,11 +197,11 @@ namespace moveUs
             WriteFirstStepToLbl();
         }
 
-        private void rightGuide_Click(object sender, EventArgs e)
+        private void rightGuide_MouseUp(object sender, MouseEventArgs e)
         {
             if (rightHypotenuse <= 50)
             {
-                panel1.BringToFront();
+                leftGuide.BringToFront();
             }
             else
             {
@@ -343,7 +243,121 @@ namespace moveUs
                 }
                 TypeTheLetter();
             }
+        }
 
+        private void leftGuide_MouseMove(object sender, MouseEventArgs e)
+        {
+            //orijine göre leftHypotenuse hesaplaması
+            leftHypotenuse = Math.Sqrt(cursorOriginX * cursorOriginX + cursorOriginY * cursorOriginY);
+
+            //orijin ve hipotenüs ile açı hesaplaması - 360 ve 0 derece çakışınca bize 360 veriyor
+            leftAngle = Math.Acos(cursorOriginY / leftHypotenuse);
+            if (cursorOriginX < 0)
+            {
+                leftAngle = leftAngle * 180 / Math.PI;
+            }
+            else
+            {
+                leftAngle -= leftAngle * 180 / Math.PI;
+                leftAngle += 360;
+            }
+
+            leftGuideX = e.X - (movingPartLeft.Width / 2);
+            leftGuideY = e.Y - (movingPartLeft.Height/2);
+            cursorOriginX = e.X - (leftGuide.Width / 2);
+            cursorOriginY = e.Y - (leftGuide.Height / 2);
+
+            //if the cursor moves on top of the button
+            if (e.Button == MouseButtons.Left)//if the button click continous
+            {
+                if (leftHypotenuse < 125)//daire içerisinden çıkartmıyor
+                {
+                    if (cursorOriginX < 125 && cursorOriginX > -125)//x ekseninde 100 ile -100 arasından çıkartmıyor
+                    {
+                        movingPartLeft.Left = leftGuideX;
+                    }
+                    if (cursorOriginY < 125 && cursorOriginY > -125)//y ekseninde 100 ile -100 arasından çıkartmıyor
+                    {
+                        movingPartLeft.Top = leftGuideY;
+                    }
+                }
+            }
+            else//butona basmayı bırakınca buton orjinal konumuna dönüyorr.
+            {
+                general_MouseUp(null, null);
+            }
+        }
+        private void rightGuide_MouseMove(object sender, MouseEventArgs e)
+        {
+            //orijine göre leftHypotenuse hesaplaması
+            rightHypotenuse = Math.Sqrt(cursorOriginX * cursorOriginX + cursorOriginY * cursorOriginY);
+
+            //orijin ve hipotenüs ile açı hesaplaması - 360 ve 0 derece çakışınca bize 360 veriyor
+            rightAngle = Math.Acos(cursorOriginY / rightHypotenuse);
+            if (cursorOriginX < 0)
+            {
+                rightAngle = rightAngle * 180 / Math.PI;
+            }
+            else
+            {
+                rightAngle -= rightAngle * 180 / Math.PI;
+                rightAngle += 360;
+            }
+
+            rightGuideX = e.X - (movingPartRight.Width / 2);
+            rightGuideY = e.Y - (movingPartRight.Height / 2);
+            cursorOriginX = e.X - (rightGuide.Width / 2);
+            cursorOriginY = e.Y - (rightGuide.Height / 2);
+
+
+            //if the cursor moves on top of the button
+            if (e.Button == System.Windows.Forms.MouseButtons.Left)//if the button click continous
+            {
+                if (rightHypotenuse < 125)//daire içerisinden çıkartmıyor
+                {
+                    if (cursorOriginX < 125 && cursorOriginX > -125)//x ekseninde 100 ile -100 arasından çıkartmıyor
+                    {
+                        movingPartRight.Left = rightGuideX;
+                    }
+                    if (cursorOriginY < 125 && cursorOriginY > -125)//y ekseninde 100 ile -100 arasından çıkartmıyor
+                    {
+                        movingPartRight.Top = rightGuideY;
+                    }
+                }
+            }
+            else//butona basmayı bırakınca buton orjinal konumuna dönüyorr.
+            {
+                general_MouseUp(null, null);
+            }
+        }
+
+
+        private void btnLeftUniter_Click(object sender, EventArgs e)
+        {
+            this.Width = leftGuide.Width;//formun boyutu bir panel boyutuyla eşitlenir
+            this.Location = new Point(screenWidth - this.Width, screenHeight - this.Height);//formun konumu sağ alta sabitlenir
+            rightGuide.Location = new Point(0, 0);//panel2 konumu panel1 ile üst üste getirilir
+            btnLeftDivider.Visible = true;
+            btnLeftUniter.Visible = false;
+            leftGuide.BringToFront();
+        }
+
+        private void btnLeftDivider_Click(object sender, EventArgs e)
+        {
+            //formu yeniden yükler, başlangıç konumuna döner
+            this.Controls.Clear();
+            this.InitializeComponent();
+            DualPanel_Load(null, null);
+        }
+
+        //buton hareketleri için olan komutlar burada bitiyor
+
+        private void general_MouseUp(object sender, MouseEventArgs e)
+        {
+            movingPartLeft.Left = 150;
+            movingPartLeft.Top = 150;
+            movingPartRight.Left = 150;
+            movingPartRight.Top = 150;
         }
     }
 }

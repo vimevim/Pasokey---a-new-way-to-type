@@ -145,7 +145,7 @@ namespace moveUs
             labelHipotenus.Text = Convert.ToString(hypotenuse);
 
             //çizgi başlangıcı
-            Graphics g = CreateGraphics();
+            Graphics g = this.CreateGraphics();
             Pen d = new Pen(Color.FromArgb(48, 47, 55), 5);//çizici kalem
             Pen s = new Pen(Color.FromArgb(245, 245, 245), 5);//iz silici kalem, sıkıntısı var
             if (e.Button == MouseButtons.Middle)

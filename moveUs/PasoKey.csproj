@@ -60,12 +60,6 @@
     <Compile Include="ButtonElipse.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="JoystickV2.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="JoystickV2.Designer.cs">
-      <DependentUpon>JoystickV2.cs</DependentUpon>
-    </Compile>
     <Compile Include="main.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -116,9 +110,6 @@
       <DependentUpon>Settings.cs</DependentUpon>
     </Compile>
     <Compile Include="UserActivityHook.cs" />
-    <EmbeddedResource Include="JoystickV2.resx">
-      <DependentUpon>JoystickV2.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="main.resx">
       <DependentUpon>main.cs</DependentUpon>
     </EmbeddedResource>
