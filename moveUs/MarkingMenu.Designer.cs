@@ -355,11 +355,11 @@
             this.Controls.Add(this.label7);
             this.ForeColor = System.Drawing.SystemColors.Window;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.KeyPreview = true;
             this.Name = "MarkingMenu";
             this.ShowIcon = false;
             this.ShowInTaskbar = false;
             this.Text = "MarkingMenu";
+            this.TopMost = true;
             this.Load += new System.EventHandler(this.MarkingMenu_Load);
             this.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.MarkingMenu_MouseDoubleClick);
             this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.MarkingMenuMouseMove);

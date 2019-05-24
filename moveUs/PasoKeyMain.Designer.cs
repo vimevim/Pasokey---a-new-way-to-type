@@ -72,7 +72,7 @@
             this.closeToolStripMenuItem.Name = "closeToolStripMenuItem";
             this.closeToolStripMenuItem.Padding = new System.Windows.Forms.Padding(0);
             this.closeToolStripMenuItem.Size = new System.Drawing.Size(207, 30);
-            this.closeToolStripMenuItem.Text = "close";
+            this.closeToolStripMenuItem.Text = "start";
             this.closeToolStripMenuItem.Click += new System.EventHandler(this.closeToolStripMenuItem_Click);
             // 
             // notifyIcon1

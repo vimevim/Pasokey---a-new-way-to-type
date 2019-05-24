@@ -140,7 +140,7 @@ namespace moveUs
 
             //hypotenuse kontrolü ve yazdırılması
             labelHipotenus.Text = Convert.ToString(hypotenuse);
-
+            
             //çizgi başlangıcı
             Graphics g = this.CreateGraphics();
             Pen d = new Pen(Color.FromArgb(48, 47, 55), 5);//çizici kalem
