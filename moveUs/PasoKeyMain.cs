@@ -16,12 +16,14 @@ namespace moveUs
     {
         bool dPanelValue = false;
         bool mMenuValue = false;
+
         public PasoKeyMain()
         {
             InitializeComponent();
             Hook.GlobalEvents().MouseClick += async (sender, e) =>
             {
-                if (e.Button == MouseButtons.Middle)
+                /*
+                 * if (e.Button == MouseButtons.Middle)
                 {
                     this.Show();
                     this.WindowState = FormWindowState.Normal;
@@ -30,15 +32,33 @@ namespace moveUs
                 }
                 else
                 {
-                    if (this.WindowState != FormWindowState.Minimized)
-                    {
+                    if (this.WindowState == FormWindowState.Normal)//form minimize değilse çalıştır
+                    {//form normal ise burası çalışır, her seferinde çalışmasını engelleyen bir sınırlayıcı
+
+                        //mouse, form kordinatları dışındaysa çalışır
                         if (Cursor.Position.X < this.Left || Cursor.Position.X > (this.Left + this.Width) || Cursor.Position.Y < this.Top || Cursor.Position.Y > (this.Top + this.Height))
                         {
                             this.Hide();
-                            this.WindowState = FormWindowState.Minimized;
+                            this.WindowState = FormWindowState.Minimized;//formu minimize et
                         }
                     }
-                    
+
+                }
+                */
+                if (e.Button == MouseButtons.Middle)
+                {
+                    contextMenuStrip1.Show();
+                    contextMenuStrip1.Left = Cursor.Position.X;
+                    contextMenuStrip1.Top = Cursor.Position.Y;
+                }
+                else
+                {
+                    //mouse, form kordinatları dışındaysa çalışır
+                    if (Cursor.Position.X < contextMenuStrip1.Left || Cursor.Position.X > (contextMenuStrip1.Left + contextMenuStrip1.Width) || Cursor.Position.Y < contextMenuStrip1.Top || Cursor.Position.Y > (contextMenuStrip1.Top + contextMenuStrip1.Height))
+                    {
+                        contextMenuStrip1.Hide();
+                    }
+
                 }
             };
         }
