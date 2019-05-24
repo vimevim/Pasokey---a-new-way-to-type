@@ -92,10 +92,7 @@ namespace moveUs
             }
         }
 
-        private void MarkingMenu_MouseDoubleClick(object sender, MouseEventArgs e)
-        {
-            this.Hide();
-        }
+
 
         public MarkingMenu()
         {
@@ -205,23 +202,6 @@ namespace moveUs
 
         private void MarkingMenuMouseUp(object sender, MouseEventArgs e)
         {
-            //Form1_Click(null, null);//formun dışına çıkınca çalışmasını sağlıyor ama hata var
-            FormFollowsCursor();
-        }
-
-        private void MarkingMenu_Load(object sender, EventArgs e)
-        {
-            FormFollowsCursor();
-            //this.TransparencyKey = BackColor;
-        }
-
-        private void FormFollowsCursor()
-        {//formun konumu 2 ye bölünüp farenin konumundan çıkartıldı,doğal olarak form farenin merkezine geçmiş oldu
-            this.Location = new Point(MousePosition.X - formCentreX, MousePosition.Y - formCentreY);
-        }
-
-        private void MarkingMenu_Click(object sender, EventArgs e)
-        {
             if (hypotenuse <= 50)
             {
                 if (i == false)
@@ -302,15 +282,23 @@ namespace moveUs
                     }
                 }
             }
+            //Form1_Click(null, null);//formun dışına çıkınca çalışmasını sağlıyor ama hata var
+            FormFollowsCursor();
         }
 
-        //form içerisinde çalışan kısayol
-        private void MarkingMenu_KeyDown(object sender, KeyEventArgs e)
+        private void MarkingMenu_Load(object sender, EventArgs e)
         {
-            if (e.KeyCode == Keys.X)
-            {
-                this.Hide();
-            }
+            FormFollowsCursor();
+            //this.TransparencyKey = BackColor;
+        }
+
+        private void FormFollowsCursor()
+        {//formun konumu 2 ye bölünüp farenin konumundan çıkartıldı,doğal olarak form farenin merkezine geçmiş oldu
+            this.Location = new Point(MousePosition.X - formCentreX, MousePosition.Y - formCentreY);
+        }
+        private void MarkingMenu_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            this.Hide();
         }
     }
 }

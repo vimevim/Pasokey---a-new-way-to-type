@@ -361,8 +361,6 @@
             this.ShowInTaskbar = false;
             this.Text = "MarkingMenu";
             this.Load += new System.EventHandler(this.MarkingMenu_Load);
-            this.Click += new System.EventHandler(this.MarkingMenu_Click);
-            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.MarkingMenu_KeyDown);
             this.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.MarkingMenu_MouseDoubleClick);
             this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.MarkingMenuMouseMove);
             this.MouseUp += new System.Windows.Forms.MouseEventHandler(this.MarkingMenuMouseUp);

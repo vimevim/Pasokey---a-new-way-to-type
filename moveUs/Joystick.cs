@@ -59,25 +59,25 @@ namespace moveUs
             {
                 if (upOrLow == "low")//büyük küçük harf kümesini seçiyorum
                 {
-                    btnLbl0.Text = keyPadLower[firstStep, 0];
-                    btnLbl1.Text = keyPadLower[firstStep, 1];
-                    btnLbl2.Text = keyPadLower[firstStep, 2];
-                    btnLbl3.Text = keyPadLower[firstStep, 3];
-                    btnLbl4.Text = keyPadLower[firstStep, 4];
-                    btnLbl5.Text = keyPadLower[firstStep, 5];
-                    btnLbl6.Text = keyPadLower[firstStep, 6];
-                    btnLbl7.Text = keyPadLower[firstStep, 7];
+                    rightLbl0.Text = keyPadLower[firstStep, 0];
+                    rightLbl1.Text = keyPadLower[firstStep, 1];
+                    rightLbl2.Text = keyPadLower[firstStep, 2];
+                    rightLbl3.Text = keyPadLower[firstStep, 3];
+                    rightLbl4.Text = keyPadLower[firstStep, 4];
+                    rightLbl5.Text = keyPadLower[firstStep, 5];
+                    rightLbl6.Text = keyPadLower[firstStep, 6];
+                    rightLbl7.Text = keyPadLower[firstStep, 7];
                 }
                 else
                 {
-                    btnLbl0.Text = keyPadUpper[firstStep, 0];
-                    btnLbl1.Text = keyPadUpper[firstStep, 1];
-                    btnLbl2.Text = keyPadUpper[firstStep, 2];
-                    btnLbl3.Text = keyPadUpper[firstStep, 3];
-                    btnLbl4.Text = keyPadUpper[firstStep, 4];
-                    btnLbl5.Text = keyPadUpper[firstStep, 5];
-                    btnLbl6.Text = keyPadUpper[firstStep, 6];
-                    btnLbl7.Text = keyPadUpper[firstStep, 7];
+                    rightLbl0.Text = keyPadUpper[firstStep, 0];
+                    rightLbl1.Text = keyPadUpper[firstStep, 1];
+                    rightLbl2.Text = keyPadUpper[firstStep, 2];
+                    rightLbl3.Text = keyPadUpper[firstStep, 3];
+                    rightLbl4.Text = keyPadUpper[firstStep, 4];
+                    rightLbl5.Text = keyPadUpper[firstStep, 5];
+                    rightLbl6.Text = keyPadUpper[firstStep, 6];
+                    rightLbl7.Text = keyPadUpper[firstStep, 7];
                 }
                 rightGuide.BringToFront();//panel2 yi ön plana çıkartıyorum
                 general_MouseUp(null, null);//tüm butonların konumunu başlangıca çekiyorum

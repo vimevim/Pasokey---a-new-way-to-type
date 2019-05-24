@@ -34,7 +34,7 @@
             // chckAcilistaCalistir
             // 
             this.chckAcilistaCalistir.AutoSize = true;
-            this.chckAcilistaCalistir.Location = new System.Drawing.Point(149, 59);
+            this.chckAcilistaCalistir.Location = new System.Drawing.Point(178, 12);
             this.chckAcilistaCalistir.Name = "chckAcilistaCalistir";
             this.chckAcilistaCalistir.Size = new System.Drawing.Size(98, 21);
             this.chckAcilistaCalistir.TabIndex = 0;

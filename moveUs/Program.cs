@@ -22,7 +22,7 @@ namespace moveUs
                 MessageBox.Show("PasoKey zaten çalışmakta.");
                 return;
             }
-            Application.Run(new Joystick());
+            Application.Run(new PasoKeyMain());
             GC.KeepAlive(mutex); //Nesneyi kaldırıyoruz. 
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
