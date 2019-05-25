@@ -17,17 +17,23 @@ namespace moveUs
 
         DoubleJoystick doubleJoystick = new DoubleJoystick();
 
+        SingleJoystick singleJoystick = new SingleJoystick();
+
+        FloatingJoystick floatingJoystick = new FloatingJoystick();
+
         FloatingMarkingMenu floatingMarkingMenu = new FloatingMarkingMenu();
 
         FixedMarkingMenu fixedMarkingMenu = new FixedMarkingMenu();
 
-        panelRight panelRight = new panelRight();
+        PanelRight panelRight = new PanelRight();
 
-        panelTop panelTop = new panelTop();
+        PanelTop panelTop = new PanelTop();
 
         private void allHide()
         {
             doubleJoystick.Hide();
+            singleJoystick.Hide();
+            floatingJoystick.Hide();
             floatingMarkingMenu.Hide();
             fixedMarkingMenu.Hide();
         }
@@ -75,7 +81,6 @@ namespace moveUs
                     {
                         contextMenuStrip1.Hide();
                     }
-
                 }
             };
         }

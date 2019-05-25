@@ -1,6 +1,6 @@
 ﻿namespace moveUs
 {
-    partial class panelRight
+    partial class PanelRight
     {
         /// <summary>
         /// Required designer variable.

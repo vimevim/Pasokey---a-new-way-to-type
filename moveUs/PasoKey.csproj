@@ -88,17 +88,23 @@
     <Compile Include="ButtonElipse.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="panelRight.cs">
+    <Compile Include="FloatingJoystick.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="panelRight.Designer.cs">
-      <DependentUpon>panelRight.cs</DependentUpon>
+    <Compile Include="FloatingJoystick.Designer.cs">
+      <DependentUpon>FloatingJoystick.cs</DependentUpon>
     </Compile>
-    <Compile Include="panelTop.cs">
+    <Compile Include="PanelRight.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="panelTop.Designer.cs">
-      <DependentUpon>panelTop.cs</DependentUpon>
+    <Compile Include="PanelRight.Designer.cs">
+      <DependentUpon>PanelRight.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PanelTop.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PanelTop.Designer.cs">
+      <DependentUpon>PanelTop.cs</DependentUpon>
     </Compile>
     <Compile Include="PasoKeyMain.cs">
       <SubType>Form</SubType>
@@ -131,8 +137,14 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="panelRight.resx">
-      <DependentUpon>panelRight.cs</DependentUpon>
+    <Compile Include="SingleJoystick.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SingleJoystick.Designer.cs">
+      <DependentUpon>SingleJoystick.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="PanelRight.resx">
+      <DependentUpon>PanelRight.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PasoKeyMain.resx">
       <DependentUpon>PasoKeyMain.cs</DependentUpon>

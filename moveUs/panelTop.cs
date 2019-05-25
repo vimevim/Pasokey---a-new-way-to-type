@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace moveUs
 {
-    public partial class panelTop : Form
+    public partial class PanelTop : Form
     {
-        public panelTop()
+        public PanelTop()
         {
             InitializeComponent();
         }

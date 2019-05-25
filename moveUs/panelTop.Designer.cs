@@ -1,6 +1,6 @@
 ﻿namespace moveUs
 {
-    partial class panelTop
+    partial class PanelTop
     {
         /// <summary>
         /// Required designer variable.
