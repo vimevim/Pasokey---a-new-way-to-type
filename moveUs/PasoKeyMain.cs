@@ -20,6 +20,10 @@ namespace moveUs
         public PasoKeyMain()
         {
             InitializeComponent();
+            //panelRight pnlR = new panelRight();
+            //pnlR.Show();
+            panelTop pnlT = new panelTop();
+            pnlT.Show();
             Hook.GlobalEvents().MouseClick += async (sender, e) =>
             {
                 /*
@@ -164,6 +168,9 @@ namespace moveUs
             }*/
         }
 
-
+        private void applicationExitToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

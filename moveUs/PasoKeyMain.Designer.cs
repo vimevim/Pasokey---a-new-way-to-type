@@ -35,6 +35,7 @@
             this.joystickToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.closeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.notifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
+            this.applicationExitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -44,16 +45,17 @@
             this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.markingMenuToolStripMenuItem,
             this.joystickToolStripMenuItem,
-            this.closeToolStripMenuItem});
+            this.closeToolStripMenuItem,
+            this.applicationExitToolStripMenuItem});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(208, 94);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(211, 154);
             // 
             // markingMenuToolStripMenuItem
             // 
             this.markingMenuToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.markingMenuToolStripMenuItem.Name = "markingMenuToolStripMenuItem";
             this.markingMenuToolStripMenuItem.Padding = new System.Windows.Forms.Padding(0);
-            this.markingMenuToolStripMenuItem.Size = new System.Drawing.Size(207, 30);
+            this.markingMenuToolStripMenuItem.Size = new System.Drawing.Size(210, 30);
             this.markingMenuToolStripMenuItem.Text = "marking menu";
             this.markingMenuToolStripMenuItem.Click += new System.EventHandler(this.markingMenuToolStripMenuItem_Click);
             // 
@@ -62,7 +64,7 @@
             this.joystickToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.joystickToolStripMenuItem.Name = "joystickToolStripMenuItem";
             this.joystickToolStripMenuItem.Padding = new System.Windows.Forms.Padding(0);
-            this.joystickToolStripMenuItem.Size = new System.Drawing.Size(207, 30);
+            this.joystickToolStripMenuItem.Size = new System.Drawing.Size(210, 30);
             this.joystickToolStripMenuItem.Text = "joystick";
             this.joystickToolStripMenuItem.Click += new System.EventHandler(this.joystickToolStripMenuItem_Click);
             // 
@@ -71,7 +73,7 @@
             this.closeToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.closeToolStripMenuItem.Name = "closeToolStripMenuItem";
             this.closeToolStripMenuItem.Padding = new System.Windows.Forms.Padding(0);
-            this.closeToolStripMenuItem.Size = new System.Drawing.Size(207, 30);
+            this.closeToolStripMenuItem.Size = new System.Drawing.Size(210, 30);
             this.closeToolStripMenuItem.Text = "start";
             this.closeToolStripMenuItem.Click += new System.EventHandler(this.closeToolStripMenuItem_Click);
             // 
@@ -79,9 +81,16 @@
             // 
             this.notifyIcon1.ContextMenuStrip = this.contextMenuStrip1;
             this.notifyIcon1.Icon = ((System.Drawing.Icon)(resources.GetObject("notifyIcon1.Icon")));
-            this.notifyIcon1.Text = "Pasoyaz";
+            this.notifyIcon1.Text = "PasoKey";
             this.notifyIcon1.Visible = true;
             this.notifyIcon1.Click += new System.EventHandler(this.notifyIcon1_Click);
+            // 
+            // applicationExitToolStripMenuItem
+            // 
+            this.applicationExitToolStripMenuItem.Name = "applicationExitToolStripMenuItem";
+            this.applicationExitToolStripMenuItem.Size = new System.Drawing.Size(210, 32);
+            this.applicationExitToolStripMenuItem.Text = "application exit";
+            this.applicationExitToolStripMenuItem.Click += new System.EventHandler(this.applicationExitToolStripMenuItem_Click);
             // 
             // PasoKeyMain
             // 
@@ -111,5 +120,6 @@
         private System.Windows.Forms.ToolStripMenuItem joystickToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem closeToolStripMenuItem;
         private System.Windows.Forms.NotifyIcon notifyIcon1;
+        private System.Windows.Forms.ToolStripMenuItem applicationExitToolStripMenuItem;
     }
 }

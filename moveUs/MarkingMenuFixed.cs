@@ -136,7 +136,7 @@ namespace moveUs
             Graphics g = CreateGraphics();
             Pen d = new Pen(Color.FromArgb(48, 47, 55), 5);//çizici kalem
             Pen s = new Pen(Color.FromArgb(245, 245, 245), 5);//iz silici kalem, sıkıntısı var
-            if (e.Button == MouseButtons.Middle)
+            if (e.Button == MouseButtons.Right)
             {
                 int angularEdge = ((Math.Abs(formOriginY) + Math.Abs(formOriginX)) / 2);
                 if (angle > 337.5 || angle < 22.5)

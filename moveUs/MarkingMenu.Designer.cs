@@ -40,7 +40,6 @@
             this.label4 = new System.Windows.Forms.Label();
             this.labelEX = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lblDownLeft = new System.Windows.Forms.Label();
             this.lblDownMid = new System.Windows.Forms.Label();
             this.lblDownRight = new System.Windows.Forms.Label();
@@ -50,7 +49,6 @@
             this.lblUpRight = new System.Windows.Forms.Label();
             this.lblCenter = new System.Windows.Forms.Label();
             this.lblUp = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // label3
@@ -197,18 +195,6 @@
             this.label7.Text = "OriginY";
             this.label7.Visible = false;
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.Image = global::moveUs.Properties.Resources.circle_png_circle_icon_1600;
-            this.pictureBox1.Location = new System.Drawing.Point(396, 388);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(350, 350);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 23;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.MarkingMenuMouseMove);
-            // 
             // lblDownLeft
             // 
             this.lblDownLeft.AutoSize = true;
@@ -340,7 +326,6 @@
             this.Controls.Add(this.lblUpRight);
             this.Controls.Add(this.lblCenter);
             this.Controls.Add(this.lblUp);
-            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.lblAngle);
             this.Controls.Add(this.labelHipotenus);
@@ -364,7 +349,6 @@
             this.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.MarkingMenu_MouseDoubleClick);
             this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.MarkingMenuMouseMove);
             this.MouseUp += new System.Windows.Forms.MouseEventHandler(this.MarkingMenuMouseUp);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -383,7 +367,6 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label labelEX;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label lblDownLeft;
         private System.Windows.Forms.Label lblDownMid;
         private System.Windows.Forms.Label lblDownRight;
