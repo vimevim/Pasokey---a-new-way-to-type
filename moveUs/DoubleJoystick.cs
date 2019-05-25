@@ -10,14 +10,14 @@ using System.Windows.Forms;
 
 namespace moveUs
 {
-    public partial class Joystick : Form
+    public partial class DoubleJoystick : Form
     {
         int leftGuideX, leftGuideY, rightGuideX, rightGuideY;
         int cursorOriginX, cursorOriginY;
         double leftHypotenuse, leftAngle, rightHypotenuse, rightAngle;
         Point mouseDownLocation;
 
-        public Joystick()
+        public DoubleJoystick()
         {
             InitializeComponent();
         }

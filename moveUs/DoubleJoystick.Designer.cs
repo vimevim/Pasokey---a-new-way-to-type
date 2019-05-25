@@ -1,6 +1,6 @@
 ﻿namespace moveUs
 {
-    partial class Joystick
+    partial class DoubleJoystick
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Joystick));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DoubleJoystick));
             this.leftGuide = new System.Windows.Forms.Panel();
             this.movingPartLeft = new moveUs.ButtonElipse();
             this.leftLbl7 = new System.Windows.Forms.Label();

@@ -14,16 +14,29 @@ namespace moveUs
 {
     public partial class PasoKeyMain : Form
     {
-        bool dPanelValue = false;
-        bool mMenuValue = false;
+
+        DoubleJoystick doubleJoystick = new DoubleJoystick();
+
+        FloatingMarkingMenu floatingMarkingMenu = new FloatingMarkingMenu();
+
+        FixedMarkingMenu fixedMarkingMenu = new FixedMarkingMenu();
+
+        panelRight panelRight = new panelRight();
+
+        panelTop panelTop = new panelTop();
+
+        private void allHide()
+        {
+            doubleJoystick.Hide();
+            floatingMarkingMenu.Hide();
+            fixedMarkingMenu.Hide();
+        }
 
         public PasoKeyMain()
         {
             InitializeComponent();
-            panelRight pnlR = new panelRight();
-            pnlR.Show();
-            panelTop pnlT = new panelTop();
-            pnlT.Show();
+            panelRight.Show();
+            panelTop.Show();
             Hook.GlobalEvents().MouseClick += async (sender, e) =>
             {
                 /*
@@ -75,7 +88,7 @@ namespace moveUs
                 RegistryKey key = Registry.CurrentUser.OpenSubKey(@"Software\Microsoft\Windows\CurrentVersion\Run", true);
                 if (key.GetValue("PasoKey").ToString() == "\"" + Application.ExecutablePath + "\"")
                 { // Eğer regeditte varsa, checkbox ı işaretle
-                    ((ToolStripMenuItem)contextMenuStrip1.Items[2]).Checked = true; //false;
+                    ((ToolStripMenuItem)contextMenuStrip1.Items[8]).Checked = true; //false;
                 }
             }
             catch
@@ -85,92 +98,30 @@ namespace moveUs
         }
 
 
-        Joystick joystick = new Joystick();
-
-        MarkingMenu markingMenu = new MarkingMenu();
-
-        private void joystickToolStripMenuItem_Click(object sender, EventArgs e)
+        private void runAtStartUpToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if (mMenuValue == true)
-            {
-                markingMenu.Hide();
-                mMenuValue = false;
-            }
-            if (dPanelValue == false)
-            {
-                joystick.Show();
-                dPanelValue = true;
-            }
-            else
-            {
-                joystick.Hide();
-                dPanelValue = false;
-            }
-        }
-
-        private void markingMenuToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            if (dPanelValue == true)
-            {
-                joystick.Hide();
-                dPanelValue = false;
-            }
-            if (mMenuValue == false)
-            {
-                markingMenu.Show();
-                mMenuValue = true;
-            }
-            else
-            {
-                markingMenu.Hide();
-                mMenuValue = false;
-            }
-        }
-
-        private void closeToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            if (((ToolStripMenuItem)contextMenuStrip1.Items[2]).Checked == false)
+            if (((ToolStripMenuItem)contextMenuStrip1.Items[8]).Checked == false)
             { //işaretlendi ise Regedit e açılışta çalıştır olarak ekle
                 RegistryKey key = Registry.CurrentUser.OpenSubKey(@"Software\Microsoft\Windows\CurrentVersion\Run", true);
                 key.SetValue("PasoKey", "\"" + Application.ExecutablePath + "\"");
-                ((ToolStripMenuItem)contextMenuStrip1.Items[2]).Checked = true; //false;
+                ((ToolStripMenuItem)contextMenuStrip1.Items[8]).Checked = true; //false;
             }
             else
             {  //işaret kaldırıldı ise Regeditten açılışta çalıştırılacaklardan kaldır
                 RegistryKey key = Registry.CurrentUser.OpenSubKey(@"Software\Microsoft\Windows\CurrentVersion\Run", true);
                 key.DeleteValue("PasoKey");
-                ((ToolStripMenuItem)contextMenuStrip1.Items[2]).Checked = false; //false;
+                ((ToolStripMenuItem)contextMenuStrip1.Items[8]).Checked = false; //false;
             }
         }
 
-        private void notifyIcon1_Click(object sender, EventArgs e)
-        {
-            /*if (dPanelValue == false)
-            {
-                dPanel.Show();
-                dPanelValue = true;
-            }
-            else
-            {
-                dPanel.Hide();
-                if (mMenuValue == false)
-                {
-                    markingMenu.Show();
-                    mMenuValue = true;
-                }
-                else
-                {
-                    markingMenu.Hide();
-                    mMenuValue = false;
-                    dPanel.Hide();
-                    dPanelValue = false;
-                }
-            }*/
-        }
-
-        private void applicationExitToolStripMenuItem_Click(object sender, EventArgs e)
+        private void closeThePasoKeyToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void markingMenuToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

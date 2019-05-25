@@ -10,13 +10,12 @@ using System.Windows.Forms;
 
 namespace moveUs
 {
-    public partial class MarkingMenuFixed : Form
+    public partial class FloatingMarkingMenu : Form
     {
-        public MarkingMenuFixed()
+        private void CursorInTheCentre()
         {
-            InitializeComponent();
-            formCentreX = this.Width / 2;
-            formCentreY = this.Height / 2;
+            Point pt = new Point(Screen.PrimaryScreen.WorkingArea.Width / 2, Screen.PrimaryScreen.WorkingArea.Height / 2);// değerleri ikiye bölüp
+            Cursor.Position = (pt);//merkeze atadık
         }
 
         int defaultOriginX, defaultOriginY;
@@ -24,13 +23,6 @@ namespace moveUs
         int formCentreX, formCentreY;
         double hypotenuse, angle;
         bool i = false;
-
-        private void CursorInTheCentre()
-        {
-            Point pt = new Point(Screen.PrimaryScreen.WorkingArea.Width / 2, Screen.PrimaryScreen.WorkingArea.Height / 2);// değerleri ikiye bölüp
-            Cursor.Position = (pt);//merkeze atadık
-        }
-
         protected override CreateParams CreateParams
         {
             get
@@ -72,6 +64,19 @@ namespace moveUs
             }
         }
 
+        private void ResetText()
+        {
+            lblUp.Text = "X";
+            lblUpRight.Text = "X";
+            lblMidRight.Text = "X";
+            lblDownRight.Text = "X";
+            lblDownMid.Text = "X";
+            lblDownLeft.Text = "X";
+            lblMidLeft.Text = "X";
+            lblUpLeft.Text = "X";
+            lblCenter.Text = "<";
+        }
+
         private void TypeTheLetter(bool sayac, int birinciDeger, int ikinciDeger)
         {
             if (sayac == false)
@@ -87,25 +92,17 @@ namespace moveUs
             }
         }
 
-        private void ResetText()
-        {
-            lblUp.Text = "X";
-            lblUpRight.Text = "X";
-            lblMidRight.Text = "X";
-            lblDownRight.Text = "X";
-            lblDownMid.Text = "X";
-            lblDownLeft.Text = "X";
-            lblMidLeft.Text = "X";
-            lblUpLeft.Text = "X";
-            lblCenter.Text = "<";
-        }
 
-        private void MarkingMenuFixed_Load(object sender, EventArgs e)
+
+        public FloatingMarkingMenu()
         {
+            InitializeComponent();
+            formCentreX = this.Width / 2;
+            formCentreY = this.Height / 2;
             CursorInTheCentre();
         }
 
-        private void MarkingMenuFixed_MouseMove(object sender, MouseEventArgs e)
+        public void MarkingMenuMouseMove(object sender, MouseEventArgs e)
         {
             //Varsayılan orijin ataması yapılıyor
             defaultOriginX = e.X;
@@ -130,10 +127,22 @@ namespace moveUs
             }
             ////*Farenin konumları yazdırılıyor*////
 
+            //farenin normal konumu
+            labelEX.Text = Convert.ToString(defaultOriginX);
+            labelEY.Text = Convert.ToString(defaultOriginY);
 
+            //farenin orijine göre konumu
+            labelEXW.Text = Convert.ToString(formOriginX);
+            labelEYH.Text = Convert.ToString(formOriginY);
 
+            //farenin açısı
+            lblAngle.Text = Convert.ToString(angle);
+
+            //hypotenuse kontrolü ve yazdırılması
+            labelHipotenus.Text = Convert.ToString(hypotenuse);
+            
             //çizgi başlangıcı
-            Graphics g = CreateGraphics();
+            Graphics g = this.CreateGraphics();
             Pen d = new Pen(Color.FromArgb(48, 47, 55), 5);//çizici kalem
             Pen s = new Pen(Color.FromArgb(245, 245, 245), 5);//iz silici kalem, sıkıntısı var
             if (e.Button == MouseButtons.Right)
@@ -187,20 +196,11 @@ namespace moveUs
             }
             else
             {
-                CursorInTheCentre();
+                FormFollowsCursor();
             }
         }
 
-        private void MarkingMenuFixed_Click(object sender, EventArgs e)
-        {
-        }
-
-        private void MarkingMenuFixed_MouseDoubleClick(object sender, MouseEventArgs e)
-        {
-            this.Hide();
-        }
-
-        private void MarkingMenuFixed_MouseUp(object sender, MouseEventArgs e)
+        private void MarkingMenuMouseUp(object sender, MouseEventArgs e)
         {
             if (hypotenuse <= 50)
             {
@@ -282,7 +282,24 @@ namespace moveUs
                     }
                 }
             }
-            CursorInTheCentre();
+            //Form1_Click(null, null);//formun dışına çıkınca çalışmasını sağlıyor ama hata var
+            FormFollowsCursor();
+        }
+
+        private void MarkingMenu_Load(object sender, EventArgs e)
+        {
+            FormFollowsCursor();
+            //this.TransparencyKey = BackColor;
+        }
+
+        private void FormFollowsCursor()
+        {//formun konumu 2 ye bölünüp farenin konumundan çıkartıldı,doğal olarak form farenin merkezine geçmiş oldu
+            this.Location = new Point(MousePosition.X - formCentreX, MousePosition.Y - formCentreY);
+        }
+        private void MarkingMenu_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            this.Hide();
         }
     }
 }
+

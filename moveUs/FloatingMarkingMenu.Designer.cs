@@ -1,6 +1,6 @@
 ﻿namespace moveUs
 {
-    partial class MarkingMenu
+    partial class FloatingMarkingMenu
     {
         /// <summary>
         /// Required designer variable.

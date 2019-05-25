@@ -1,6 +1,6 @@
 ﻿namespace moveUs
 {
-    partial class MarkingMenuFixed
+    partial class FixedMarkingMenu
     {
         /// <summary>
         /// Required designer variable.

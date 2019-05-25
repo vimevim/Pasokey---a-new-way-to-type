@@ -106,23 +106,23 @@
     <Compile Include="PasoKeyMain.Designer.cs">
       <DependentUpon>PasoKeyMain.cs</DependentUpon>
     </Compile>
-    <Compile Include="Joystick.cs">
+    <Compile Include="DoubleJoystick.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Joystick.Designer.cs">
-      <DependentUpon>Joystick.cs</DependentUpon>
+    <Compile Include="DoubleJoystick.Designer.cs">
+      <DependentUpon>DoubleJoystick.cs</DependentUpon>
     </Compile>
-    <Compile Include="MarkingMenu.cs">
+    <Compile Include="FloatingMarkingMenu.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MarkingMenu.Designer.cs">
-      <DependentUpon>MarkingMenu.cs</DependentUpon>
+    <Compile Include="FloatingMarkingMenu.Designer.cs">
+      <DependentUpon>FloatingMarkingMenu.cs</DependentUpon>
     </Compile>
-    <Compile Include="MarkingMenuFixed.cs">
+    <Compile Include="FixedMarkingMenu.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MarkingMenuFixed.Designer.cs">
-      <DependentUpon>MarkingMenuFixed.cs</DependentUpon>
+    <Compile Include="FixedMarkingMenu.Designer.cs">
+      <DependentUpon>FixedMarkingMenu.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -137,14 +137,14 @@
     <EmbeddedResource Include="PasoKeyMain.resx">
       <DependentUpon>PasoKeyMain.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Joystick.resx">
-      <DependentUpon>Joystick.cs</DependentUpon>
+    <EmbeddedResource Include="DoubleJoystick.resx">
+      <DependentUpon>DoubleJoystick.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MarkingMenu.resx">
-      <DependentUpon>MarkingMenu.cs</DependentUpon>
+    <EmbeddedResource Include="FloatingMarkingMenu.resx">
+      <DependentUpon>FloatingMarkingMenu.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MarkingMenuFixed.resx">
-      <DependentUpon>MarkingMenuFixed.cs</DependentUpon>
+    <EmbeddedResource Include="FixedMarkingMenu.resx">
+      <DependentUpon>FixedMarkingMenu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
