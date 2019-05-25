@@ -20,8 +20,8 @@ namespace moveUs
         public PasoKeyMain()
         {
             InitializeComponent();
-            //panelRight pnlR = new panelRight();
-            //pnlR.Show();
+            panelRight pnlR = new panelRight();
+            pnlR.Show();
             panelTop pnlT = new panelTop();
             pnlT.Show();
             Hook.GlobalEvents().MouseClick += async (sender, e) =>

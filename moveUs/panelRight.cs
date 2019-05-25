@@ -25,7 +25,7 @@ namespace moveUs
         }
 
 
-        Point birinciDeger, ikinciDeger, sonDeger;
+        Point saniye5, saniye4, saniye3, saniye2, saniye1;
 
         private void panelRight_MouseMove(object sender, MouseEventArgs e)
         {
@@ -33,7 +33,7 @@ namespace moveUs
             {
                 this.Top = (e.Y + this.Top - mouseDownLocation.Y);
             }
-            birinciDeger = new Point(e.X, e.Y);
+            saniye1 = new Point(e.X, e.Y);
         }
 
         Point mouseDownLocation;
@@ -48,6 +48,31 @@ namespace moveUs
             {
                 kepenkAc.Start();
                 sleepModeActivate.Start();
+            }
+        }
+
+        private void sleepModeActivate_Tick(object sender, EventArgs e)
+        {
+            saniye5 = saniye4;
+            saniye4 = saniye3;
+            saniye3 = saniye2;
+            saniye2 = saniye1;
+            if (saniye1 == saniye5)
+            {
+                if (this.Width == 150)
+                {
+                    kepenkKapat.Start();
+                }
+            }
+            else
+            {
+                if (Cursor.Position.X < this.Left || Cursor.Position.X > (this.Left + this.Width) || Cursor.Position.Y < this.Top || Cursor.Position.Y > (this.Top + this.Height))
+                {
+                    if (this.Width == 150)
+                    {
+                        kepenkKapat.Start();
+                    }
+                }
             }
         }
 
@@ -68,19 +93,6 @@ namespace moveUs
             if (this.Width == 5)
             {
                 kepenkKapat.Stop();
-            }
-        }
-
-        private void sleepModeActivate_Tick(object sender, EventArgs e)
-        {
-            sonDeger = ikinciDeger;
-            ikinciDeger = birinciDeger;
-            if (birinciDeger == sonDeger)
-            {
-                if (this.Width == 150)
-                {
-                    kepenkKapat.Start();
-                }
             }
         }
     }
