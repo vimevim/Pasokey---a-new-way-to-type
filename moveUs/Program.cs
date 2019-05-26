@@ -25,7 +25,7 @@ namespace moveUs
             Application.Run(new PasoKeyMain());
             GC.KeepAlive(mutex); //Nesneyi kaldırıyoruz. 
             Application.EnableVisualStyles();
-            Application.SetCompatibleTextRenderingDefault(false);
+            //Application.SetCompatibleTextRenderingDefault(false);
         }
     }
 }

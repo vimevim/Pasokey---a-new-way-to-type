@@ -41,24 +41,7 @@ namespace moveUs
         public PasoKeyMain()
         {
             InitializeComponent();
-            if (ayarlar.Default.panelData == "non")
-            {
-                panelHide();
-            }
-            else if (ayarlar.Default.panelData == "top")
-            {
-                ((ToolStripMenuItem)contextMenuStrip1.Items[7]).Checked = true;
-                panelHide();
-                panelTop.Show();
-            }
-            else if (ayarlar.Default.panelData == "right")
-            {
-                ((ToolStripMenuItem)contextMenuStrip1.Items[8]).Checked = true;
-                panelHide();
-                panelRight.Show();
-            }
-
-
+            
             Hook.GlobalEvents().MouseClick += async (sender, e) =>
             {
                 if (ayarlar.Default.midBut == "activate")
@@ -128,6 +111,23 @@ namespace moveUs
             {
                 ((ToolStripMenuItem)contextMenuStrip1.Items[10]).Checked = false;
             }
+
+            if (ayarlar.Default.panelData == "non")
+            {
+                panelHide();
+            }
+            else if (ayarlar.Default.panelData == "top")
+            {
+                ((ToolStripMenuItem)contextMenuStrip1.Items[7]).Checked = true;
+                panelHide();
+                panelTop.Show();
+            }
+            else if (ayarlar.Default.panelData == "right")
+            {
+                ((ToolStripMenuItem)contextMenuStrip1.Items[8]).Checked = true;
+                panelHide();
+                panelRight.Show();
+            }
         }
 
         private void floatingMarkingMenuToolStripMenuItem_Click(object sender, EventArgs e)
@@ -145,6 +145,7 @@ namespace moveUs
         private void doubleJoystickToolStripMenuItem_Click(object sender, EventArgs e)
         {
             allHide();
+
             doubleJoystick.Show();
         }
 
@@ -190,7 +191,7 @@ namespace moveUs
                 ayarlar.Default.panelData = "non";
                 panelHide();
             }
-
+            ayarlar.Default.Save();
         }
 
         private void quickPanelRightToolStripMenuItem_Click(object sender, EventArgs e)
@@ -216,6 +217,7 @@ namespace moveUs
                 ayarlar.Default.panelData = "non";
                 panelHide();
             }
+            ayarlar.Default.Save();
         }
 
         private void middleButtonToolStripMenuItem_Click(object sender, EventArgs e)
@@ -230,6 +232,7 @@ namespace moveUs
                 ayarlar.Default.midBut = "activate";
                 ((ToolStripMenuItem)contextMenuStrip1.Items[10]).Checked = true;
             }
+            ayarlar.Default.Save();
         }
 
         private void runAtStartUpToolStripMenuItem_Click(object sender, EventArgs e)
@@ -253,6 +256,5 @@ namespace moveUs
             Application.Exit();
             ayarlar.Default.Save();
         }
-
     }
 }

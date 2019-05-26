@@ -148,6 +148,9 @@
     <Compile Include="SingleJoystick.Designer.cs">
       <DependentUpon>SingleJoystick.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="FloatingJoystick.resx">
+      <DependentUpon>FloatingJoystick.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="PanelRight.resx">
       <DependentUpon>PanelRight.cs</DependentUpon>
     </EmbeddedResource>
@@ -167,6 +170,9 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SingleJoystick.resx">
+      <DependentUpon>SingleJoystick.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="PasoKey_TemporaryKey.pfx" />
