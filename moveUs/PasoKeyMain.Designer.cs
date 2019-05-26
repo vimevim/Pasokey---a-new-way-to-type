@@ -31,18 +31,19 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PasoKeyMain));
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.markingMenuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.floatingMarkingMenuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.fixedMarkingMenuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.joystickToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.doubleJoystickToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.singleJoystickToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.floatingJoystickToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.quickToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.topToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.rightToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+            this.quickPanelTopToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.quickPanelRightToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
             this.middleButtonToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.closeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.applicationExitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.runAtStartUpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.closeThePasokKeyToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.notifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
             this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -51,27 +52,30 @@
             // 
             this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.markingMenuToolStripMenuItem,
+            this.floatingMarkingMenuToolStripMenuItem,
             this.fixedMarkingMenuToolStripMenuItem,
             this.toolStripSeparator1,
-            this.joystickToolStripMenuItem,
+            this.doubleJoystickToolStripMenuItem,
             this.singleJoystickToolStripMenuItem,
             this.floatingJoystickToolStripMenuItem,
-            this.quickToolStripMenuItem,
+            this.toolStripSeparator2,
+            this.quickPanelTopToolStripMenuItem,
+            this.quickPanelRightToolStripMenuItem,
+            this.toolStripSeparator3,
             this.middleButtonToolStripMenuItem,
-            this.closeToolStripMenuItem,
-            this.applicationExitToolStripMenuItem});
+            this.runAtStartUpToolStripMenuItem,
+            this.closeThePasokKeyToolStripMenuItem});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(287, 320);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(287, 364);
             // 
-            // markingMenuToolStripMenuItem
+            // floatingMarkingMenuToolStripMenuItem
             // 
-            this.markingMenuToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.markingMenuToolStripMenuItem.Name = "markingMenuToolStripMenuItem";
-            this.markingMenuToolStripMenuItem.Padding = new System.Windows.Forms.Padding(0);
-            this.markingMenuToolStripMenuItem.Size = new System.Drawing.Size(286, 30);
-            this.markingMenuToolStripMenuItem.Text = "Floating Marking Menu";
-            this.markingMenuToolStripMenuItem.Click += new System.EventHandler(this.markingMenuToolStripMenuItem_Click);
+            this.floatingMarkingMenuToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.floatingMarkingMenuToolStripMenuItem.Name = "floatingMarkingMenuToolStripMenuItem";
+            this.floatingMarkingMenuToolStripMenuItem.Padding = new System.Windows.Forms.Padding(0);
+            this.floatingMarkingMenuToolStripMenuItem.Size = new System.Drawing.Size(286, 30);
+            this.floatingMarkingMenuToolStripMenuItem.Text = "Floating Marking Menu";
+            this.floatingMarkingMenuToolStripMenuItem.Click += new System.EventHandler(this.floatingMarkingMenuToolStripMenuItem_Click);
             // 
             // fixedMarkingMenuToolStripMenuItem
             // 
@@ -79,19 +83,21 @@
             this.fixedMarkingMenuToolStripMenuItem.Name = "fixedMarkingMenuToolStripMenuItem";
             this.fixedMarkingMenuToolStripMenuItem.Size = new System.Drawing.Size(286, 32);
             this.fixedMarkingMenuToolStripMenuItem.Text = "Fixed Marking Menu";
+            this.fixedMarkingMenuToolStripMenuItem.Click += new System.EventHandler(this.fixedMarkingMenuToolStripMenuItem_Click);
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
             this.toolStripSeparator1.Size = new System.Drawing.Size(283, 6);
             // 
-            // joystickToolStripMenuItem
+            // doubleJoystickToolStripMenuItem
             // 
-            this.joystickToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.joystickToolStripMenuItem.Name = "joystickToolStripMenuItem";
-            this.joystickToolStripMenuItem.Padding = new System.Windows.Forms.Padding(0);
-            this.joystickToolStripMenuItem.Size = new System.Drawing.Size(286, 30);
-            this.joystickToolStripMenuItem.Text = "Double Joystick";
+            this.doubleJoystickToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.doubleJoystickToolStripMenuItem.Name = "doubleJoystickToolStripMenuItem";
+            this.doubleJoystickToolStripMenuItem.Padding = new System.Windows.Forms.Padding(0);
+            this.doubleJoystickToolStripMenuItem.Size = new System.Drawing.Size(286, 30);
+            this.doubleJoystickToolStripMenuItem.Text = "Double Joystick";
+            this.doubleJoystickToolStripMenuItem.Click += new System.EventHandler(this.doubleJoystickToolStripMenuItem_Click);
             // 
             // singleJoystickToolStripMenuItem
             // 
@@ -99,6 +105,7 @@
             this.singleJoystickToolStripMenuItem.Name = "singleJoystickToolStripMenuItem";
             this.singleJoystickToolStripMenuItem.Size = new System.Drawing.Size(286, 32);
             this.singleJoystickToolStripMenuItem.Text = "Single Joystick";
+            this.singleJoystickToolStripMenuItem.Click += new System.EventHandler(this.singleJoystickToolStripMenuItem_Click);
             // 
             // floatingJoystickToolStripMenuItem
             // 
@@ -106,28 +113,33 @@
             this.floatingJoystickToolStripMenuItem.Name = "floatingJoystickToolStripMenuItem";
             this.floatingJoystickToolStripMenuItem.Size = new System.Drawing.Size(286, 32);
             this.floatingJoystickToolStripMenuItem.Text = "Floating Joystick";
+            this.floatingJoystickToolStripMenuItem.Click += new System.EventHandler(this.floatingJoystickToolStripMenuItem_Click);
             // 
-            // quickToolStripMenuItem
+            // toolStripSeparator2
             // 
-            this.quickToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.topToolStripMenuItem,
-            this.rightToolStripMenuItem});
-            this.quickToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.quickToolStripMenuItem.Name = "quickToolStripMenuItem";
-            this.quickToolStripMenuItem.Size = new System.Drawing.Size(286, 32);
-            this.quickToolStripMenuItem.Text = "Quick Panel";
+            this.toolStripSeparator2.Name = "toolStripSeparator2";
+            this.toolStripSeparator2.Size = new System.Drawing.Size(283, 6);
             // 
-            // topToolStripMenuItem
+            // quickPanelTopToolStripMenuItem
             // 
-            this.topToolStripMenuItem.Name = "topToolStripMenuItem";
-            this.topToolStripMenuItem.Size = new System.Drawing.Size(216, 32);
-            this.topToolStripMenuItem.Text = "Top";
+            this.quickPanelTopToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.quickPanelTopToolStripMenuItem.Name = "quickPanelTopToolStripMenuItem";
+            this.quickPanelTopToolStripMenuItem.Size = new System.Drawing.Size(286, 32);
+            this.quickPanelTopToolStripMenuItem.Text = "Quick Panel Top";
+            this.quickPanelTopToolStripMenuItem.Click += new System.EventHandler(this.quickPanelTopToolStripMenuItem_Click);
             // 
-            // rightToolStripMenuItem
+            // quickPanelRightToolStripMenuItem
             // 
-            this.rightToolStripMenuItem.Name = "rightToolStripMenuItem";
-            this.rightToolStripMenuItem.Size = new System.Drawing.Size(216, 32);
-            this.rightToolStripMenuItem.Text = "Right";
+            this.quickPanelRightToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.quickPanelRightToolStripMenuItem.Name = "quickPanelRightToolStripMenuItem";
+            this.quickPanelRightToolStripMenuItem.Size = new System.Drawing.Size(286, 32);
+            this.quickPanelRightToolStripMenuItem.Text = "Quick Panel Right";
+            this.quickPanelRightToolStripMenuItem.Click += new System.EventHandler(this.quickPanelRightToolStripMenuItem_Click);
+            // 
+            // toolStripSeparator3
+            // 
+            this.toolStripSeparator3.Name = "toolStripSeparator3";
+            this.toolStripSeparator3.Size = new System.Drawing.Size(283, 6);
             // 
             // middleButtonToolStripMenuItem
             // 
@@ -135,23 +147,24 @@
             this.middleButtonToolStripMenuItem.Name = "middleButtonToolStripMenuItem";
             this.middleButtonToolStripMenuItem.Size = new System.Drawing.Size(286, 32);
             this.middleButtonToolStripMenuItem.Text = "Middle Button";
+            this.middleButtonToolStripMenuItem.Click += new System.EventHandler(this.middleButtonToolStripMenuItem_Click);
             // 
-            // closeToolStripMenuItem
+            // runAtStartUpToolStripMenuItem
             // 
-            this.closeToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.closeToolStripMenuItem.Name = "closeToolStripMenuItem";
-            this.closeToolStripMenuItem.Padding = new System.Windows.Forms.Padding(0);
-            this.closeToolStripMenuItem.Size = new System.Drawing.Size(286, 30);
-            this.closeToolStripMenuItem.Text = "Run At Startup";
-            this.closeToolStripMenuItem.Click += new System.EventHandler(this.runAtStartUpToolStripMenuItem_Click);
+            this.runAtStartUpToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.runAtStartUpToolStripMenuItem.Name = "runAtStartUpToolStripMenuItem";
+            this.runAtStartUpToolStripMenuItem.Padding = new System.Windows.Forms.Padding(0);
+            this.runAtStartUpToolStripMenuItem.Size = new System.Drawing.Size(286, 30);
+            this.runAtStartUpToolStripMenuItem.Text = "Run At Startup";
+            this.runAtStartUpToolStripMenuItem.Click += new System.EventHandler(this.runAtStartUpToolStripMenuItem_Click);
             // 
-            // applicationExitToolStripMenuItem
+            // closeThePasokKeyToolStripMenuItem
             // 
-            this.applicationExitToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.applicationExitToolStripMenuItem.Name = "applicationExitToolStripMenuItem";
-            this.applicationExitToolStripMenuItem.Size = new System.Drawing.Size(286, 32);
-            this.applicationExitToolStripMenuItem.Text = "Close the PasoKey";
-            this.applicationExitToolStripMenuItem.Click += new System.EventHandler(this.closeThePasoKeyToolStripMenuItem_Click);
+            this.closeThePasokKeyToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.closeThePasokKeyToolStripMenuItem.Name = "closeThePasokKeyToolStripMenuItem";
+            this.closeThePasokKeyToolStripMenuItem.Size = new System.Drawing.Size(286, 32);
+            this.closeThePasokKeyToolStripMenuItem.Text = "Close the PasoKey";
+            this.closeThePasokKeyToolStripMenuItem.Click += new System.EventHandler(this.closeThePasoKeyToolStripMenuItem_Click);
             // 
             // notifyIcon1
             // 
@@ -184,18 +197,19 @@
         #endregion
 
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem markingMenuToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem joystickToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem closeToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem floatingMarkingMenuToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem doubleJoystickToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem runAtStartUpToolStripMenuItem;
         private System.Windows.Forms.NotifyIcon notifyIcon1;
-        private System.Windows.Forms.ToolStripMenuItem applicationExitToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem quickToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem topToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem rightToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem closeThePasokKeyToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem fixedMarkingMenuToolStripMenuItem;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
         private System.Windows.Forms.ToolStripMenuItem singleJoystickToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem floatingJoystickToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem middleButtonToolStripMenuItem;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
+        private System.Windows.Forms.ToolStripMenuItem quickPanelTopToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem quickPanelRightToolStripMenuItem;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
     }
 }
