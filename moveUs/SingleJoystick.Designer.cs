@@ -381,7 +381,7 @@
             this.Controls.Add(this.rightGuide);
             this.Controls.Add(this.leftGuide);
             this.ForeColor = System.Drawing.Color.Black;
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "SingleJoystick";
             this.ShowIcon = false;
             this.ShowInTaskbar = false;
