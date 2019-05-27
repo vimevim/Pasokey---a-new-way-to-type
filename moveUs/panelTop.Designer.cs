@@ -1,4 +1,4 @@
-﻿namespace moveUs
+﻿namespace PasoKey
 {
     partial class PanelTop
     {
@@ -38,11 +38,11 @@
             this.lineDown = new System.Windows.Forms.Label();
             this.kepenkKapat = new System.Windows.Forms.Timer(this.components);
             this.kepenkAc = new System.Windows.Forms.Timer(this.components);
-            this.buttonElipse1 = new moveUs.ButtonElipse();
-            this.buttonElipse2 = new moveUs.ButtonElipse();
-            this.buttonElipse3 = new moveUs.ButtonElipse();
-            this.buttonElipse4 = new moveUs.ButtonElipse();
-            this.buttonElipse5 = new moveUs.ButtonElipse();
+            this.buttonElipse1 = new PasoKey.ButtonElipse();
+            this.buttonElipse2 = new PasoKey.ButtonElipse();
+            this.buttonElipse3 = new PasoKey.ButtonElipse();
+            this.buttonElipse4 = new PasoKey.ButtonElipse();
+            this.buttonElipse5 = new PasoKey.ButtonElipse();
             this.sleepModeActivate = new System.Windows.Forms.Timer(this.components);
             this.panel2.SuspendLayout();
             this.SuspendLayout();

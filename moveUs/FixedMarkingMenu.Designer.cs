@@ -1,4 +1,4 @@
-﻿namespace moveUs
+﻿namespace PasoKey
 {
     partial class FixedMarkingMenu
     {
@@ -160,7 +160,7 @@
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.BackgroundImage = global::moveUs.Properties.Resources.JoystickOutline_fw;
+            this.BackgroundImage = global::PasoKey.Properties.Resources.JoystickOutline_fw;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(750, 750);
             this.Controls.Add(this.lblDownLeft);

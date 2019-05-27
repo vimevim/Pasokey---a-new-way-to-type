@@ -1,4 +1,4 @@
-﻿namespace moveUs
+﻿namespace PasoKey
 {
     partial class DoubleJoystick
     {
@@ -30,7 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DoubleJoystick));
             this.rightGuide = new System.Windows.Forms.Panel();
-            this.movingPartRight = new moveUs.ButtonElipse();
+            this.movingPartRight = new PasoKey.ButtonElipse();
             this.rightLbl7 = new System.Windows.Forms.Label();
             this.rightLbl6 = new System.Windows.Forms.Label();
             this.rightLbl5 = new System.Windows.Forms.Label();
@@ -39,9 +39,9 @@
             this.rightLbl2 = new System.Windows.Forms.Label();
             this.rightLbl1 = new System.Windows.Forms.Label();
             this.rightLbl0 = new System.Windows.Forms.Label();
-            this.buttonElipse11 = new moveUs.ButtonElipse();
+            this.buttonElipse11 = new PasoKey.ButtonElipse();
             this.leftGuide = new System.Windows.Forms.Panel();
-            this.movingPartLeft = new moveUs.ButtonElipse();
+            this.movingPartLeft = new PasoKey.ButtonElipse();
             this.leftLbl7 = new System.Windows.Forms.Label();
             this.leftLbl6 = new System.Windows.Forms.Label();
             this.leftLbl5 = new System.Windows.Forms.Label();
@@ -50,7 +50,7 @@
             this.leftLbl2 = new System.Windows.Forms.Label();
             this.leftLbl1 = new System.Windows.Forms.Label();
             this.leftLbl0 = new System.Windows.Forms.Label();
-            this.buttonElipse1 = new moveUs.ButtonElipse();
+            this.buttonElipse1 = new PasoKey.ButtonElipse();
             this.rightGuide.SuspendLayout();
             this.leftGuide.SuspendLayout();
             this.SuspendLayout();

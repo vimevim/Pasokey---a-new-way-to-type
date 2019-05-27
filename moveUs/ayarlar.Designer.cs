@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace moveUs {
+namespace PasoKey {
     
     
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]

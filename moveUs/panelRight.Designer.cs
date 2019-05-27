@@ -1,4 +1,4 @@
-﻿namespace moveUs
+﻿namespace PasoKey
 {
     partial class PanelRight
     {
@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.buttonElipse1 = new moveUs.ButtonElipse();
+            this.buttonElipse1 = new PasoKey.ButtonElipse();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.dots2 = new System.Windows.Forms.Label();

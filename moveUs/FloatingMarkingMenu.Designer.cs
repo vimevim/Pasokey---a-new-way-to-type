@@ -1,4 +1,4 @@
-﻿namespace moveUs
+﻿namespace PasoKey
 {
     partial class FloatingMarkingMenu
     {
@@ -316,7 +316,7 @@
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(47)))), ((int)(((byte)(55)))));
-            this.BackgroundImage = global::moveUs.Properties.Resources.JoystickOutline_fw;
+            this.BackgroundImage = global::PasoKey.Properties.Resources.JoystickOutline_fw;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.ClientSize = new System.Drawing.Size(450, 450);
             this.Controls.Add(this.lblDownLeft);

@@ -10,7 +10,7 @@ using System.Windows.Forms;
 using Microsoft.Win32;
 using Gma.System.MouseKeyHook;
 
-namespace moveUs
+namespace PasoKey
 {
     public partial class PasoKeyMain : Form
     {
