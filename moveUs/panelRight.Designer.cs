@@ -108,7 +108,7 @@
             this.sleepModeActivate.Interval = 1000;
             this.sleepModeActivate.Tick += new System.EventHandler(this.sleepModeActivate_Tick);
             // 
-            // panelRight
+            // PanelRight
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(47)))), ((int)(((byte)(55)))));
@@ -120,8 +120,8 @@
             this.Controls.Add(this.dots1);
             this.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "panelRight";
-            this.Text = "panelVertical";
+            this.Name = "PanelRight";
+            this.ShowInTaskbar = false;
             this.TopMost = true;
             this.Load += new System.EventHandler(this.panelRight_Load);
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelRight_MouseDown);

@@ -233,6 +233,7 @@ namespace moveUs
                 ((ToolStripMenuItem)contextMenuStrip1.Items[10]).Checked = true;
             }
             ayarlar.Default.Save();
+            
         }
 
         private void runAtStartUpToolStripMenuItem_Click(object sender, EventArgs e)

@@ -39,6 +39,7 @@
             this.leftLbl2 = new System.Windows.Forms.Label();
             this.leftLbl1 = new System.Windows.Forms.Label();
             this.leftLbl0 = new System.Windows.Forms.Label();
+            this.buttonElipse1 = new moveUs.ButtonElipse();
             this.rightGuide = new System.Windows.Forms.Panel();
             this.movingPartRight = new moveUs.ButtonElipse();
             this.rightLbl7 = new System.Windows.Forms.Label();
@@ -50,7 +51,6 @@
             this.rightLbl1 = new System.Windows.Forms.Label();
             this.rightLbl0 = new System.Windows.Forms.Label();
             this.buttonElipse11 = new moveUs.ButtonElipse();
-            this.buttonElipse1 = new moveUs.ButtonElipse();
             this.leftGuide.SuspendLayout();
             this.rightGuide.SuspendLayout();
             this.SuspendLayout();
@@ -190,6 +190,18 @@
             this.leftLbl0.Size = new System.Drawing.Size(48, 48);
             this.leftLbl0.TabIndex = 54;
             this.leftLbl0.Text = "X";
+            // 
+            // buttonElipse1
+            // 
+            this.buttonElipse1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(47)))), ((int)(((byte)(55)))));
+            this.buttonElipse1.Enabled = false;
+            this.buttonElipse1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonElipse1.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.buttonElipse1.Location = new System.Drawing.Point(40, 40);
+            this.buttonElipse1.Name = "buttonElipse1";
+            this.buttonElipse1.Size = new System.Drawing.Size(270, 270);
+            this.buttonElipse1.TabIndex = 44;
+            this.buttonElipse1.UseVisualStyleBackColor = false;
             // 
             // rightGuide
             // 
@@ -347,18 +359,6 @@
             this.buttonElipse11.TabIndex = 44;
             this.buttonElipse11.UseVisualStyleBackColor = false;
             // 
-            // buttonElipse1
-            // 
-            this.buttonElipse1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(47)))), ((int)(((byte)(55)))));
-            this.buttonElipse1.Enabled = false;
-            this.buttonElipse1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonElipse1.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.buttonElipse1.Location = new System.Drawing.Point(40, 40);
-            this.buttonElipse1.Name = "buttonElipse1";
-            this.buttonElipse1.Size = new System.Drawing.Size(270, 270);
-            this.buttonElipse1.TabIndex = 44;
-            this.buttonElipse1.UseVisualStyleBackColor = false;
-            // 
             // FloatingJoystick
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -368,10 +368,10 @@
             this.Controls.Add(this.leftGuide);
             this.ForeColor = System.Drawing.Color.White;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FloatingJoystick";
             this.ShowIcon = false;
             this.ShowInTaskbar = false;
-            this.Text = "DualPanel";
             this.TopMost = true;
             this.Load += new System.EventHandler(this.DualPanel_Load);
             this.MouseUp += new System.Windows.Forms.MouseEventHandler(this.general_MouseUp);
