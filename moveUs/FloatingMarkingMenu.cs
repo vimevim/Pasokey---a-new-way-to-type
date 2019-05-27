@@ -144,12 +144,13 @@ namespace moveUs
             //çizgi başlangıcı
             Graphics g = this.CreateGraphics();
             Pen d = new Pen(Color.FromArgb(48, 47, 55), 5);//çizici kalem
-            Pen s = new Pen(Color.FromArgb(245, 245, 245), 5);//iz silici kalem, sıkıntısı var
+            Pen s = new Pen(Color.White, 5);//iz silici kalem, sıkıntısı var
             if (e.Button == MouseButtons.Right)
             {
                 int angularEdge = ((Math.Abs(formOriginY) + Math.Abs(formOriginX)) / 2);
                 if (angle > 337.5 || angle < 22.5)
                 {
+
                     g.DrawLine(d, formCentreX, formCentreY, formCentreX, defaultOriginY);//çiziliyor
                     g.DrawLine(s, formCentreX, formCentreY, formCentreX, defaultOriginY);//çizginin izi siliniyor
                 }
@@ -289,7 +290,7 @@ namespace moveUs
         private void MarkingMenu_Load(object sender, EventArgs e)
         {
             FormFollowsCursor();
-            //this.TransparencyKey = BackColor;
+            this.TransparencyKey = BackColor;
         }
 
         private void FormFollowsCursor()

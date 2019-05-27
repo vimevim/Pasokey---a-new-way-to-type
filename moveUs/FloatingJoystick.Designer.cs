@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FloatingJoystick));
             this.leftGuide = new System.Windows.Forms.Panel();
             this.movingPartLeft = new moveUs.ButtonElipse();
             this.leftLbl7 = new System.Windows.Forms.Label();
@@ -38,7 +39,6 @@
             this.leftLbl2 = new System.Windows.Forms.Label();
             this.leftLbl1 = new System.Windows.Forms.Label();
             this.leftLbl0 = new System.Windows.Forms.Label();
-            this.buttonElipse1 = new moveUs.ButtonElipse();
             this.rightGuide = new System.Windows.Forms.Panel();
             this.movingPartRight = new moveUs.ButtonElipse();
             this.rightLbl7 = new System.Windows.Forms.Label();
@@ -50,6 +50,7 @@
             this.rightLbl1 = new System.Windows.Forms.Label();
             this.rightLbl0 = new System.Windows.Forms.Label();
             this.buttonElipse11 = new moveUs.ButtonElipse();
+            this.buttonElipse1 = new moveUs.ButtonElipse();
             this.leftGuide.SuspendLayout();
             this.rightGuide.SuspendLayout();
             this.SuspendLayout();
@@ -57,7 +58,7 @@
             // leftGuide
             // 
             this.leftGuide.BackColor = System.Drawing.Color.Transparent;
-            this.leftGuide.BackgroundImage = global::moveUs.Properties.Resources.JoystickOutline_fw;
+            this.leftGuide.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("leftGuide.BackgroundImage")));
             this.leftGuide.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.leftGuide.Controls.Add(this.movingPartLeft);
             this.leftGuide.Controls.Add(this.leftLbl7);
@@ -98,7 +99,6 @@
             // 
             this.leftLbl7.AutoSize = true;
             this.leftLbl7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(47)))), ((int)(((byte)(55)))));
-            this.leftLbl7.Enabled = false;
             this.leftLbl7.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.leftLbl7.ForeColor = System.Drawing.Color.White;
             this.leftLbl7.Location = new System.Drawing.Point(81, 81);
@@ -111,7 +111,6 @@
             // 
             this.leftLbl6.AutoSize = true;
             this.leftLbl6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(47)))), ((int)(((byte)(55)))));
-            this.leftLbl6.Enabled = false;
             this.leftLbl6.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.leftLbl6.ForeColor = System.Drawing.Color.White;
             this.leftLbl6.Location = new System.Drawing.Point(51, 151);
@@ -124,7 +123,6 @@
             // 
             this.leftLbl5.AutoSize = true;
             this.leftLbl5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(47)))), ((int)(((byte)(55)))));
-            this.leftLbl5.Enabled = false;
             this.leftLbl5.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.leftLbl5.ForeColor = System.Drawing.Color.White;
             this.leftLbl5.Location = new System.Drawing.Point(81, 221);
@@ -137,7 +135,6 @@
             // 
             this.leftLbl4.AutoSize = true;
             this.leftLbl4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(47)))), ((int)(((byte)(55)))));
-            this.leftLbl4.Enabled = false;
             this.leftLbl4.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.leftLbl4.ForeColor = System.Drawing.Color.White;
             this.leftLbl4.Location = new System.Drawing.Point(151, 251);
@@ -150,7 +147,6 @@
             // 
             this.leftLbl3.AutoSize = true;
             this.leftLbl3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(47)))), ((int)(((byte)(55)))));
-            this.leftLbl3.Enabled = false;
             this.leftLbl3.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.leftLbl3.ForeColor = System.Drawing.Color.White;
             this.leftLbl3.Location = new System.Drawing.Point(221, 221);
@@ -163,7 +159,6 @@
             // 
             this.leftLbl2.AutoSize = true;
             this.leftLbl2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(47)))), ((int)(((byte)(55)))));
-            this.leftLbl2.Enabled = false;
             this.leftLbl2.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.leftLbl2.ForeColor = System.Drawing.Color.White;
             this.leftLbl2.Location = new System.Drawing.Point(251, 151);
@@ -176,7 +171,6 @@
             // 
             this.leftLbl1.AutoSize = true;
             this.leftLbl1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(47)))), ((int)(((byte)(55)))));
-            this.leftLbl1.Enabled = false;
             this.leftLbl1.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.leftLbl1.ForeColor = System.Drawing.Color.White;
             this.leftLbl1.Location = new System.Drawing.Point(221, 81);
@@ -189,7 +183,6 @@
             // 
             this.leftLbl0.AutoSize = true;
             this.leftLbl0.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(47)))), ((int)(((byte)(55)))));
-            this.leftLbl0.Enabled = false;
             this.leftLbl0.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.leftLbl0.ForeColor = System.Drawing.Color.White;
             this.leftLbl0.Location = new System.Drawing.Point(151, 51);
@@ -198,22 +191,10 @@
             this.leftLbl0.TabIndex = 54;
             this.leftLbl0.Text = "X";
             // 
-            // buttonElipse1
-            // 
-            this.buttonElipse1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(47)))), ((int)(((byte)(55)))));
-            this.buttonElipse1.Enabled = false;
-            this.buttonElipse1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonElipse1.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.buttonElipse1.Location = new System.Drawing.Point(40, 40);
-            this.buttonElipse1.Name = "buttonElipse1";
-            this.buttonElipse1.Size = new System.Drawing.Size(270, 270);
-            this.buttonElipse1.TabIndex = 44;
-            this.buttonElipse1.UseVisualStyleBackColor = false;
-            // 
             // rightGuide
             // 
             this.rightGuide.BackColor = System.Drawing.Color.Transparent;
-            this.rightGuide.BackgroundImage = global::moveUs.Properties.Resources.JoystickOutline_fw;
+            this.rightGuide.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("rightGuide.BackgroundImage")));
             this.rightGuide.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.rightGuide.Controls.Add(this.movingPartRight);
             this.rightGuide.Controls.Add(this.rightLbl7);
@@ -254,7 +235,6 @@
             // 
             this.rightLbl7.AutoSize = true;
             this.rightLbl7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(47)))), ((int)(((byte)(55)))));
-            this.rightLbl7.Enabled = false;
             this.rightLbl7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.rightLbl7.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.rightLbl7.ForeColor = System.Drawing.Color.White;
@@ -268,7 +248,6 @@
             // 
             this.rightLbl6.AutoSize = true;
             this.rightLbl6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(47)))), ((int)(((byte)(55)))));
-            this.rightLbl6.Enabled = false;
             this.rightLbl6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.rightLbl6.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.rightLbl6.ForeColor = System.Drawing.Color.White;
@@ -282,7 +261,6 @@
             // 
             this.rightLbl5.AutoSize = true;
             this.rightLbl5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(47)))), ((int)(((byte)(55)))));
-            this.rightLbl5.Enabled = false;
             this.rightLbl5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.rightLbl5.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.rightLbl5.ForeColor = System.Drawing.Color.White;
@@ -296,7 +274,6 @@
             // 
             this.rightLbl4.AutoSize = true;
             this.rightLbl4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(47)))), ((int)(((byte)(55)))));
-            this.rightLbl4.Enabled = false;
             this.rightLbl4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.rightLbl4.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.rightLbl4.ForeColor = System.Drawing.Color.White;
@@ -310,7 +287,6 @@
             // 
             this.rightLbl3.AutoSize = true;
             this.rightLbl3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(47)))), ((int)(((byte)(55)))));
-            this.rightLbl3.Enabled = false;
             this.rightLbl3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.rightLbl3.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.rightLbl3.ForeColor = System.Drawing.Color.White;
@@ -324,7 +300,6 @@
             // 
             this.rightLbl2.AutoSize = true;
             this.rightLbl2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(47)))), ((int)(((byte)(55)))));
-            this.rightLbl2.Enabled = false;
             this.rightLbl2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.rightLbl2.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.rightLbl2.ForeColor = System.Drawing.Color.White;
@@ -338,7 +313,6 @@
             // 
             this.rightLbl1.AutoSize = true;
             this.rightLbl1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(47)))), ((int)(((byte)(55)))));
-            this.rightLbl1.Enabled = false;
             this.rightLbl1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.rightLbl1.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.rightLbl1.ForeColor = System.Drawing.Color.White;
@@ -352,7 +326,6 @@
             // 
             this.rightLbl0.AutoSize = true;
             this.rightLbl0.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(47)))), ((int)(((byte)(55)))));
-            this.rightLbl0.Enabled = false;
             this.rightLbl0.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.rightLbl0.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.rightLbl0.ForeColor = System.Drawing.Color.White;
@@ -373,6 +346,18 @@
             this.buttonElipse11.Size = new System.Drawing.Size(270, 270);
             this.buttonElipse11.TabIndex = 44;
             this.buttonElipse11.UseVisualStyleBackColor = false;
+            // 
+            // buttonElipse1
+            // 
+            this.buttonElipse1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(47)))), ((int)(((byte)(55)))));
+            this.buttonElipse1.Enabled = false;
+            this.buttonElipse1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonElipse1.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.buttonElipse1.Location = new System.Drawing.Point(40, 40);
+            this.buttonElipse1.Name = "buttonElipse1";
+            this.buttonElipse1.Size = new System.Drawing.Size(270, 270);
+            this.buttonElipse1.TabIndex = 44;
+            this.buttonElipse1.UseVisualStyleBackColor = false;
             // 
             // FloatingJoystick
             // 
@@ -400,9 +385,7 @@
 
         #endregion
         private System.Windows.Forms.Panel leftGuide;
-        private ButtonElipse buttonElipse1;
         private System.Windows.Forms.Panel rightGuide;
-        private ButtonElipse buttonElipse11;
         private System.Windows.Forms.Label leftLbl0;
         private System.Windows.Forms.Label leftLbl4;
         private System.Windows.Forms.Label leftLbl3;
@@ -421,5 +404,7 @@
         private System.Windows.Forms.Label rightLbl1;
         private System.Windows.Forms.Label rightLbl0;
         private ButtonElipse movingPartRight;
+        private ButtonElipse buttonElipse1;
+        private ButtonElipse buttonElipse11;
     }
 }

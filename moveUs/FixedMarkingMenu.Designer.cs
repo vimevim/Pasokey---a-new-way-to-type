@@ -156,10 +156,12 @@
             this.lblUp.TabIndex = 33;
             this.lblUp.Text = "X";
             // 
-            // MarkingMenuFixed
+            // FixedMarkingMenu
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.BackgroundImage = global::moveUs.Properties.Resources.JoystickOutline_fw;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(750, 750);
             this.Controls.Add(this.lblDownLeft);
             this.Controls.Add(this.lblDownMid);
@@ -170,8 +172,9 @@
             this.Controls.Add(this.lblUpRight);
             this.Controls.Add(this.lblCenter);
             this.Controls.Add(this.lblUp);
+            this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "MarkingMenuFixed";
+            this.Name = "FixedMarkingMenu";
             this.ShowIcon = false;
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

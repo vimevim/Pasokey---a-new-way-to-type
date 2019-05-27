@@ -208,5 +208,8 @@
   <ItemGroup>
     <None Include="Resources\JoystickOutline.fw.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\JoystickInner.fw.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

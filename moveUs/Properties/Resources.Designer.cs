@@ -63,6 +63,16 @@ namespace moveUs.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap JoystickInner_fw {
+            get {
+                object obj = ResourceManager.GetObject("JoystickInner.fw", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap JoystickOutline_fw {
             get {
                 object obj = ResourceManager.GetObject("JoystickOutline.fw", resourceCulture);

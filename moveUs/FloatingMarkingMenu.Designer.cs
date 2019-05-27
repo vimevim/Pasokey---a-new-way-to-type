@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FloatingMarkingMenu));
             this.label3 = new System.Windows.Forms.Label();
             this.lblAngle = new System.Windows.Forms.Label();
             this.labelHipotenus = new System.Windows.Forms.Label();
@@ -316,9 +315,9 @@
             // FloatingMarkingMenu
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
-            this.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(47)))), ((int)(((byte)(55)))));
+            this.BackgroundImage = global::moveUs.Properties.Resources.JoystickOutline_fw;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.ClientSize = new System.Drawing.Size(450, 450);
             this.Controls.Add(this.lblDownLeft);
             this.Controls.Add(this.lblDownMid);
@@ -342,7 +341,7 @@
             this.Controls.Add(this.labelEX);
             this.Controls.Add(this.label7);
             this.DoubleBuffered = true;
-            this.ForeColor = System.Drawing.SystemColors.Window;
+            this.ForeColor = System.Drawing.Color.Black;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FloatingMarkingMenu";
             this.ShowIcon = false;
