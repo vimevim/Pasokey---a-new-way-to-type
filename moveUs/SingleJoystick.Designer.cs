@@ -57,7 +57,7 @@
             // rightGuide
             // 
             this.rightGuide.BackColor = System.Drawing.Color.Transparent;
-            this.rightGuide.BackgroundImage = global::moveUs.Properties.Resources.circle_png_circle_icon_1600;
+            this.rightGuide.BackgroundImage = global::moveUs.Properties.Resources.JoystickOutline_fw;
             this.rightGuide.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.rightGuide.Controls.Add(this.movingPartRight);
             this.rightGuide.Controls.Add(this.rightLbl7);
@@ -221,7 +221,7 @@
             // leftGuide
             // 
             this.leftGuide.BackColor = System.Drawing.Color.Transparent;
-            this.leftGuide.BackgroundImage = global::moveUs.Properties.Resources.circle_png_circle_icon_1600;
+            this.leftGuide.BackgroundImage = global::moveUs.Properties.Resources.JoystickOutline_fw;
             this.leftGuide.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.leftGuide.Controls.Add(this.movingPartLeft);
             this.leftGuide.Controls.Add(this.leftLbl7);
@@ -377,10 +377,11 @@
             // SingleJoystick
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
+            this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(700, 350);
             this.Controls.Add(this.rightGuide);
             this.Controls.Add(this.leftGuide);
-            this.ForeColor = System.Drawing.Color.Black;
+            this.ForeColor = System.Drawing.Color.White;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "SingleJoystick";
             this.ShowIcon = false;
@@ -399,7 +400,6 @@
 
         #endregion
         private System.Windows.Forms.Panel leftGuide;
-        private ButtonElipse buttonElipse1;
         private System.Windows.Forms.Panel rightGuide;
         private ButtonElipse buttonElipse11;
         private System.Windows.Forms.Label leftLbl0;
@@ -420,5 +420,6 @@
         private System.Windows.Forms.Label rightLbl1;
         private System.Windows.Forms.Label rightLbl0;
         private ButtonElipse movingPartRight;
+        private ButtonElipse buttonElipse1;
     }
 }

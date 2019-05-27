@@ -116,7 +116,6 @@ namespace moveUs
             this.Location = new Point(screenWidth - this.Width, screenHeight - this.Height);//formun konumunu ekranın altına sabitleyen komut
             rightGuide.Location = new Point(this.Width - rightGuide.Width, 0);//panel2 konumunu başlangıçta sağa yaslayan komut.
             this.TransparencyKey = BackColor;
-            btnLeftDivider.Visible = false;
         }
         //butonları hareket ettirme komutları burada başlıyor
 
@@ -329,25 +328,6 @@ namespace moveUs
             {
                 general_MouseUp(null, null);
             }
-        }
-
-
-        private void btnLeftUniter_Click(object sender, EventArgs e)
-        {
-            this.Width = leftGuide.Width;//formun boyutu bir panel boyutuyla eşitlenir
-            this.Location = new Point(screenWidth - this.Width, screenHeight - this.Height);//formun konumu sağ alta sabitlenir
-            rightGuide.Location = new Point(0, 0);//panel2 konumu panel1 ile üst üste getirilir
-            btnLeftDivider.Visible = true;
-            btnLeftUniter.Visible = false;
-            leftGuide.BringToFront();
-        }
-
-        private void btnLeftDivider_Click(object sender, EventArgs e)
-        {
-            //formu yeniden yükler, başlangıç konumuna döner
-            this.Controls.Clear();
-            this.InitializeComponent();
-            DualPanel_Load(null, null);
         }
 
         //buton hareketleri için olan komutlar burada bitiyor

@@ -57,7 +57,7 @@
             // leftGuide
             // 
             this.leftGuide.BackColor = System.Drawing.Color.Transparent;
-            this.leftGuide.BackgroundImage = global::moveUs.Properties.Resources.circle_png_circle_icon_1600;
+            this.leftGuide.BackgroundImage = global::moveUs.Properties.Resources.JoystickOutline_fw;
             this.leftGuide.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.leftGuide.Controls.Add(this.movingPartLeft);
             this.leftGuide.Controls.Add(this.leftLbl7);
@@ -213,7 +213,7 @@
             // rightGuide
             // 
             this.rightGuide.BackColor = System.Drawing.Color.Transparent;
-            this.rightGuide.BackgroundImage = global::moveUs.Properties.Resources.circle_png_circle_icon_1600;
+            this.rightGuide.BackgroundImage = global::moveUs.Properties.Resources.JoystickOutline_fw;
             this.rightGuide.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.rightGuide.Controls.Add(this.movingPartRight);
             this.rightGuide.Controls.Add(this.rightLbl7);
@@ -377,10 +377,11 @@
             // FloatingJoystick
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
+            this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(700, 350);
             this.Controls.Add(this.rightGuide);
             this.Controls.Add(this.leftGuide);
-            this.ForeColor = System.Drawing.Color.Black;
+            this.ForeColor = System.Drawing.Color.White;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "FloatingJoystick";
             this.ShowIcon = false;

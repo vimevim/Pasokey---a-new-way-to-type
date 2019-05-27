@@ -63,9 +63,9 @@ namespace moveUs.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap circle_png_circle_icon_1600 {
+        internal static System.Drawing.Bitmap JoystickOutline_fw {
             get {
-                object obj = ResourceManager.GetObject("circle-png-circle-icon-1600", resourceCulture);
+                object obj = ResourceManager.GetObject("JoystickOutline.fw", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

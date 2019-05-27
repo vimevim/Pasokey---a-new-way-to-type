@@ -206,7 +206,7 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\circle-png-circle-icon-1600.png" />
+    <None Include="Resources\JoystickOutline.fw.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

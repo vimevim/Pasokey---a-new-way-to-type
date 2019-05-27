@@ -28,20 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DoubleJoystick));
-            this.leftGuide = new System.Windows.Forms.Panel();
-            this.movingPartLeft = new moveUs.ButtonElipse();
-            this.leftLbl7 = new System.Windows.Forms.Label();
-            this.leftLbl6 = new System.Windows.Forms.Label();
-            this.leftLbl5 = new System.Windows.Forms.Label();
-            this.leftLbl4 = new System.Windows.Forms.Label();
-            this.leftLbl3 = new System.Windows.Forms.Label();
-            this.leftLbl2 = new System.Windows.Forms.Label();
-            this.leftLbl1 = new System.Windows.Forms.Label();
-            this.leftLbl0 = new System.Windows.Forms.Label();
-            this.buttonElipse1 = new moveUs.ButtonElipse();
-            this.btnLeftDivider = new System.Windows.Forms.Button();
-            this.btnLeftUniter = new System.Windows.Forms.Button();
             this.rightGuide = new System.Windows.Forms.Panel();
             this.movingPartRight = new moveUs.ButtonElipse();
             this.rightLbl7 = new System.Windows.Forms.Label();
@@ -53,202 +39,25 @@
             this.rightLbl1 = new System.Windows.Forms.Label();
             this.rightLbl0 = new System.Windows.Forms.Label();
             this.buttonElipse11 = new moveUs.ButtonElipse();
-            this.leftGuide.SuspendLayout();
+            this.leftGuide = new System.Windows.Forms.Panel();
+            this.movingPartLeft = new moveUs.ButtonElipse();
+            this.leftLbl7 = new System.Windows.Forms.Label();
+            this.leftLbl6 = new System.Windows.Forms.Label();
+            this.leftLbl5 = new System.Windows.Forms.Label();
+            this.leftLbl4 = new System.Windows.Forms.Label();
+            this.leftLbl3 = new System.Windows.Forms.Label();
+            this.leftLbl2 = new System.Windows.Forms.Label();
+            this.leftLbl1 = new System.Windows.Forms.Label();
+            this.leftLbl0 = new System.Windows.Forms.Label();
+            this.buttonElipse1 = new moveUs.ButtonElipse();
             this.rightGuide.SuspendLayout();
+            this.leftGuide.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // leftGuide
-            // 
-            this.leftGuide.BackColor = System.Drawing.Color.Transparent;
-            this.leftGuide.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("leftGuide.BackgroundImage")));
-            this.leftGuide.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.leftGuide.Controls.Add(this.movingPartLeft);
-            this.leftGuide.Controls.Add(this.leftLbl7);
-            this.leftGuide.Controls.Add(this.leftLbl6);
-            this.leftGuide.Controls.Add(this.leftLbl5);
-            this.leftGuide.Controls.Add(this.leftLbl4);
-            this.leftGuide.Controls.Add(this.leftLbl3);
-            this.leftGuide.Controls.Add(this.leftLbl2);
-            this.leftGuide.Controls.Add(this.leftLbl1);
-            this.leftGuide.Controls.Add(this.leftLbl0);
-            this.leftGuide.Controls.Add(this.buttonElipse1);
-            this.leftGuide.Controls.Add(this.btnLeftDivider);
-            this.leftGuide.Controls.Add(this.btnLeftUniter);
-            this.leftGuide.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.leftGuide.Location = new System.Drawing.Point(0, 0);
-            this.leftGuide.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.leftGuide.Name = "leftGuide";
-            this.leftGuide.Size = new System.Drawing.Size(350, 350);
-            this.leftGuide.TabIndex = 4;
-            this.leftGuide.MouseDown += new System.Windows.Forms.MouseEventHandler(this.leftGuide_MouseDown);
-            this.leftGuide.MouseMove += new System.Windows.Forms.MouseEventHandler(this.leftGuide_MouseMove);
-            this.leftGuide.MouseUp += new System.Windows.Forms.MouseEventHandler(this.leftGuide_MouseUp);
-            // 
-            // movingPartLeft
-            // 
-            this.movingPartLeft.BackColor = System.Drawing.Color.White;
-            this.movingPartLeft.Enabled = false;
-            this.movingPartLeft.FlatAppearance.BorderSize = 0;
-            this.movingPartLeft.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.movingPartLeft.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.movingPartLeft.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(47)))), ((int)(((byte)(55)))));
-            this.movingPartLeft.Location = new System.Drawing.Point(150, 150);
-            this.movingPartLeft.Name = "movingPartLeft";
-            this.movingPartLeft.Size = new System.Drawing.Size(50, 50);
-            this.movingPartLeft.TabIndex = 61;
-            this.movingPartLeft.Text = "X";
-            this.movingPartLeft.UseVisualStyleBackColor = false;
-            // 
-            // leftLbl7
-            // 
-            this.leftLbl7.AutoSize = true;
-            this.leftLbl7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(47)))), ((int)(((byte)(55)))));
-            this.leftLbl7.Enabled = false;
-            this.leftLbl7.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.leftLbl7.ForeColor = System.Drawing.Color.White;
-            this.leftLbl7.Location = new System.Drawing.Point(81, 81);
-            this.leftLbl7.Name = "leftLbl7";
-            this.leftLbl7.Size = new System.Drawing.Size(48, 48);
-            this.leftLbl7.TabIndex = 60;
-            this.leftLbl7.Text = "X";
-            // 
-            // leftLbl6
-            // 
-            this.leftLbl6.AutoSize = true;
-            this.leftLbl6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(47)))), ((int)(((byte)(55)))));
-            this.leftLbl6.Enabled = false;
-            this.leftLbl6.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.leftLbl6.ForeColor = System.Drawing.Color.White;
-            this.leftLbl6.Location = new System.Drawing.Point(51, 151);
-            this.leftLbl6.Name = "leftLbl6";
-            this.leftLbl6.Size = new System.Drawing.Size(48, 48);
-            this.leftLbl6.TabIndex = 59;
-            this.leftLbl6.Text = "X";
-            // 
-            // leftLbl5
-            // 
-            this.leftLbl5.AutoSize = true;
-            this.leftLbl5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(47)))), ((int)(((byte)(55)))));
-            this.leftLbl5.Enabled = false;
-            this.leftLbl5.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.leftLbl5.ForeColor = System.Drawing.Color.White;
-            this.leftLbl5.Location = new System.Drawing.Point(81, 221);
-            this.leftLbl5.Name = "leftLbl5";
-            this.leftLbl5.Size = new System.Drawing.Size(48, 48);
-            this.leftLbl5.TabIndex = 58;
-            this.leftLbl5.Text = "X";
-            // 
-            // leftLbl4
-            // 
-            this.leftLbl4.AutoSize = true;
-            this.leftLbl4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(47)))), ((int)(((byte)(55)))));
-            this.leftLbl4.Enabled = false;
-            this.leftLbl4.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.leftLbl4.ForeColor = System.Drawing.Color.White;
-            this.leftLbl4.Location = new System.Drawing.Point(151, 251);
-            this.leftLbl4.Name = "leftLbl4";
-            this.leftLbl4.Size = new System.Drawing.Size(48, 48);
-            this.leftLbl4.TabIndex = 57;
-            this.leftLbl4.Text = "X";
-            // 
-            // leftLbl3
-            // 
-            this.leftLbl3.AutoSize = true;
-            this.leftLbl3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(47)))), ((int)(((byte)(55)))));
-            this.leftLbl3.Enabled = false;
-            this.leftLbl3.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.leftLbl3.ForeColor = System.Drawing.Color.White;
-            this.leftLbl3.Location = new System.Drawing.Point(221, 221);
-            this.leftLbl3.Name = "leftLbl3";
-            this.leftLbl3.Size = new System.Drawing.Size(48, 48);
-            this.leftLbl3.TabIndex = 56;
-            this.leftLbl3.Text = "X";
-            // 
-            // leftLbl2
-            // 
-            this.leftLbl2.AutoSize = true;
-            this.leftLbl2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(47)))), ((int)(((byte)(55)))));
-            this.leftLbl2.Enabled = false;
-            this.leftLbl2.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.leftLbl2.ForeColor = System.Drawing.Color.White;
-            this.leftLbl2.Location = new System.Drawing.Point(251, 151);
-            this.leftLbl2.Name = "leftLbl2";
-            this.leftLbl2.Size = new System.Drawing.Size(48, 48);
-            this.leftLbl2.TabIndex = 55;
-            this.leftLbl2.Text = "X";
-            // 
-            // leftLbl1
-            // 
-            this.leftLbl1.AutoSize = true;
-            this.leftLbl1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(47)))), ((int)(((byte)(55)))));
-            this.leftLbl1.Enabled = false;
-            this.leftLbl1.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.leftLbl1.ForeColor = System.Drawing.Color.White;
-            this.leftLbl1.Location = new System.Drawing.Point(221, 81);
-            this.leftLbl1.Name = "leftLbl1";
-            this.leftLbl1.Size = new System.Drawing.Size(48, 48);
-            this.leftLbl1.TabIndex = 54;
-            this.leftLbl1.Text = "X";
-            // 
-            // leftLbl0
-            // 
-            this.leftLbl0.AutoSize = true;
-            this.leftLbl0.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(47)))), ((int)(((byte)(55)))));
-            this.leftLbl0.Enabled = false;
-            this.leftLbl0.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.leftLbl0.ForeColor = System.Drawing.Color.White;
-            this.leftLbl0.Location = new System.Drawing.Point(151, 51);
-            this.leftLbl0.Name = "leftLbl0";
-            this.leftLbl0.Size = new System.Drawing.Size(48, 48);
-            this.leftLbl0.TabIndex = 54;
-            this.leftLbl0.Text = "X";
-            // 
-            // buttonElipse1
-            // 
-            this.buttonElipse1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(47)))), ((int)(((byte)(55)))));
-            this.buttonElipse1.Enabled = false;
-            this.buttonElipse1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonElipse1.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.buttonElipse1.Location = new System.Drawing.Point(40, 40);
-            this.buttonElipse1.Name = "buttonElipse1";
-            this.buttonElipse1.Size = new System.Drawing.Size(270, 270);
-            this.buttonElipse1.TabIndex = 44;
-            this.buttonElipse1.UseVisualStyleBackColor = false;
-            // 
-            // btnLeftDivider
-            // 
-            this.btnLeftDivider.BackColor = System.Drawing.SystemColors.ButtonShadow;
-            this.btnLeftDivider.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLeftDivider.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnLeftDivider.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(47)))), ((int)(((byte)(55)))));
-            this.btnLeftDivider.Location = new System.Drawing.Point(0, 280);
-            this.btnLeftDivider.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnLeftDivider.Name = "btnLeftDivider";
-            this.btnLeftDivider.Size = new System.Drawing.Size(50, 70);
-            this.btnLeftDivider.TabIndex = 40;
-            this.btnLeftDivider.Text = "<";
-            this.btnLeftDivider.UseVisualStyleBackColor = false;
-            this.btnLeftDivider.Click += new System.EventHandler(this.btnLeftDivider_Click);
-            // 
-            // btnLeftUniter
-            // 
-            this.btnLeftUniter.BackColor = System.Drawing.SystemColors.ButtonShadow;
-            this.btnLeftUniter.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLeftUniter.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnLeftUniter.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(47)))), ((int)(((byte)(55)))));
-            this.btnLeftUniter.Location = new System.Drawing.Point(300, 280);
-            this.btnLeftUniter.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnLeftUniter.Name = "btnLeftUniter";
-            this.btnLeftUniter.Size = new System.Drawing.Size(50, 70);
-            this.btnLeftUniter.TabIndex = 41;
-            this.btnLeftUniter.Text = ">";
-            this.btnLeftUniter.UseVisualStyleBackColor = false;
-            this.btnLeftUniter.Click += new System.EventHandler(this.btnLeftUniter_Click);
             // 
             // rightGuide
             // 
             this.rightGuide.BackColor = System.Drawing.Color.Transparent;
-            this.rightGuide.BackgroundImage = global::moveUs.Properties.Resources.circle_png_circle_icon_1600;
+            this.rightGuide.BackgroundImage = global::moveUs.Properties.Resources.JoystickOutline_fw;
             this.rightGuide.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.rightGuide.Controls.Add(this.movingPartRight);
             this.rightGuide.Controls.Add(this.rightLbl7);
@@ -409,25 +218,182 @@
             this.buttonElipse11.TabIndex = 44;
             this.buttonElipse11.UseVisualStyleBackColor = false;
             // 
-            // Joystick
+            // leftGuide
+            // 
+            this.leftGuide.BackColor = System.Drawing.Color.Transparent;
+            this.leftGuide.BackgroundImage = global::moveUs.Properties.Resources.JoystickOutline_fw;
+            this.leftGuide.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.leftGuide.Controls.Add(this.movingPartLeft);
+            this.leftGuide.Controls.Add(this.leftLbl7);
+            this.leftGuide.Controls.Add(this.leftLbl6);
+            this.leftGuide.Controls.Add(this.leftLbl5);
+            this.leftGuide.Controls.Add(this.leftLbl4);
+            this.leftGuide.Controls.Add(this.leftLbl3);
+            this.leftGuide.Controls.Add(this.leftLbl2);
+            this.leftGuide.Controls.Add(this.leftLbl1);
+            this.leftGuide.Controls.Add(this.leftLbl0);
+            this.leftGuide.Controls.Add(this.buttonElipse1);
+            this.leftGuide.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.leftGuide.Location = new System.Drawing.Point(0, 0);
+            this.leftGuide.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.leftGuide.Name = "leftGuide";
+            this.leftGuide.Size = new System.Drawing.Size(350, 350);
+            this.leftGuide.TabIndex = 4;
+            this.leftGuide.MouseDown += new System.Windows.Forms.MouseEventHandler(this.leftGuide_MouseDown);
+            this.leftGuide.MouseMove += new System.Windows.Forms.MouseEventHandler(this.leftGuide_MouseMove);
+            this.leftGuide.MouseUp += new System.Windows.Forms.MouseEventHandler(this.leftGuide_MouseUp);
+            // 
+            // movingPartLeft
+            // 
+            this.movingPartLeft.BackColor = System.Drawing.Color.White;
+            this.movingPartLeft.Enabled = false;
+            this.movingPartLeft.FlatAppearance.BorderSize = 0;
+            this.movingPartLeft.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.movingPartLeft.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.movingPartLeft.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(47)))), ((int)(((byte)(55)))));
+            this.movingPartLeft.Location = new System.Drawing.Point(150, 150);
+            this.movingPartLeft.Name = "movingPartLeft";
+            this.movingPartLeft.Size = new System.Drawing.Size(50, 50);
+            this.movingPartLeft.TabIndex = 61;
+            this.movingPartLeft.Text = "X";
+            this.movingPartLeft.UseVisualStyleBackColor = false;
+            // 
+            // leftLbl7
+            // 
+            this.leftLbl7.AutoSize = true;
+            this.leftLbl7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(47)))), ((int)(((byte)(55)))));
+            this.leftLbl7.Enabled = false;
+            this.leftLbl7.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.leftLbl7.ForeColor = System.Drawing.Color.White;
+            this.leftLbl7.Location = new System.Drawing.Point(81, 81);
+            this.leftLbl7.Name = "leftLbl7";
+            this.leftLbl7.Size = new System.Drawing.Size(48, 48);
+            this.leftLbl7.TabIndex = 60;
+            this.leftLbl7.Text = "X";
+            // 
+            // leftLbl6
+            // 
+            this.leftLbl6.AutoSize = true;
+            this.leftLbl6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(47)))), ((int)(((byte)(55)))));
+            this.leftLbl6.Enabled = false;
+            this.leftLbl6.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.leftLbl6.ForeColor = System.Drawing.Color.White;
+            this.leftLbl6.Location = new System.Drawing.Point(51, 151);
+            this.leftLbl6.Name = "leftLbl6";
+            this.leftLbl6.Size = new System.Drawing.Size(48, 48);
+            this.leftLbl6.TabIndex = 59;
+            this.leftLbl6.Text = "X";
+            // 
+            // leftLbl5
+            // 
+            this.leftLbl5.AutoSize = true;
+            this.leftLbl5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(47)))), ((int)(((byte)(55)))));
+            this.leftLbl5.Enabled = false;
+            this.leftLbl5.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.leftLbl5.ForeColor = System.Drawing.Color.White;
+            this.leftLbl5.Location = new System.Drawing.Point(81, 221);
+            this.leftLbl5.Name = "leftLbl5";
+            this.leftLbl5.Size = new System.Drawing.Size(48, 48);
+            this.leftLbl5.TabIndex = 58;
+            this.leftLbl5.Text = "X";
+            // 
+            // leftLbl4
+            // 
+            this.leftLbl4.AutoSize = true;
+            this.leftLbl4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(47)))), ((int)(((byte)(55)))));
+            this.leftLbl4.Enabled = false;
+            this.leftLbl4.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.leftLbl4.ForeColor = System.Drawing.Color.White;
+            this.leftLbl4.Location = new System.Drawing.Point(151, 251);
+            this.leftLbl4.Name = "leftLbl4";
+            this.leftLbl4.Size = new System.Drawing.Size(48, 48);
+            this.leftLbl4.TabIndex = 57;
+            this.leftLbl4.Text = "X";
+            // 
+            // leftLbl3
+            // 
+            this.leftLbl3.AutoSize = true;
+            this.leftLbl3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(47)))), ((int)(((byte)(55)))));
+            this.leftLbl3.Enabled = false;
+            this.leftLbl3.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.leftLbl3.ForeColor = System.Drawing.Color.White;
+            this.leftLbl3.Location = new System.Drawing.Point(221, 221);
+            this.leftLbl3.Name = "leftLbl3";
+            this.leftLbl3.Size = new System.Drawing.Size(48, 48);
+            this.leftLbl3.TabIndex = 56;
+            this.leftLbl3.Text = "X";
+            // 
+            // leftLbl2
+            // 
+            this.leftLbl2.AutoSize = true;
+            this.leftLbl2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(47)))), ((int)(((byte)(55)))));
+            this.leftLbl2.Enabled = false;
+            this.leftLbl2.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.leftLbl2.ForeColor = System.Drawing.Color.White;
+            this.leftLbl2.Location = new System.Drawing.Point(251, 151);
+            this.leftLbl2.Name = "leftLbl2";
+            this.leftLbl2.Size = new System.Drawing.Size(48, 48);
+            this.leftLbl2.TabIndex = 55;
+            this.leftLbl2.Text = "X";
+            // 
+            // leftLbl1
+            // 
+            this.leftLbl1.AutoSize = true;
+            this.leftLbl1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(47)))), ((int)(((byte)(55)))));
+            this.leftLbl1.Enabled = false;
+            this.leftLbl1.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.leftLbl1.ForeColor = System.Drawing.Color.White;
+            this.leftLbl1.Location = new System.Drawing.Point(221, 81);
+            this.leftLbl1.Name = "leftLbl1";
+            this.leftLbl1.Size = new System.Drawing.Size(48, 48);
+            this.leftLbl1.TabIndex = 54;
+            this.leftLbl1.Text = "X";
+            // 
+            // leftLbl0
+            // 
+            this.leftLbl0.AutoSize = true;
+            this.leftLbl0.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(47)))), ((int)(((byte)(55)))));
+            this.leftLbl0.Enabled = false;
+            this.leftLbl0.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.leftLbl0.ForeColor = System.Drawing.Color.White;
+            this.leftLbl0.Location = new System.Drawing.Point(151, 51);
+            this.leftLbl0.Name = "leftLbl0";
+            this.leftLbl0.Size = new System.Drawing.Size(48, 48);
+            this.leftLbl0.TabIndex = 54;
+            this.leftLbl0.Text = "X";
+            // 
+            // buttonElipse1
+            // 
+            this.buttonElipse1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(47)))), ((int)(((byte)(55)))));
+            this.buttonElipse1.Enabled = false;
+            this.buttonElipse1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonElipse1.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.buttonElipse1.Location = new System.Drawing.Point(40, 40);
+            this.buttonElipse1.Name = "buttonElipse1";
+            this.buttonElipse1.Size = new System.Drawing.Size(270, 270);
+            this.buttonElipse1.TabIndex = 44;
+            this.buttonElipse1.UseVisualStyleBackColor = false;
+            // 
+            // DoubleJoystick
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
+            this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(700, 350);
             this.Controls.Add(this.rightGuide);
             this.Controls.Add(this.leftGuide);
-            this.ForeColor = System.Drawing.Color.Black;
+            this.ForeColor = System.Drawing.Color.White;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "Joystick";
+            this.Name = "DoubleJoystick";
             this.ShowIcon = false;
             this.ShowInTaskbar = false;
             this.Text = "DualPanel";
             this.TopMost = true;
             this.Load += new System.EventHandler(this.DualPanel_Load);
             this.MouseUp += new System.Windows.Forms.MouseEventHandler(this.general_MouseUp);
-            this.leftGuide.ResumeLayout(false);
-            this.leftGuide.PerformLayout();
             this.rightGuide.ResumeLayout(false);
             this.rightGuide.PerformLayout();
+            this.leftGuide.ResumeLayout(false);
+            this.leftGuide.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -437,8 +403,6 @@
         private ButtonElipse buttonElipse1;
         private System.Windows.Forms.Panel rightGuide;
         private ButtonElipse buttonElipse11;
-        private System.Windows.Forms.Button btnLeftDivider;
-        private System.Windows.Forms.Button btnLeftUniter;
         private System.Windows.Forms.Label leftLbl0;
         private System.Windows.Forms.Label leftLbl4;
         private System.Windows.Forms.Label leftLbl3;
