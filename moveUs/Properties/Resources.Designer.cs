@@ -63,6 +63,36 @@ namespace PasoKey.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap backspace_white_fw {
+            get {
+                object obj = ResourceManager.GetObject("backspace-white.fw", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap caps_lock_white_fw {
+            get {
+                object obj = ResourceManager.GetObject("caps-lock-white.fw", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap enter_white_fw {
+            get {
+                object obj = ResourceManager.GetObject("enter-white.fw", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap JoystickInner_fw {
             get {
                 object obj = ResourceManager.GetObject("JoystickInner.fw", resourceCulture);
@@ -76,6 +106,16 @@ namespace PasoKey.Properties {
         internal static System.Drawing.Bitmap JoystickOutline_fw {
             get {
                 object obj = ResourceManager.GetObject("JoystickOutline.fw", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap space_bar_white_fw {
+            get {
+                object obj = ResourceManager.GetObject("space-bar-white.fw", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -220,6 +220,10 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="PasoKeyLogoV6.1.fw.ico" />
+    <None Include="Resources\enter-white.fw.png" />
+    <None Include="Resources\caps-lock-white.fw.png" />
+    <None Include="Resources\backspace-white.fw.png" />
+    <None Include="Resources\space-bar-white.fw1.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

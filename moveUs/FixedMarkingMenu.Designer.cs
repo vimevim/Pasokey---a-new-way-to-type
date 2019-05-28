@@ -47,9 +47,9 @@
             this.lblDownLeft.ForeColor = System.Drawing.Color.Black;
             this.lblDownLeft.Location = new System.Drawing.Point(200, 502);
             this.lblDownLeft.Name = "lblDownLeft";
-            this.lblDownLeft.Size = new System.Drawing.Size(48, 48);
+            this.lblDownLeft.Size = new System.Drawing.Size(45, 48);
             this.lblDownLeft.TabIndex = 41;
-            this.lblDownLeft.Text = "X";
+            this.lblDownLeft.Text = "×";
             // 
             // lblDownMid
             // 
@@ -59,9 +59,9 @@
             this.lblDownMid.ForeColor = System.Drawing.Color.Black;
             this.lblDownMid.Location = new System.Drawing.Point(351, 538);
             this.lblDownMid.Name = "lblDownMid";
-            this.lblDownMid.Size = new System.Drawing.Size(48, 48);
+            this.lblDownMid.Size = new System.Drawing.Size(45, 48);
             this.lblDownMid.TabIndex = 40;
-            this.lblDownMid.Text = "X";
+            this.lblDownMid.Text = "×";
             // 
             // lblDownRight
             // 
@@ -71,9 +71,9 @@
             this.lblDownRight.ForeColor = System.Drawing.Color.Black;
             this.lblDownRight.Location = new System.Drawing.Point(502, 502);
             this.lblDownRight.Name = "lblDownRight";
-            this.lblDownRight.Size = new System.Drawing.Size(48, 48);
+            this.lblDownRight.Size = new System.Drawing.Size(45, 48);
             this.lblDownRight.TabIndex = 39;
-            this.lblDownRight.Text = "X";
+            this.lblDownRight.Text = "×";
             // 
             // lblUpLeft
             // 
@@ -83,9 +83,9 @@
             this.lblUpLeft.ForeColor = System.Drawing.Color.Black;
             this.lblUpLeft.Location = new System.Drawing.Point(200, 200);
             this.lblUpLeft.Name = "lblUpLeft";
-            this.lblUpLeft.Size = new System.Drawing.Size(48, 48);
+            this.lblUpLeft.Size = new System.Drawing.Size(45, 48);
             this.lblUpLeft.TabIndex = 38;
-            this.lblUpLeft.Text = "X";
+            this.lblUpLeft.Text = "×";
             // 
             // lblMidLeft
             // 
@@ -95,9 +95,9 @@
             this.lblMidLeft.ForeColor = System.Drawing.Color.Black;
             this.lblMidLeft.Location = new System.Drawing.Point(164, 351);
             this.lblMidLeft.Name = "lblMidLeft";
-            this.lblMidLeft.Size = new System.Drawing.Size(48, 48);
+            this.lblMidLeft.Size = new System.Drawing.Size(45, 48);
             this.lblMidLeft.TabIndex = 37;
-            this.lblMidLeft.Text = "X";
+            this.lblMidLeft.Text = "×";
             // 
             // lblMidRight
             // 
@@ -107,9 +107,9 @@
             this.lblMidRight.ForeColor = System.Drawing.Color.Black;
             this.lblMidRight.Location = new System.Drawing.Point(538, 351);
             this.lblMidRight.Name = "lblMidRight";
-            this.lblMidRight.Size = new System.Drawing.Size(48, 48);
+            this.lblMidRight.Size = new System.Drawing.Size(45, 48);
             this.lblMidRight.TabIndex = 36;
-            this.lblMidRight.Text = "X";
+            this.lblMidRight.Text = "×";
             // 
             // lblUpRight
             // 
@@ -119,9 +119,9 @@
             this.lblUpRight.ForeColor = System.Drawing.Color.Black;
             this.lblUpRight.Location = new System.Drawing.Point(502, 200);
             this.lblUpRight.Name = "lblUpRight";
-            this.lblUpRight.Size = new System.Drawing.Size(48, 48);
+            this.lblUpRight.Size = new System.Drawing.Size(45, 48);
             this.lblUpRight.TabIndex = 35;
-            this.lblUpRight.Text = "X";
+            this.lblUpRight.Text = "×";
             // 
             // lblCenter
             // 
@@ -132,9 +132,9 @@
             this.lblCenter.ForeColor = System.Drawing.Color.Black;
             this.lblCenter.Location = new System.Drawing.Point(351, 351);
             this.lblCenter.Name = "lblCenter";
-            this.lblCenter.Size = new System.Drawing.Size(48, 48);
+            this.lblCenter.Size = new System.Drawing.Size(45, 48);
             this.lblCenter.TabIndex = 34;
-            this.lblCenter.Text = "X";
+            this.lblCenter.Text = "×";
             // 
             // lblUp
             // 
@@ -144,9 +144,9 @@
             this.lblUp.ForeColor = System.Drawing.Color.Black;
             this.lblUp.Location = new System.Drawing.Point(351, 164);
             this.lblUp.Name = "lblUp";
-            this.lblUp.Size = new System.Drawing.Size(48, 48);
+            this.lblUp.Size = new System.Drawing.Size(45, 48);
             this.lblUp.TabIndex = 33;
-            this.lblUp.Text = "X";
+            this.lblUp.Text = "×";
             // 
             // FixedMarkingMenu
             // 

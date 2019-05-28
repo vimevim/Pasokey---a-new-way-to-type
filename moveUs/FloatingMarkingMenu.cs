@@ -66,14 +66,14 @@ namespace PasoKey
 
         private void ResetText()
         {
-            lblUp.Text = "X";
-            lblUpRight.Text = "X";
-            lblMidRight.Text = "X";
-            lblDownRight.Text = "X";
-            lblDownMid.Text = "X";
-            lblDownLeft.Text = "X";
-            lblMidLeft.Text = "X";
-            lblUpLeft.Text = "X";
+            lblUp.Text = "×";
+            lblUpRight.Text = "×";
+            lblMidRight.Text = "×";
+            lblDownRight.Text = "×";
+            lblDownMid.Text = "×";
+            lblDownLeft.Text = "×";
+            lblMidLeft.Text = "×";
+            lblUpLeft.Text = "×";
             lblCenter.Text = "<";
         }
 
