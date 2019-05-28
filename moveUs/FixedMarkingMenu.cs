@@ -136,55 +136,46 @@ namespace PasoKey
             //çizgi başlangıcı
             Graphics g = CreateGraphics();
             Pen d = new Pen(Color.FromArgb(48, 47, 55), 5);//çizici kalem
-            Pen s = new Pen(Color.FromArgb(245, 245, 245), 5);//iz silici kalem, sıkıntısı var
             if (e.Button == MouseButtons.Right)
             {
                 int angularEdge = ((Math.Abs(formOriginY) + Math.Abs(formOriginX)) / 2);
                 if (angle > 337.5 || angle < 22.5)
                 {
-                    g.DrawLine(d, formCentreX, formCentreY, formCentreX, defaultOriginY);//çiziliyor
-                    g.DrawLine(s, formCentreX, formCentreY, formCentreX, defaultOriginY);//çizginin izi siliniyor
+                    g.DrawLine(d, formCentreX, formCentreY, formCentreX, defaultOriginY);
                 }
                 else if (angle > 22.5 && angle < 67.5)
                 {
                     g.DrawLine(d, formCentreX, formCentreY, (formCentreX - angularEdge), (angularEdge + formCentreY));
-                    g.DrawLine(s, formCentreX, formCentreY, (formCentreX - angularEdge), (angularEdge + formCentreY));
                 }
                 else if (angle > 67.5 && angle < 112.5)
                 {
-                    g.DrawLine(d, formCentreX, formCentreY, defaultOriginX, formCentreY);//çiziliyor
-                    g.DrawLine(s, formCentreX, formCentreY, defaultOriginX, formCentreY);//çizginin izi siliniyor
+                    g.DrawLine(d, formCentreX, formCentreY, defaultOriginX, formCentreY);
                 }
                 else if (angle > 112.5 && angle < 157.5)
                 {
                     g.DrawLine(d, formCentreX, formCentreY, (formCentreX - angularEdge), (formCentreY - angularEdge));
-                    g.DrawLine(s, formCentreX, formCentreY, (formCentreX - angularEdge), (formCentreY - angularEdge));
                 }
                 else if (angle > 157.5 && angle < 202.5)
                 {
-                    g.DrawLine(d, formCentreX, formCentreY, formCentreX, defaultOriginY);//çiziliyor
-                    g.DrawLine(s, formCentreX, formCentreY, formCentreX, defaultOriginY);//çizginin izi siliniyor
+                    g.DrawLine(d, formCentreX, formCentreY, formCentreX, defaultOriginY);
                 }
                 else if (angle > 202.5 && angle < 247.5)
                 {
                     g.DrawLine(d, formCentreX, formCentreY, (angularEdge + formCentreX), (formCentreY - angularEdge));
-                    g.DrawLine(s, formCentreX, formCentreY, (angularEdge + formCentreX), (formCentreY - angularEdge));
                 }
                 else if (angle > 247.5 && angle < 292.5)
                 {
-                    g.DrawLine(d, formCentreX, formCentreY, defaultOriginX, formCentreY);//çiziliyor
-                    g.DrawLine(s, formCentreX, formCentreY, defaultOriginX, formCentreY);//çizginin izi siliniyor
+                    g.DrawLine(d, formCentreX, formCentreY, defaultOriginX, formCentreY);
                 }
                 else if (angle > 292.5 && angle < 337.5)
                 {
                     g.DrawLine(d, formCentreX, formCentreY, (angularEdge + formCentreX), (angularEdge + formCentreY));
-                    g.DrawLine(s, formCentreX, formCentreY, (angularEdge + formCentreX), (angularEdge + formCentreY));
                 }
                 else
                 {
-                    g.DrawLine(d, formCentreX, formCentreY, defaultOriginX, defaultOriginY);//çiziliyor
-                    g.DrawLine(s, formCentreX, formCentreY, defaultOriginX, defaultOriginY);//çizginin izi siliniyor
+                    g.DrawLine(d, formCentreX, formCentreY, defaultOriginX, defaultOriginY);
                 }
+                this.Invalidate();
             }
             else
             {
