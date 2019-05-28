@@ -23,10 +23,10 @@ namespace PasoKey
                 MessageBox.Show("PasoKey zaten çalışmakta.");
                 return;
             }
-            Application.Run(new PasoKeyMain());
             GC.KeepAlive(mutex); //Nesneyi kaldırıyoruz. 
             Application.EnableVisualStyles();
-            //Application.SetCompatibleTextRenderingDefault(false);
+            Application.SetCompatibleTextRenderingDefault(false);
+            Application.Run(new PasoKeyMain());
         }
     }
 }
