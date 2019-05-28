@@ -107,9 +107,6 @@ namespace PasoKey
             general_MouseUp(null, null);
         }
 
-        int screenWidth = Screen.PrimaryScreen.WorkingArea.Width;//ekran genişliği
-        int screenHeight = Screen.PrimaryScreen.WorkingArea.Height;//ekran yüksekliği
-
         private void DualPanel_Load(object sender, EventArgs e)
         {
             this.Width = leftGuide.Width;//formun boyutu bir panel boyutuyla eşitlenir

@@ -98,6 +98,12 @@
     <Compile Include="FloatingJoystick.Designer.cs">
       <DependentUpon>FloatingJoystick.cs</DependentUpon>
     </Compile>
+    <Compile Include="FloatingMarkingMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FloatingMarkingMenu.Designer.cs">
+      <DependentUpon>FloatingMarkingMenu.cs</DependentUpon>
+    </Compile>
     <Compile Include="PanelRight.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -121,12 +127,6 @@
     </Compile>
     <Compile Include="DoubleJoystick.Designer.cs">
       <DependentUpon>DoubleJoystick.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FloatingMarkingMenu.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FloatingMarkingMenu.Designer.cs">
-      <DependentUpon>FloatingMarkingMenu.cs</DependentUpon>
     </Compile>
     <Compile Include="FixedMarkingMenu.cs">
       <SubType>Form</SubType>
@@ -155,6 +155,9 @@
     <EmbeddedResource Include="FloatingJoystick.resx">
       <DependentUpon>FloatingJoystick.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FloatingMarkingMenu.resx">
+      <DependentUpon>FloatingMarkingMenu.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="PanelRight.resx">
       <DependentUpon>PanelRight.cs</DependentUpon>
     </EmbeddedResource>
@@ -166,9 +169,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="DoubleJoystick.resx">
       <DependentUpon>DoubleJoystick.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FloatingMarkingMenu.resx">
-      <DependentUpon>FloatingMarkingMenu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FixedMarkingMenu.resx">
       <DependentUpon>FixedMarkingMenu.cs</DependentUpon>
@@ -220,6 +220,10 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="PasoKeyLogoV6.1.fw.ico" />
+    <None Include="Resources\caps-lock-black.fw1.png" />
+    <None Include="Resources\enter-black.fw1.png" />
+    <None Include="Resources\backspace-black.fw1.png" />
+    <None Include="Resources\space-bar-black.fw1.png" />
     <None Include="Resources\enter-white.fw.png" />
     <None Include="Resources\caps-lock-white.fw.png" />
     <None Include="Resources\backspace-white.fw.png" />

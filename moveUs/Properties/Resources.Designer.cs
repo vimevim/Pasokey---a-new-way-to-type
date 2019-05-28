@@ -63,6 +63,16 @@ namespace PasoKey.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap backspace_black_fw {
+            get {
+                object obj = ResourceManager.GetObject("backspace-black.fw", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap backspace_white_fw {
             get {
                 object obj = ResourceManager.GetObject("backspace-white.fw", resourceCulture);
@@ -73,9 +83,29 @@ namespace PasoKey.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap caps_lock_black_fw {
+            get {
+                object obj = ResourceManager.GetObject("caps-lock-black.fw", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap caps_lock_white_fw {
             get {
                 object obj = ResourceManager.GetObject("caps-lock-white.fw", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap enter_black_fw {
+            get {
+                object obj = ResourceManager.GetObject("enter-black.fw", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -106,6 +136,16 @@ namespace PasoKey.Properties {
         internal static System.Drawing.Bitmap JoystickOutline_fw {
             get {
                 object obj = ResourceManager.GetObject("JoystickOutline.fw", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap space_bar_black_fw {
+            get {
+                object obj = ResourceManager.GetObject("space-bar-black.fw", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

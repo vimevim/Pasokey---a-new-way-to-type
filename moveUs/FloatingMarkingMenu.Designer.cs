@@ -28,348 +28,355 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label3 = new System.Windows.Forms.Label();
-            this.lblAngle = new System.Windows.Forms.Label();
-            this.labelHipotenus = new System.Windows.Forms.Label();
-            this.labelEYH = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.labelEY = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.labelEXW = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.labelEX = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.lblDownLeft = new System.Windows.Forms.Label();
-            this.lblDownMid = new System.Windows.Forms.Label();
-            this.lblDownRight = new System.Windows.Forms.Label();
-            this.lblUpLeft = new System.Windows.Forms.Label();
-            this.lblMidLeft = new System.Windows.Forms.Label();
-            this.lblMidRight = new System.Windows.Forms.Label();
-            this.lblUpRight = new System.Windows.Forms.Label();
-            this.lblCenter = new System.Windows.Forms.Label();
-            this.lblUp = new System.Windows.Forms.Label();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FloatingMarkingMenu));
+            this.rightGuide = new System.Windows.Forms.Panel();
+            this.rightLblCentre = new System.Windows.Forms.Label();
+            this.rightLbl7 = new System.Windows.Forms.Label();
+            this.rightLbl6 = new System.Windows.Forms.Label();
+            this.rightLbl5 = new System.Windows.Forms.Label();
+            this.rightLbl4 = new System.Windows.Forms.Label();
+            this.rightLbl3 = new System.Windows.Forms.Label();
+            this.rightLbl2 = new System.Windows.Forms.Label();
+            this.rightLbl1 = new System.Windows.Forms.Label();
+            this.rightLbl0 = new System.Windows.Forms.Label();
+            this.leftGuide = new System.Windows.Forms.Panel();
+            this.leftLblCentre = new System.Windows.Forms.Label();
+            this.pictureBoxCapsLock = new System.Windows.Forms.PictureBox();
+            this.pictureBoxEnter = new System.Windows.Forms.PictureBox();
+            this.pictureBoxBackSpace = new System.Windows.Forms.PictureBox();
+            this.pictureBoxSpace = new System.Windows.Forms.PictureBox();
+            this.leftLbl6 = new System.Windows.Forms.Label();
+            this.leftLbl4 = new System.Windows.Forms.Label();
+            this.leftLbl2 = new System.Windows.Forms.Label();
+            this.leftLbl0 = new System.Windows.Forms.Label();
+            this.rightGuide.SuspendLayout();
+            this.leftGuide.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxCapsLock)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxEnter)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBackSpace)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxSpace)).BeginInit();
             this.SuspendLayout();
             // 
-            // label3
+            // rightGuide
             // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(118, 283);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(55, 17);
-            this.label3.TabIndex = 13;
-            this.label3.Text = "OriginX";
-            this.label3.Visible = false;
+            this.rightGuide.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.rightGuide.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("rightGuide.BackgroundImage")));
+            this.rightGuide.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.rightGuide.Controls.Add(this.rightLblCentre);
+            this.rightGuide.Controls.Add(this.rightLbl7);
+            this.rightGuide.Controls.Add(this.rightLbl6);
+            this.rightGuide.Controls.Add(this.rightLbl5);
+            this.rightGuide.Controls.Add(this.rightLbl4);
+            this.rightGuide.Controls.Add(this.rightLbl3);
+            this.rightGuide.Controls.Add(this.rightLbl2);
+            this.rightGuide.Controls.Add(this.rightLbl1);
+            this.rightGuide.Controls.Add(this.rightLbl0);
+            this.rightGuide.ForeColor = System.Drawing.Color.Black;
+            this.rightGuide.Location = new System.Drawing.Point(350, 0);
+            this.rightGuide.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.rightGuide.Name = "rightGuide";
+            this.rightGuide.Size = new System.Drawing.Size(350, 350);
+            this.rightGuide.TabIndex = 5;
+            this.rightGuide.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.thisHide);
+            this.rightGuide.MouseMove += new System.Windows.Forms.MouseEventHandler(this.rightGuide_MouseMove);
+            this.rightGuide.MouseUp += new System.Windows.Forms.MouseEventHandler(this.rightGuide_MouseUp);
             // 
-            // lblAngle
+            // rightLblCentre
             // 
-            this.lblAngle.AutoSize = true;
-            this.lblAngle.BackColor = System.Drawing.Color.Transparent;
-            this.lblAngle.ForeColor = System.Drawing.Color.Black;
-            this.lblAngle.Location = new System.Drawing.Point(327, 313);
-            this.lblAngle.Name = "lblAngle";
-            this.lblAngle.Size = new System.Drawing.Size(46, 17);
-            this.lblAngle.TabIndex = 2;
-            this.lblAngle.Text = "label1";
-            this.lblAngle.Visible = false;
+            this.rightLblCentre.AutoSize = true;
+            this.rightLblCentre.BackColor = System.Drawing.Color.Transparent;
+            this.rightLblCentre.Enabled = false;
+            this.rightLblCentre.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.rightLblCentre.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.rightLblCentre.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(47)))), ((int)(((byte)(55)))));
+            this.rightLblCentre.Location = new System.Drawing.Point(153, 151);
+            this.rightLblCentre.Name = "rightLblCentre";
+            this.rightLblCentre.Size = new System.Drawing.Size(45, 48);
+            this.rightLblCentre.TabIndex = 69;
+            this.rightLblCentre.Text = "×";
             // 
-            // labelHipotenus
+            // rightLbl7
             // 
-            this.labelHipotenus.AutoSize = true;
-            this.labelHipotenus.BackColor = System.Drawing.Color.Transparent;
-            this.labelHipotenus.ForeColor = System.Drawing.Color.Black;
-            this.labelHipotenus.Location = new System.Drawing.Point(327, 283);
-            this.labelHipotenus.Name = "labelHipotenus";
-            this.labelHipotenus.Size = new System.Drawing.Size(46, 17);
-            this.labelHipotenus.TabIndex = 10;
-            this.labelHipotenus.Text = "label1";
-            this.labelHipotenus.Visible = false;
+            this.rightLbl7.AutoSize = true;
+            this.rightLbl7.BackColor = System.Drawing.Color.Transparent;
+            this.rightLbl7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.rightLbl7.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.rightLbl7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(47)))), ((int)(((byte)(55)))));
+            this.rightLbl7.Location = new System.Drawing.Point(81, 81);
+            this.rightLbl7.Name = "rightLbl7";
+            this.rightLbl7.Size = new System.Drawing.Size(45, 48);
+            this.rightLbl7.TabIndex = 68;
+            this.rightLbl7.Text = "×";
             // 
-            // labelEYH
+            // rightLbl6
             // 
-            this.labelEYH.AutoSize = true;
-            this.labelEYH.BackColor = System.Drawing.Color.Transparent;
-            this.labelEYH.ForeColor = System.Drawing.Color.Black;
-            this.labelEYH.Location = new System.Drawing.Point(177, 313);
-            this.labelEYH.Name = "labelEYH";
-            this.labelEYH.Size = new System.Drawing.Size(46, 17);
-            this.labelEYH.TabIndex = 9;
-            this.labelEYH.Text = "label1";
-            this.labelEYH.Visible = false;
+            this.rightLbl6.AutoSize = true;
+            this.rightLbl6.BackColor = System.Drawing.Color.Transparent;
+            this.rightLbl6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.rightLbl6.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.rightLbl6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(47)))), ((int)(((byte)(55)))));
+            this.rightLbl6.Location = new System.Drawing.Point(51, 151);
+            this.rightLbl6.Name = "rightLbl6";
+            this.rightLbl6.Size = new System.Drawing.Size(45, 48);
+            this.rightLbl6.TabIndex = 67;
+            this.rightLbl6.Text = "×";
             // 
-            // label1
+            // rightLbl5
             // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(19, 283);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(29, 17);
-            this.label1.TabIndex = 8;
-            this.label1.Text = "e.X";
-            this.label1.Visible = false;
+            this.rightLbl5.AutoSize = true;
+            this.rightLbl5.BackColor = System.Drawing.Color.Transparent;
+            this.rightLbl5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.rightLbl5.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.rightLbl5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(47)))), ((int)(((byte)(55)))));
+            this.rightLbl5.Location = new System.Drawing.Point(81, 221);
+            this.rightLbl5.Name = "rightLbl5";
+            this.rightLbl5.Size = new System.Drawing.Size(45, 48);
+            this.rightLbl5.TabIndex = 66;
+            this.rightLbl5.Text = "×";
             // 
-            // label2
+            // rightLbl4
             // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(19, 313);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(29, 17);
-            this.label2.TabIndex = 7;
-            this.label2.Text = "e.Y";
-            this.label2.Visible = false;
+            this.rightLbl4.AutoSize = true;
+            this.rightLbl4.BackColor = System.Drawing.Color.Transparent;
+            this.rightLbl4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.rightLbl4.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.rightLbl4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(47)))), ((int)(((byte)(55)))));
+            this.rightLbl4.Location = new System.Drawing.Point(151, 251);
+            this.rightLbl4.Name = "rightLbl4";
+            this.rightLbl4.Size = new System.Drawing.Size(45, 48);
+            this.rightLbl4.TabIndex = 65;
+            this.rightLbl4.Text = "×";
             // 
-            // labelEY
+            // rightLbl3
             // 
-            this.labelEY.AutoSize = true;
-            this.labelEY.BackColor = System.Drawing.Color.Transparent;
-            this.labelEY.ForeColor = System.Drawing.Color.Black;
-            this.labelEY.Location = new System.Drawing.Point(57, 313);
-            this.labelEY.Name = "labelEY";
-            this.labelEY.Size = new System.Drawing.Size(46, 17);
-            this.labelEY.TabIndex = 6;
-            this.labelEY.Text = "label1";
-            this.labelEY.Visible = false;
+            this.rightLbl3.AutoSize = true;
+            this.rightLbl3.BackColor = System.Drawing.Color.Transparent;
+            this.rightLbl3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.rightLbl3.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.rightLbl3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(47)))), ((int)(((byte)(55)))));
+            this.rightLbl3.Location = new System.Drawing.Point(221, 221);
+            this.rightLbl3.Name = "rightLbl3";
+            this.rightLbl3.Size = new System.Drawing.Size(45, 48);
+            this.rightLbl3.TabIndex = 64;
+            this.rightLbl3.Text = "×";
             // 
-            // label5
+            // rightLbl2
             // 
-            this.label5.AutoSize = true;
-            this.label5.BackColor = System.Drawing.Color.Transparent;
-            this.label5.ForeColor = System.Drawing.Color.Black;
-            this.label5.Location = new System.Drawing.Point(239, 313);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(55, 17);
-            this.label5.TabIndex = 5;
-            this.label5.Text = "Degree";
-            this.label5.Visible = false;
+            this.rightLbl2.AutoSize = true;
+            this.rightLbl2.BackColor = System.Drawing.Color.Transparent;
+            this.rightLbl2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.rightLbl2.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.rightLbl2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(47)))), ((int)(((byte)(55)))));
+            this.rightLbl2.Location = new System.Drawing.Point(251, 151);
+            this.rightLbl2.Name = "rightLbl2";
+            this.rightLbl2.Size = new System.Drawing.Size(45, 48);
+            this.rightLbl2.TabIndex = 63;
+            this.rightLbl2.Text = "×";
             // 
-            // labelEXW
+            // rightLbl1
             // 
-            this.labelEXW.AutoSize = true;
-            this.labelEXW.BackColor = System.Drawing.Color.Transparent;
-            this.labelEXW.ForeColor = System.Drawing.Color.Black;
-            this.labelEXW.Location = new System.Drawing.Point(177, 283);
-            this.labelEXW.Name = "labelEXW";
-            this.labelEXW.Size = new System.Drawing.Size(46, 17);
-            this.labelEXW.TabIndex = 4;
-            this.labelEXW.Text = "label1";
-            this.labelEXW.Visible = false;
+            this.rightLbl1.AutoSize = true;
+            this.rightLbl1.BackColor = System.Drawing.Color.Transparent;
+            this.rightLbl1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.rightLbl1.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.rightLbl1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(47)))), ((int)(((byte)(55)))));
+            this.rightLbl1.Location = new System.Drawing.Point(221, 81);
+            this.rightLbl1.Name = "rightLbl1";
+            this.rightLbl1.Size = new System.Drawing.Size(45, 48);
+            this.rightLbl1.TabIndex = 61;
+            this.rightLbl1.Text = "×";
             // 
-            // label4
+            // rightLbl0
             // 
-            this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.Color.Transparent;
-            this.label4.ForeColor = System.Drawing.Color.Black;
-            this.label4.Location = new System.Drawing.Point(239, 283);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(84, 17);
-            this.label4.TabIndex = 3;
-            this.label4.Text = "Hypotenuse";
-            this.label4.Visible = false;
+            this.rightLbl0.AutoSize = true;
+            this.rightLbl0.BackColor = System.Drawing.Color.Transparent;
+            this.rightLbl0.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.rightLbl0.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.rightLbl0.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(47)))), ((int)(((byte)(55)))));
+            this.rightLbl0.Location = new System.Drawing.Point(151, 51);
+            this.rightLbl0.Name = "rightLbl0";
+            this.rightLbl0.Size = new System.Drawing.Size(45, 48);
+            this.rightLbl0.TabIndex = 62;
+            this.rightLbl0.Text = "×";
             // 
-            // labelEX
+            // leftGuide
             // 
-            this.labelEX.AutoSize = true;
-            this.labelEX.BackColor = System.Drawing.Color.Transparent;
-            this.labelEX.ForeColor = System.Drawing.Color.Black;
-            this.labelEX.Location = new System.Drawing.Point(57, 283);
-            this.labelEX.Name = "labelEX";
-            this.labelEX.Size = new System.Drawing.Size(46, 17);
-            this.labelEX.TabIndex = 11;
-            this.labelEX.Text = "label1";
-            this.labelEX.Visible = false;
+            this.leftGuide.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.leftGuide.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("leftGuide.BackgroundImage")));
+            this.leftGuide.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.leftGuide.Controls.Add(this.leftLblCentre);
+            this.leftGuide.Controls.Add(this.pictureBoxCapsLock);
+            this.leftGuide.Controls.Add(this.pictureBoxEnter);
+            this.leftGuide.Controls.Add(this.pictureBoxBackSpace);
+            this.leftGuide.Controls.Add(this.pictureBoxSpace);
+            this.leftGuide.Controls.Add(this.leftLbl6);
+            this.leftGuide.Controls.Add(this.leftLbl4);
+            this.leftGuide.Controls.Add(this.leftLbl2);
+            this.leftGuide.Controls.Add(this.leftLbl0);
+            this.leftGuide.ForeColor = System.Drawing.Color.Black;
+            this.leftGuide.Location = new System.Drawing.Point(0, 0);
+            this.leftGuide.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.leftGuide.Name = "leftGuide";
+            this.leftGuide.Size = new System.Drawing.Size(350, 350);
+            this.leftGuide.TabIndex = 6;
+            this.leftGuide.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.thisHide);
+            this.leftGuide.MouseMove += new System.Windows.Forms.MouseEventHandler(this.leftGuide_MouseMove);
+            this.leftGuide.MouseUp += new System.Windows.Forms.MouseEventHandler(this.leftGuide_MouseUp);
             // 
-            // label7
+            // leftLblCentre
             // 
-            this.label7.AutoSize = true;
-            this.label7.BackColor = System.Drawing.Color.Transparent;
-            this.label7.ForeColor = System.Drawing.Color.Black;
-            this.label7.Location = new System.Drawing.Point(118, 313);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(55, 17);
-            this.label7.TabIndex = 12;
-            this.label7.Text = "OriginY";
-            this.label7.Visible = false;
+            this.leftLblCentre.AutoSize = true;
+            this.leftLblCentre.BackColor = System.Drawing.Color.Transparent;
+            this.leftLblCentre.Enabled = false;
+            this.leftLblCentre.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.leftLblCentre.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(47)))), ((int)(((byte)(55)))));
+            this.leftLblCentre.Location = new System.Drawing.Point(153, 151);
+            this.leftLblCentre.Name = "leftLblCentre";
+            this.leftLblCentre.Size = new System.Drawing.Size(45, 48);
+            this.leftLblCentre.TabIndex = 63;
+            this.leftLblCentre.Text = "×";
             // 
-            // lblDownLeft
+            // pictureBoxCapsLock
             // 
-            this.lblDownLeft.AutoSize = true;
-            this.lblDownLeft.BackColor = System.Drawing.Color.Transparent;
-            this.lblDownLeft.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblDownLeft.ForeColor = System.Drawing.Color.Black;
-            this.lblDownLeft.Location = new System.Drawing.Point(50, 352);
-            this.lblDownLeft.Name = "lblDownLeft";
-            this.lblDownLeft.Size = new System.Drawing.Size(45, 48);
-            this.lblDownLeft.TabIndex = 32;
-            this.lblDownLeft.Text = "×";
+            this.pictureBoxCapsLock.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBoxCapsLock.BackgroundImage = global::PasoKey.Properties.Resources.caps_lock_black_fw;
+            this.pictureBoxCapsLock.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBoxCapsLock.Enabled = false;
+            this.pictureBoxCapsLock.Location = new System.Drawing.Point(81, 221);
+            this.pictureBoxCapsLock.Name = "pictureBoxCapsLock";
+            this.pictureBoxCapsLock.Size = new System.Drawing.Size(48, 48);
+            this.pictureBoxCapsLock.TabIndex = 62;
+            this.pictureBoxCapsLock.TabStop = false;
             // 
-            // lblDownMid
+            // pictureBoxEnter
             // 
-            this.lblDownMid.AutoSize = true;
-            this.lblDownMid.BackColor = System.Drawing.Color.Transparent;
-            this.lblDownMid.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblDownMid.ForeColor = System.Drawing.Color.Black;
-            this.lblDownMid.Location = new System.Drawing.Point(201, 388);
-            this.lblDownMid.Name = "lblDownMid";
-            this.lblDownMid.Size = new System.Drawing.Size(45, 48);
-            this.lblDownMid.TabIndex = 31;
-            this.lblDownMid.Text = "×";
+            this.pictureBoxEnter.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBoxEnter.BackgroundImage = global::PasoKey.Properties.Resources.enter_black_fw;
+            this.pictureBoxEnter.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBoxEnter.Enabled = false;
+            this.pictureBoxEnter.Location = new System.Drawing.Point(221, 221);
+            this.pictureBoxEnter.Name = "pictureBoxEnter";
+            this.pictureBoxEnter.Size = new System.Drawing.Size(48, 48);
+            this.pictureBoxEnter.TabIndex = 62;
+            this.pictureBoxEnter.TabStop = false;
             // 
-            // lblDownRight
+            // pictureBoxBackSpace
             // 
-            this.lblDownRight.AutoSize = true;
-            this.lblDownRight.BackColor = System.Drawing.Color.Transparent;
-            this.lblDownRight.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblDownRight.ForeColor = System.Drawing.Color.Black;
-            this.lblDownRight.Location = new System.Drawing.Point(352, 352);
-            this.lblDownRight.Name = "lblDownRight";
-            this.lblDownRight.Size = new System.Drawing.Size(45, 48);
-            this.lblDownRight.TabIndex = 30;
-            this.lblDownRight.Text = "×";
+            this.pictureBoxBackSpace.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBoxBackSpace.BackgroundImage = global::PasoKey.Properties.Resources.backspace_black_fw;
+            this.pictureBoxBackSpace.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBoxBackSpace.Enabled = false;
+            this.pictureBoxBackSpace.Location = new System.Drawing.Point(221, 81);
+            this.pictureBoxBackSpace.Name = "pictureBoxBackSpace";
+            this.pictureBoxBackSpace.Size = new System.Drawing.Size(48, 48);
+            this.pictureBoxBackSpace.TabIndex = 62;
+            this.pictureBoxBackSpace.TabStop = false;
             // 
-            // lblUpLeft
+            // pictureBoxSpace
             // 
-            this.lblUpLeft.AutoSize = true;
-            this.lblUpLeft.BackColor = System.Drawing.Color.Transparent;
-            this.lblUpLeft.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblUpLeft.ForeColor = System.Drawing.Color.Black;
-            this.lblUpLeft.Location = new System.Drawing.Point(50, 50);
-            this.lblUpLeft.Name = "lblUpLeft";
-            this.lblUpLeft.Size = new System.Drawing.Size(45, 48);
-            this.lblUpLeft.TabIndex = 29;
-            this.lblUpLeft.Text = "×";
+            this.pictureBoxSpace.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBoxSpace.BackgroundImage = global::PasoKey.Properties.Resources.space_bar_black_fw;
+            this.pictureBoxSpace.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBoxSpace.Enabled = false;
+            this.pictureBoxSpace.Location = new System.Drawing.Point(81, 81);
+            this.pictureBoxSpace.Name = "pictureBoxSpace";
+            this.pictureBoxSpace.Size = new System.Drawing.Size(48, 48);
+            this.pictureBoxSpace.TabIndex = 62;
+            this.pictureBoxSpace.TabStop = false;
             // 
-            // lblMidLeft
+            // leftLbl6
             // 
-            this.lblMidLeft.AutoSize = true;
-            this.lblMidLeft.BackColor = System.Drawing.Color.Transparent;
-            this.lblMidLeft.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblMidLeft.ForeColor = System.Drawing.Color.Black;
-            this.lblMidLeft.Location = new System.Drawing.Point(14, 201);
-            this.lblMidLeft.Name = "lblMidLeft";
-            this.lblMidLeft.Size = new System.Drawing.Size(45, 48);
-            this.lblMidLeft.TabIndex = 28;
-            this.lblMidLeft.Text = "×";
+            this.leftLbl6.AutoSize = true;
+            this.leftLbl6.BackColor = System.Drawing.Color.Transparent;
+            this.leftLbl6.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.leftLbl6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(47)))), ((int)(((byte)(55)))));
+            this.leftLbl6.Location = new System.Drawing.Point(51, 151);
+            this.leftLbl6.Name = "leftLbl6";
+            this.leftLbl6.Size = new System.Drawing.Size(45, 48);
+            this.leftLbl6.TabIndex = 59;
+            this.leftLbl6.Text = "×";
             // 
-            // lblMidRight
+            // leftLbl4
             // 
-            this.lblMidRight.AutoSize = true;
-            this.lblMidRight.BackColor = System.Drawing.Color.Transparent;
-            this.lblMidRight.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblMidRight.ForeColor = System.Drawing.Color.Black;
-            this.lblMidRight.Location = new System.Drawing.Point(388, 201);
-            this.lblMidRight.Name = "lblMidRight";
-            this.lblMidRight.Size = new System.Drawing.Size(45, 48);
-            this.lblMidRight.TabIndex = 27;
-            this.lblMidRight.Text = "×";
+            this.leftLbl4.AutoSize = true;
+            this.leftLbl4.BackColor = System.Drawing.Color.Transparent;
+            this.leftLbl4.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.leftLbl4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(47)))), ((int)(((byte)(55)))));
+            this.leftLbl4.Location = new System.Drawing.Point(151, 251);
+            this.leftLbl4.Name = "leftLbl4";
+            this.leftLbl4.Size = new System.Drawing.Size(45, 48);
+            this.leftLbl4.TabIndex = 57;
+            this.leftLbl4.Text = "×";
             // 
-            // lblUpRight
+            // leftLbl2
             // 
-            this.lblUpRight.AutoSize = true;
-            this.lblUpRight.BackColor = System.Drawing.Color.Transparent;
-            this.lblUpRight.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblUpRight.ForeColor = System.Drawing.Color.Black;
-            this.lblUpRight.Location = new System.Drawing.Point(352, 50);
-            this.lblUpRight.Name = "lblUpRight";
-            this.lblUpRight.Size = new System.Drawing.Size(45, 48);
-            this.lblUpRight.TabIndex = 26;
-            this.lblUpRight.Text = "×";
+            this.leftLbl2.AutoSize = true;
+            this.leftLbl2.BackColor = System.Drawing.Color.Transparent;
+            this.leftLbl2.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.leftLbl2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(47)))), ((int)(((byte)(55)))));
+            this.leftLbl2.Location = new System.Drawing.Point(251, 151);
+            this.leftLbl2.Name = "leftLbl2";
+            this.leftLbl2.Size = new System.Drawing.Size(45, 48);
+            this.leftLbl2.TabIndex = 55;
+            this.leftLbl2.Text = "×";
             // 
-            // lblCenter
+            // leftLbl0
             // 
-            this.lblCenter.AutoSize = true;
-            this.lblCenter.BackColor = System.Drawing.Color.Transparent;
-            this.lblCenter.Enabled = false;
-            this.lblCenter.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblCenter.ForeColor = System.Drawing.Color.Black;
-            this.lblCenter.Location = new System.Drawing.Point(201, 201);
-            this.lblCenter.Name = "lblCenter";
-            this.lblCenter.Size = new System.Drawing.Size(45, 48);
-            this.lblCenter.TabIndex = 25;
-            this.lblCenter.Text = "×";
-            // 
-            // lblUp
-            // 
-            this.lblUp.AutoSize = true;
-            this.lblUp.BackColor = System.Drawing.Color.Transparent;
-            this.lblUp.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblUp.ForeColor = System.Drawing.Color.Black;
-            this.lblUp.Location = new System.Drawing.Point(201, 14);
-            this.lblUp.Name = "lblUp";
-            this.lblUp.Size = new System.Drawing.Size(45, 48);
-            this.lblUp.TabIndex = 24;
-            this.lblUp.Text = "×";
+            this.leftLbl0.AutoSize = true;
+            this.leftLbl0.BackColor = System.Drawing.Color.Transparent;
+            this.leftLbl0.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.leftLbl0.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(47)))), ((int)(((byte)(55)))));
+            this.leftLbl0.Location = new System.Drawing.Point(151, 51);
+            this.leftLbl0.Name = "leftLbl0";
+            this.leftLbl0.Size = new System.Drawing.Size(45, 48);
+            this.leftLbl0.TabIndex = 54;
+            this.leftLbl0.Text = "×";
             // 
             // FloatingMarkingMenu
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.BackgroundImage = global::PasoKey.Properties.Resources.JoystickOutline_fw;
-            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.ClientSize = new System.Drawing.Size(450, 450);
-            this.Controls.Add(this.lblDownLeft);
-            this.Controls.Add(this.lblDownMid);
-            this.Controls.Add(this.lblDownRight);
-            this.Controls.Add(this.lblUpLeft);
-            this.Controls.Add(this.lblMidLeft);
-            this.Controls.Add(this.lblMidRight);
-            this.Controls.Add(this.lblUpRight);
-            this.Controls.Add(this.lblCenter);
-            this.Controls.Add(this.lblUp);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.lblAngle);
-            this.Controls.Add(this.labelHipotenus);
-            this.Controls.Add(this.labelEYH);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.labelEY);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.labelEXW);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.labelEX);
-            this.Controls.Add(this.label7);
-            this.DoubleBuffered = true;
+            this.ClientSize = new System.Drawing.Size(700, 350);
+            this.Controls.Add(this.rightGuide);
+            this.Controls.Add(this.leftGuide);
             this.ForeColor = System.Drawing.Color.Black;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FloatingMarkingMenu";
-            this.ShowIcon = false;
-            this.ShowInTaskbar = false;
-            this.Text = "MarkingMenu";
-            this.TopMost = true;
-            this.Load += new System.EventHandler(this.MarkingMenu_Load);
-            this.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.MarkingMenu_MouseDoubleClick);
-            this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.MarkingMenuMouseMove);
-            this.MouseUp += new System.Windows.Forms.MouseEventHandler(this.MarkingMenuMouseUp);
+            this.Text = "FloatingMarkingMenu";
+            this.Load += new System.EventHandler(this.FloatingMarkingMenu_Load);
+            this.rightGuide.ResumeLayout(false);
+            this.rightGuide.PerformLayout();
+            this.leftGuide.ResumeLayout(false);
+            this.leftGuide.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxCapsLock)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxEnter)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBackSpace)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxSpace)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label lblAngle;
-        private System.Windows.Forms.Label labelHipotenus;
-        private System.Windows.Forms.Label labelEYH;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label labelEY;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label labelEXW;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label labelEX;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label lblDownLeft;
-        private System.Windows.Forms.Label lblDownMid;
-        private System.Windows.Forms.Label lblDownRight;
-        private System.Windows.Forms.Label lblUpLeft;
-        private System.Windows.Forms.Label lblMidLeft;
-        private System.Windows.Forms.Label lblMidRight;
-        private System.Windows.Forms.Label lblUpRight;
-        private System.Windows.Forms.Label lblCenter;
-        private System.Windows.Forms.Label lblUp;
+
+        private System.Windows.Forms.Label rightLbl7;
+        private System.Windows.Forms.Label rightLbl6;
+        private System.Windows.Forms.Label rightLbl5;
+        private System.Windows.Forms.Label rightLbl4;
+        private System.Windows.Forms.Label rightLbl3;
+        private System.Windows.Forms.Label rightLbl2;
+        private System.Windows.Forms.Label rightLbl1;
+        private System.Windows.Forms.Label rightLbl0;
+        private System.Windows.Forms.PictureBox pictureBoxBackSpace;
+        private System.Windows.Forms.PictureBox pictureBoxSpace;
+        private System.Windows.Forms.Label leftLbl6;
+        private System.Windows.Forms.Label leftLbl4;
+        private System.Windows.Forms.Label leftLbl2;
+        private System.Windows.Forms.PictureBox pictureBoxCapsLock;
+        private System.Windows.Forms.Panel rightGuide;
+        private System.Windows.Forms.Label rightLblCentre;
+        private System.Windows.Forms.PictureBox pictureBoxEnter;
+        private System.Windows.Forms.Label leftLbl0;
+        private System.Windows.Forms.Panel leftGuide;
+        private System.Windows.Forms.Label leftLblCentre;
     }
 }
