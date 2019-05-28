@@ -43,7 +43,6 @@
             // 
             this.lblDownLeft.AutoSize = true;
             this.lblDownLeft.BackColor = System.Drawing.Color.Transparent;
-            this.lblDownLeft.Enabled = false;
             this.lblDownLeft.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.lblDownLeft.ForeColor = System.Drawing.Color.Black;
             this.lblDownLeft.Location = new System.Drawing.Point(200, 502);
@@ -56,7 +55,6 @@
             // 
             this.lblDownMid.AutoSize = true;
             this.lblDownMid.BackColor = System.Drawing.Color.Transparent;
-            this.lblDownMid.Enabled = false;
             this.lblDownMid.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.lblDownMid.ForeColor = System.Drawing.Color.Black;
             this.lblDownMid.Location = new System.Drawing.Point(351, 538);
@@ -69,7 +67,6 @@
             // 
             this.lblDownRight.AutoSize = true;
             this.lblDownRight.BackColor = System.Drawing.Color.Transparent;
-            this.lblDownRight.Enabled = false;
             this.lblDownRight.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.lblDownRight.ForeColor = System.Drawing.Color.Black;
             this.lblDownRight.Location = new System.Drawing.Point(502, 502);
@@ -82,7 +79,6 @@
             // 
             this.lblUpLeft.AutoSize = true;
             this.lblUpLeft.BackColor = System.Drawing.Color.Transparent;
-            this.lblUpLeft.Enabled = false;
             this.lblUpLeft.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.lblUpLeft.ForeColor = System.Drawing.Color.Black;
             this.lblUpLeft.Location = new System.Drawing.Point(200, 200);
@@ -95,7 +91,6 @@
             // 
             this.lblMidLeft.AutoSize = true;
             this.lblMidLeft.BackColor = System.Drawing.Color.Transparent;
-            this.lblMidLeft.Enabled = false;
             this.lblMidLeft.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.lblMidLeft.ForeColor = System.Drawing.Color.Black;
             this.lblMidLeft.Location = new System.Drawing.Point(164, 351);
@@ -108,7 +103,6 @@
             // 
             this.lblMidRight.AutoSize = true;
             this.lblMidRight.BackColor = System.Drawing.Color.Transparent;
-            this.lblMidRight.Enabled = false;
             this.lblMidRight.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.lblMidRight.ForeColor = System.Drawing.Color.Black;
             this.lblMidRight.Location = new System.Drawing.Point(538, 351);
@@ -121,7 +115,6 @@
             // 
             this.lblUpRight.AutoSize = true;
             this.lblUpRight.BackColor = System.Drawing.Color.Transparent;
-            this.lblUpRight.Enabled = false;
             this.lblUpRight.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.lblUpRight.ForeColor = System.Drawing.Color.Black;
             this.lblUpRight.Location = new System.Drawing.Point(502, 200);
@@ -147,7 +140,6 @@
             // 
             this.lblUp.AutoSize = true;
             this.lblUp.BackColor = System.Drawing.Color.Transparent;
-            this.lblUp.Enabled = false;
             this.lblUp.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.lblUp.ForeColor = System.Drawing.Color.Black;
             this.lblUp.Location = new System.Drawing.Point(351, 164);
@@ -173,6 +165,7 @@
             this.Controls.Add(this.lblCenter);
             this.Controls.Add(this.lblUp);
             this.DoubleBuffered = true;
+            this.ForeColor = System.Drawing.Color.Black;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FixedMarkingMenu";
             this.ShowIcon = false;

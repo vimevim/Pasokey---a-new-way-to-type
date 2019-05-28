@@ -103,7 +103,7 @@ namespace PasoKey
         private void MarkingMenuFixed_Load(object sender, EventArgs e)
         {
             CursorInTheCentre();
-            //this.TransparencyKey = BackColor;
+            this.TransparencyKey = BackColor;
         }
 
         private void MarkingMenuFixed_MouseMove(object sender, MouseEventArgs e)
