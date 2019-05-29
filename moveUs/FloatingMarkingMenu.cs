@@ -111,7 +111,7 @@ namespace PasoKey
         }
         private void thisHide(object sender, MouseEventArgs e)
         {
-            this.Hide();
+            this.Hide();//bu kod PasoKeyMain üzerindeki bir kod ile çakışmaktadır, PasoKeyMain üzerindeki tikleme olayını settings olarak kayıt edip düzeltmek daha akıllıca olacaktır.
         }
 
         private void FloatingMarkingMenu_Load(object sender, EventArgs e)
