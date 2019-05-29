@@ -129,9 +129,6 @@ namespace PasoKey
                 angle -= angle * 180 / Math.PI;
                 angle += 360;
             }
-            ////*Farenin konumları yazdırılıyor*////
-
-
 
             //çizgi başlangıcı
             Graphics g = CreateGraphics();

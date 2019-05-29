@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DoubleJoystick));
             this.rightGuide = new System.Windows.Forms.Panel();
+            this.movingPartRight = new PasoKey.ButtonElipse();
             this.rightLbl7 = new System.Windows.Forms.Label();
             this.rightLbl6 = new System.Windows.Forms.Label();
             this.rightLbl5 = new System.Windows.Forms.Label();
@@ -38,7 +39,9 @@
             this.rightLbl2 = new System.Windows.Forms.Label();
             this.rightLbl1 = new System.Windows.Forms.Label();
             this.rightLbl0 = new System.Windows.Forms.Label();
+            this.buttonElipse11 = new PasoKey.ButtonElipse();
             this.leftGuide = new System.Windows.Forms.Panel();
+            this.movingPartLeft = new PasoKey.ButtonElipse();
             this.pictureBoxCapsLock = new System.Windows.Forms.PictureBox();
             this.pictureBoxEnter = new System.Windows.Forms.PictureBox();
             this.pictureBoxBackSpace = new System.Windows.Forms.PictureBox();
@@ -47,9 +50,6 @@
             this.leftLbl4 = new System.Windows.Forms.Label();
             this.leftLbl2 = new System.Windows.Forms.Label();
             this.leftLbl0 = new System.Windows.Forms.Label();
-            this.movingPartRight = new PasoKey.ButtonElipse();
-            this.buttonElipse11 = new PasoKey.ButtonElipse();
-            this.movingPartLeft = new PasoKey.ButtonElipse();
             this.buttonElipse1 = new PasoKey.ButtonElipse();
             this.rightGuide.SuspendLayout();
             this.leftGuide.SuspendLayout();
@@ -83,6 +83,21 @@
             this.rightGuide.MouseDown += new System.Windows.Forms.MouseEventHandler(this.rightGuide_MouseDown);
             this.rightGuide.MouseMove += new System.Windows.Forms.MouseEventHandler(this.rightGuide_MouseMove);
             this.rightGuide.MouseUp += new System.Windows.Forms.MouseEventHandler(this.rightGuide_MouseUp);
+            // 
+            // movingPartRight
+            // 
+            this.movingPartRight.BackColor = System.Drawing.Color.White;
+            this.movingPartRight.Enabled = false;
+            this.movingPartRight.FlatAppearance.BorderSize = 0;
+            this.movingPartRight.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.movingPartRight.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.movingPartRight.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(47)))), ((int)(((byte)(55)))));
+            this.movingPartRight.Location = new System.Drawing.Point(150, 150);
+            this.movingPartRight.Name = "movingPartRight";
+            this.movingPartRight.Size = new System.Drawing.Size(50, 50);
+            this.movingPartRight.TabIndex = 69;
+            this.movingPartRight.Text = "×";
+            this.movingPartRight.UseVisualStyleBackColor = false;
             // 
             // rightLbl7
             // 
@@ -188,6 +203,18 @@
             this.rightLbl0.TabIndex = 62;
             this.rightLbl0.Text = "×";
             // 
+            // buttonElipse11
+            // 
+            this.buttonElipse11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(47)))), ((int)(((byte)(55)))));
+            this.buttonElipse11.Enabled = false;
+            this.buttonElipse11.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonElipse11.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.buttonElipse11.Location = new System.Drawing.Point(40, 40);
+            this.buttonElipse11.Name = "buttonElipse11";
+            this.buttonElipse11.Size = new System.Drawing.Size(270, 270);
+            this.buttonElipse11.TabIndex = 44;
+            this.buttonElipse11.UseVisualStyleBackColor = false;
+            // 
             // leftGuide
             // 
             this.leftGuide.BackColor = System.Drawing.Color.Transparent;
@@ -212,6 +239,21 @@
             this.leftGuide.MouseDown += new System.Windows.Forms.MouseEventHandler(this.leftGuide_MouseDown);
             this.leftGuide.MouseMove += new System.Windows.Forms.MouseEventHandler(this.leftGuide_MouseMove);
             this.leftGuide.MouseUp += new System.Windows.Forms.MouseEventHandler(this.leftGuide_MouseUp);
+            // 
+            // movingPartLeft
+            // 
+            this.movingPartLeft.BackColor = System.Drawing.Color.White;
+            this.movingPartLeft.Enabled = false;
+            this.movingPartLeft.FlatAppearance.BorderSize = 0;
+            this.movingPartLeft.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.movingPartLeft.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.movingPartLeft.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(47)))), ((int)(((byte)(55)))));
+            this.movingPartLeft.Location = new System.Drawing.Point(150, 150);
+            this.movingPartLeft.Name = "movingPartLeft";
+            this.movingPartLeft.Size = new System.Drawing.Size(50, 50);
+            this.movingPartLeft.TabIndex = 63;
+            this.movingPartLeft.Text = "×";
+            this.movingPartLeft.UseVisualStyleBackColor = false;
             // 
             // pictureBoxCapsLock
             // 
@@ -309,48 +351,6 @@
             this.leftLbl0.TabIndex = 54;
             this.leftLbl0.Text = "×";
             // 
-            // movingPartRight
-            // 
-            this.movingPartRight.BackColor = System.Drawing.Color.White;
-            this.movingPartRight.Enabled = false;
-            this.movingPartRight.FlatAppearance.BorderSize = 0;
-            this.movingPartRight.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.movingPartRight.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.movingPartRight.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(47)))), ((int)(((byte)(55)))));
-            this.movingPartRight.Location = new System.Drawing.Point(150, 150);
-            this.movingPartRight.Name = "movingPartRight";
-            this.movingPartRight.Size = new System.Drawing.Size(50, 50);
-            this.movingPartRight.TabIndex = 69;
-            this.movingPartRight.Text = "×";
-            this.movingPartRight.UseVisualStyleBackColor = false;
-            // 
-            // buttonElipse11
-            // 
-            this.buttonElipse11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(47)))), ((int)(((byte)(55)))));
-            this.buttonElipse11.Enabled = false;
-            this.buttonElipse11.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonElipse11.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.buttonElipse11.Location = new System.Drawing.Point(40, 40);
-            this.buttonElipse11.Name = "buttonElipse11";
-            this.buttonElipse11.Size = new System.Drawing.Size(270, 270);
-            this.buttonElipse11.TabIndex = 44;
-            this.buttonElipse11.UseVisualStyleBackColor = false;
-            // 
-            // movingPartLeft
-            // 
-            this.movingPartLeft.BackColor = System.Drawing.Color.White;
-            this.movingPartLeft.Enabled = false;
-            this.movingPartLeft.FlatAppearance.BorderSize = 0;
-            this.movingPartLeft.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.movingPartLeft.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.movingPartLeft.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(47)))), ((int)(((byte)(55)))));
-            this.movingPartLeft.Location = new System.Drawing.Point(150, 150);
-            this.movingPartLeft.Name = "movingPartLeft";
-            this.movingPartLeft.Size = new System.Drawing.Size(50, 50);
-            this.movingPartLeft.TabIndex = 63;
-            this.movingPartLeft.Text = "×";
-            this.movingPartLeft.UseVisualStyleBackColor = false;
-            // 
             // buttonElipse1
             // 
             this.buttonElipse1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(47)))), ((int)(((byte)(55)))));
@@ -373,6 +373,7 @@
             this.ForeColor = System.Drawing.Color.White;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "DoubleJoystick";
+            this.Opacity = 0.95D;
             this.ShowIcon = false;
             this.ShowInTaskbar = false;
             this.Text = "DualPanel";

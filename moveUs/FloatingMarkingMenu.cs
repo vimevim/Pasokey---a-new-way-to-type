@@ -125,7 +125,7 @@ namespace PasoKey
 
         private void FormFollowsCursor()
         {//formun konumu 2 ye bölünüp farenin konumundan çıkartıldı,doğal olarak form farenin merkezine geçmiş oldu
-            this.Location = new Point(MousePosition.X - formCentreX, MousePosition.Y - formCentreY);
+            this.Location = new Point(Cursor.Position.X - formCentreX, Cursor.Position.Y - formCentreY);
         }
 
         private void leftGuide_MouseMove(object sender, MouseEventArgs e)
@@ -265,7 +265,6 @@ namespace PasoKey
                 }
                 FormFollowsCursor();
             }
-
         }
 
         private void rightGuide_MouseMove(object sender, MouseEventArgs e)

@@ -29,19 +29,24 @@ namespace PasoKey
 
         PanelTop panelTop = new PanelTop();
 
-        private void allHide()
+        private void allHideAndFalse()
         {
             doubleJoystick.Hide();
             singleJoystick.Hide();
             floatingJoystick.Hide();
             floatingMarkingMenu.Hide();
             fixedMarkingMenu.Hide();
+            ((ToolStripMenuItem)contextMenuStrip1.Items[0]).Checked = false;
+            ((ToolStripMenuItem)contextMenuStrip1.Items[1]).Checked = false;
+            ((ToolStripMenuItem)contextMenuStrip1.Items[3]).Checked = false;
+            ((ToolStripMenuItem)contextMenuStrip1.Items[4]).Checked = false;
+            ((ToolStripMenuItem)contextMenuStrip1.Items[5]).Checked = false;
         }
-
+        
         public PasoKeyMain()
         {
             InitializeComponent();
-            
+
             Hook.GlobalEvents().MouseClick += async (sender, e) =>
             {
                 if (ayarlar.Default.midBut == "activate")
@@ -84,8 +89,6 @@ namespace PasoKey
                     }
                 }
             };
-
-
         }
 
         private void PasoKeyMain_Load(object sender, EventArgs e)
@@ -132,33 +135,83 @@ namespace PasoKey
 
         private void floatingMarkingMenuToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            allHide();
-            floatingMarkingMenu.Show();
+            if (((ToolStripMenuItem)contextMenuStrip1.Items[0]).Checked == false)
+            {
+                allHideAndFalse();
+
+                ((ToolStripMenuItem)contextMenuStrip1.Items[0]).Checked = true;
+
+                floatingMarkingMenu.Show();
+            }
+            else
+            {
+
+                allHideAndFalse();
+            }
         }
 
         private void fixedMarkingMenuToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            allHide();
-            fixedMarkingMenu.Show();
+            if (((ToolStripMenuItem)contextMenuStrip1.Items[1]).Checked == false)
+            {
+                allHideAndFalse();
+
+                ((ToolStripMenuItem)contextMenuStrip1.Items[1]).Checked = true;
+
+                fixedMarkingMenu.Show();
+            }
+            else
+            {
+ 
+                allHideAndFalse();
+            }
         }
 
         private void doubleJoystickToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            allHide();
+            if (((ToolStripMenuItem)contextMenuStrip1.Items[3]).Checked == false)
+            {
+                allHideAndFalse();
 
-            doubleJoystick.Show();
+                ((ToolStripMenuItem)contextMenuStrip1.Items[3]).Checked = true;
+
+                doubleJoystick.Show();
+            }
+           else
+            {
+
+                allHideAndFalse();
+            }
         }
 
         private void singleJoystickToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            allHide();
-            singleJoystick.Show();
+            if (((ToolStripMenuItem)contextMenuStrip1.Items[4]).Checked == false)
+            {
+                allHideAndFalse();
+                ((ToolStripMenuItem)contextMenuStrip1.Items[4]).Checked = true;
+
+                singleJoystick.Show();
+            }
+            else
+            {
+                allHideAndFalse();
+            }
         }
 
         private void floatingJoystickToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            allHide();
-            floatingJoystick.Show();
+            if (((ToolStripMenuItem)contextMenuStrip1.Items[5]).Checked == false)
+            {
+                allHideAndFalse();
+                ((ToolStripMenuItem)contextMenuStrip1.Items[5]).Checked = true;
+
+                floatingJoystick.Show();
+            }
+            else
+            {
+                allHideAndFalse();
+            }
         }
 
         private void panelHide()
@@ -233,7 +286,7 @@ namespace PasoKey
                 ((ToolStripMenuItem)contextMenuStrip1.Items[10]).Checked = true;
             }
             ayarlar.Default.Save();
-            
+
         }
 
         private void runAtStartUpToolStripMenuItem_Click(object sender, EventArgs e)

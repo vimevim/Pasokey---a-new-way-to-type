@@ -41,16 +41,16 @@
             this.rightLbl0 = new System.Windows.Forms.Label();
             this.buttonElipse11 = new PasoKey.ButtonElipse();
             this.leftGuide = new System.Windows.Forms.Panel();
+            this.movingPartLeft = new PasoKey.ButtonElipse();
+            this.pictureBoxCapsLock = new System.Windows.Forms.PictureBox();
+            this.pictureBoxEnter = new System.Windows.Forms.PictureBox();
+            this.pictureBoxBackSpace = new System.Windows.Forms.PictureBox();
+            this.pictureBoxSpace = new System.Windows.Forms.PictureBox();
             this.leftLbl6 = new System.Windows.Forms.Label();
             this.leftLbl4 = new System.Windows.Forms.Label();
             this.leftLbl2 = new System.Windows.Forms.Label();
             this.leftLbl0 = new System.Windows.Forms.Label();
             this.buttonElipse1 = new PasoKey.ButtonElipse();
-            this.pictureBoxCapsLock = new System.Windows.Forms.PictureBox();
-            this.pictureBoxEnter = new System.Windows.Forms.PictureBox();
-            this.pictureBoxBackSpace = new System.Windows.Forms.PictureBox();
-            this.pictureBoxSpace = new System.Windows.Forms.PictureBox();
-            this.movingPartLeft = new PasoKey.ButtonElipse();
             this.rightGuide.SuspendLayout();
             this.leftGuide.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxCapsLock)).BeginInit();
@@ -240,6 +240,69 @@
             this.leftGuide.MouseMove += new System.Windows.Forms.MouseEventHandler(this.leftGuide_MouseMove);
             this.leftGuide.MouseUp += new System.Windows.Forms.MouseEventHandler(this.leftGuide_MouseUp);
             // 
+            // movingPartLeft
+            // 
+            this.movingPartLeft.BackColor = System.Drawing.Color.White;
+            this.movingPartLeft.Enabled = false;
+            this.movingPartLeft.FlatAppearance.BorderSize = 0;
+            this.movingPartLeft.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.movingPartLeft.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.movingPartLeft.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(47)))), ((int)(((byte)(55)))));
+            this.movingPartLeft.Location = new System.Drawing.Point(150, 150);
+            this.movingPartLeft.Name = "movingPartLeft";
+            this.movingPartLeft.Size = new System.Drawing.Size(50, 50);
+            this.movingPartLeft.TabIndex = 67;
+            this.movingPartLeft.Text = "×";
+            this.movingPartLeft.UseVisualStyleBackColor = false;
+            // 
+            // pictureBoxCapsLock
+            // 
+            this.pictureBoxCapsLock.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(47)))), ((int)(((byte)(55)))));
+            this.pictureBoxCapsLock.BackgroundImage = global::PasoKey.Properties.Resources.caps_lock_white_fw;
+            this.pictureBoxCapsLock.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBoxCapsLock.Enabled = false;
+            this.pictureBoxCapsLock.Location = new System.Drawing.Point(81, 221);
+            this.pictureBoxCapsLock.Name = "pictureBoxCapsLock";
+            this.pictureBoxCapsLock.Size = new System.Drawing.Size(48, 48);
+            this.pictureBoxCapsLock.TabIndex = 63;
+            this.pictureBoxCapsLock.TabStop = false;
+            // 
+            // pictureBoxEnter
+            // 
+            this.pictureBoxEnter.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(47)))), ((int)(((byte)(55)))));
+            this.pictureBoxEnter.BackgroundImage = global::PasoKey.Properties.Resources.enter_white_fw;
+            this.pictureBoxEnter.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBoxEnter.Enabled = false;
+            this.pictureBoxEnter.Location = new System.Drawing.Point(221, 221);
+            this.pictureBoxEnter.Name = "pictureBoxEnter";
+            this.pictureBoxEnter.Size = new System.Drawing.Size(48, 48);
+            this.pictureBoxEnter.TabIndex = 64;
+            this.pictureBoxEnter.TabStop = false;
+            // 
+            // pictureBoxBackSpace
+            // 
+            this.pictureBoxBackSpace.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(47)))), ((int)(((byte)(55)))));
+            this.pictureBoxBackSpace.BackgroundImage = global::PasoKey.Properties.Resources.backspace_white_fw;
+            this.pictureBoxBackSpace.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBoxBackSpace.Enabled = false;
+            this.pictureBoxBackSpace.Location = new System.Drawing.Point(221, 81);
+            this.pictureBoxBackSpace.Name = "pictureBoxBackSpace";
+            this.pictureBoxBackSpace.Size = new System.Drawing.Size(48, 48);
+            this.pictureBoxBackSpace.TabIndex = 65;
+            this.pictureBoxBackSpace.TabStop = false;
+            // 
+            // pictureBoxSpace
+            // 
+            this.pictureBoxSpace.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(47)))), ((int)(((byte)(55)))));
+            this.pictureBoxSpace.BackgroundImage = global::PasoKey.Properties.Resources.space_bar_white_fw;
+            this.pictureBoxSpace.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBoxSpace.Enabled = false;
+            this.pictureBoxSpace.Location = new System.Drawing.Point(81, 81);
+            this.pictureBoxSpace.Name = "pictureBoxSpace";
+            this.pictureBoxSpace.Size = new System.Drawing.Size(48, 48);
+            this.pictureBoxSpace.TabIndex = 66;
+            this.pictureBoxSpace.TabStop = false;
+            // 
             // leftLbl6
             // 
             this.leftLbl6.AutoSize = true;
@@ -300,79 +363,17 @@
             this.buttonElipse1.TabIndex = 44;
             this.buttonElipse1.UseVisualStyleBackColor = false;
             // 
-            // pictureBoxCapsLock
-            // 
-            this.pictureBoxCapsLock.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(47)))), ((int)(((byte)(55)))));
-            this.pictureBoxCapsLock.BackgroundImage = global::PasoKey.Properties.Resources.caps_lock_white_fw;
-            this.pictureBoxCapsLock.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBoxCapsLock.Enabled = false;
-            this.pictureBoxCapsLock.Location = new System.Drawing.Point(81, 221);
-            this.pictureBoxCapsLock.Name = "pictureBoxCapsLock";
-            this.pictureBoxCapsLock.Size = new System.Drawing.Size(48, 48);
-            this.pictureBoxCapsLock.TabIndex = 63;
-            this.pictureBoxCapsLock.TabStop = false;
-            // 
-            // pictureBoxEnter
-            // 
-            this.pictureBoxEnter.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(47)))), ((int)(((byte)(55)))));
-            this.pictureBoxEnter.BackgroundImage = global::PasoKey.Properties.Resources.enter_white_fw;
-            this.pictureBoxEnter.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBoxEnter.Enabled = false;
-            this.pictureBoxEnter.Location = new System.Drawing.Point(221, 221);
-            this.pictureBoxEnter.Name = "pictureBoxEnter";
-            this.pictureBoxEnter.Size = new System.Drawing.Size(48, 48);
-            this.pictureBoxEnter.TabIndex = 64;
-            this.pictureBoxEnter.TabStop = false;
-            // 
-            // pictureBoxBackSpace
-            // 
-            this.pictureBoxBackSpace.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(47)))), ((int)(((byte)(55)))));
-            this.pictureBoxBackSpace.BackgroundImage = global::PasoKey.Properties.Resources.backspace_white_fw;
-            this.pictureBoxBackSpace.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBoxBackSpace.Enabled = false;
-            this.pictureBoxBackSpace.Location = new System.Drawing.Point(221, 81);
-            this.pictureBoxBackSpace.Name = "pictureBoxBackSpace";
-            this.pictureBoxBackSpace.Size = new System.Drawing.Size(48, 48);
-            this.pictureBoxBackSpace.TabIndex = 65;
-            this.pictureBoxBackSpace.TabStop = false;
-            // 
-            // pictureBoxSpace
-            // 
-            this.pictureBoxSpace.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(47)))), ((int)(((byte)(55)))));
-            this.pictureBoxSpace.BackgroundImage = global::PasoKey.Properties.Resources.space_bar_white_fw;
-            this.pictureBoxSpace.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBoxSpace.Enabled = false;
-            this.pictureBoxSpace.Location = new System.Drawing.Point(81, 81);
-            this.pictureBoxSpace.Name = "pictureBoxSpace";
-            this.pictureBoxSpace.Size = new System.Drawing.Size(48, 48);
-            this.pictureBoxSpace.TabIndex = 66;
-            this.pictureBoxSpace.TabStop = false;
-            // 
-            // movingPartLeft
-            // 
-            this.movingPartLeft.BackColor = System.Drawing.Color.White;
-            this.movingPartLeft.Enabled = false;
-            this.movingPartLeft.FlatAppearance.BorderSize = 0;
-            this.movingPartLeft.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.movingPartLeft.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.movingPartLeft.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(47)))), ((int)(((byte)(55)))));
-            this.movingPartLeft.Location = new System.Drawing.Point(150, 150);
-            this.movingPartLeft.Name = "movingPartLeft";
-            this.movingPartLeft.Size = new System.Drawing.Size(50, 50);
-            this.movingPartLeft.TabIndex = 67;
-            this.movingPartLeft.Text = "×";
-            this.movingPartLeft.UseVisualStyleBackColor = false;
-            // 
             // SingleJoystick
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
-            this.BackColor = System.Drawing.Color.Black;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(1)))), ((int)(((byte)(1)))));
             this.ClientSize = new System.Drawing.Size(700, 350);
             this.Controls.Add(this.rightGuide);
             this.Controls.Add(this.leftGuide);
             this.ForeColor = System.Drawing.Color.White;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "SingleJoystick";
+            this.Opacity = 0.95D;
             this.ShowIcon = false;
             this.ShowInTaskbar = false;
             this.Text = "DualPanel";

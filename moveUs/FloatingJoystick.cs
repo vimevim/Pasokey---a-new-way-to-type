@@ -110,10 +110,32 @@ namespace PasoKey
         private void DualPanel_Load(object sender, EventArgs e)
         {
             this.Width = leftGuide.Width;//formun boyutu bir panel boyutuyla eşitlenir
-            rightGuide.Location = new Point(0, 0);//panel2 konumu panel1 ile üst üste getirilir
+            rightGuide.Location = new Point(0, 50);//panel2 konumu panel1 ile üst üste getirilir
             this.TransparencyKey = BackColor;
             leftGuide.BringToFront();
         }
+        int panelGuiderLeft, panelGuiderTop;
+
+
+        private void panelGuider_MouseDown(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Left)
+            {
+                panelGuiderLeft = e.X;
+                panelGuiderTop = e.Y;
+            }
+        }
+
+
+        private void panelGuider_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Left)
+            {
+                this.Left = Cursor.Position.X - panelGuiderLeft;
+                this.Top = Cursor.Position.Y - panelGuiderTop;
+            }
+        }
+
         //butonları hareket ettirme komutları burada başlıyor
 
         private void leftGuide_MouseDown(object sender, MouseEventArgs e)
@@ -141,12 +163,14 @@ namespace PasoKey
             if (leftHypotenuse <= 50)
             {
                 firstStep = 4;
+                WriteFirstStepToLbl();
             }
             else
             {
                 if (leftAngle > 337.5 || leftAngle < 22.5)
                 {
                     firstStep = 2;
+                    WriteFirstStepToLbl();
                 }
                 else if (leftAngle > 22.5 && leftAngle < 67.5)
                 {
@@ -164,6 +188,7 @@ namespace PasoKey
                 else if (leftAngle > 67.5 && leftAngle < 112.5)
                 {
                     firstStep = 3;
+                    WriteFirstStepToLbl();
                 }
                 else if (leftAngle > 112.5 && leftAngle < 157.5)
                 {
@@ -172,6 +197,7 @@ namespace PasoKey
                 else if (leftAngle > 157.5 && leftAngle < 202.5)
                 {
                     firstStep = 0;
+                    WriteFirstStepToLbl();
                 }
                 else if (leftAngle > 202.5 && leftAngle < 247.5)
                 {
@@ -180,6 +206,7 @@ namespace PasoKey
                 else if (leftAngle > 247.5 && leftAngle < 292.5)
                 {
                     firstStep = 1;
+                    WriteFirstStepToLbl();
                 }
                 else if (leftAngle > 292.5 && leftAngle < 337.5)
                 {
@@ -190,7 +217,6 @@ namespace PasoKey
                     general_MouseUp(null, null);
                 }
             }
-            WriteFirstStepToLbl();
         }
 
         private void rightGuide_MouseUp(object sender, MouseEventArgs e)

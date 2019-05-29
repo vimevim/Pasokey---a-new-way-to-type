@@ -342,6 +342,9 @@
             this.ForeColor = System.Drawing.Color.Black;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FloatingMarkingMenu";
+            this.Opacity = 0.9D;
+            this.ShowIcon = false;
+            this.ShowInTaskbar = false;
             this.Text = "FloatingMarkingMenu";
             this.Load += new System.EventHandler(this.FloatingMarkingMenu_Load);
             this.rightGuide.ResumeLayout(false);

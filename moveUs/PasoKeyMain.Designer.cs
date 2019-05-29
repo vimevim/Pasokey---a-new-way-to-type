@@ -66,7 +66,7 @@
             this.runAtStartUpToolStripMenuItem,
             this.closeThePasokKeyToolStripMenuItem});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(287, 336);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(287, 364);
             // 
             // floatingMarkingMenuToolStripMenuItem
             // 

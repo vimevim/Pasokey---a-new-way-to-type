@@ -144,12 +144,14 @@ namespace PasoKey
             if (leftHypotenuse <= 50)
             {
                 firstStep = 4;
+                WriteFirstStepToLbl();
             }
             else
             {
                 if (leftAngle > 337.5 || leftAngle < 22.5)
                 {
                     firstStep = 2;
+                    WriteFirstStepToLbl();
                 }
                 else if (leftAngle > 22.5 && leftAngle < 67.5)
                 {
@@ -167,6 +169,7 @@ namespace PasoKey
                 else if (leftAngle > 67.5 && leftAngle < 112.5)
                 {
                     firstStep = 3;
+                    WriteFirstStepToLbl();
                 }
                 else if (leftAngle > 112.5 && leftAngle < 157.5)
                 {
@@ -175,6 +178,7 @@ namespace PasoKey
                 else if (leftAngle > 157.5 && leftAngle < 202.5)
                 {
                     firstStep = 0;
+                    WriteFirstStepToLbl();
                 }
                 else if (leftAngle > 202.5 && leftAngle < 247.5)
                 {
@@ -183,6 +187,7 @@ namespace PasoKey
                 else if (leftAngle > 247.5 && leftAngle < 292.5)
                 {
                     firstStep = 1;
+                    WriteFirstStepToLbl();
                 }
                 else if (leftAngle > 292.5 && leftAngle < 337.5)
                 {
@@ -193,7 +198,6 @@ namespace PasoKey
                     general_MouseUp(null, null);
                 }
             }
-            WriteFirstStepToLbl();
         }
 
         private void rightGuide_MouseUp(object sender, MouseEventArgs e)

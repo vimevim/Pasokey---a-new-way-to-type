@@ -124,6 +124,9 @@
   <data name="space-bar-white.fw" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\space-bar-white.fw1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="caps-lock-black.fw" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\caps-lock-black.fw1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="backspace-white.fw" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\backspace-white.fw.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -136,6 +139,9 @@
   <data name="caps-lock-white.fw" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\caps-lock-white.fw.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="JoystickOutline.V1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\JoystickOutline.V1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="enter-white.fw" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\enter-white.fw.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -145,7 +151,7 @@
   <data name="JoystickInner.fw" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\JoystickInner.fw.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="caps-lock-black.fw" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\caps-lock-black.fw1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="JoystickOutline.V2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\JoystickOutline.V2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

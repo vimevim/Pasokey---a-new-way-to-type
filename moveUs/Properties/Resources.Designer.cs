@@ -143,6 +143,26 @@ namespace PasoKey.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap JoystickOutline_V1 {
+            get {
+                object obj = ResourceManager.GetObject("JoystickOutline.V1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap JoystickOutline_V2 {
+            get {
+                object obj = ResourceManager.GetObject("JoystickOutline.V2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap space_bar_black_fw {
             get {
                 object obj = ResourceManager.GetObject("space-bar-black.fw", resourceCulture);
