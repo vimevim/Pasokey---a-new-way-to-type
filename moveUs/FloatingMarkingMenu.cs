@@ -164,7 +164,10 @@ namespace PasoKey
                 }
                 else if (leftAngle > 22.5 && leftAngle < 67.5)
                 {
-                    g.DrawLine(d, formCentreX, formCentreY, (formCentreX - angularEdge), (angularEdge + formCentreY));
+                    if (leftHypotenuse < formCentreX)
+                    {
+                        g.DrawLine(d, formCentreX, formCentreY, (formCentreX - angularEdge), (angularEdge + formCentreY));
+                    }
                 }
                 else if (leftAngle > 67.5 && leftAngle < 112.5)
                 {
@@ -172,7 +175,10 @@ namespace PasoKey
                 }
                 else if (leftAngle > 112.5 && leftAngle < 157.5)
                 {
-                    g.DrawLine(d, formCentreX, formCentreY, (formCentreX - angularEdge), (formCentreY - angularEdge));
+                    if (leftHypotenuse < formCentreX)
+                    {
+                        g.DrawLine(d, formCentreX, formCentreY, (formCentreX - angularEdge), (formCentreY - angularEdge));
+                    }
                 }
                 else if (leftAngle > 157.5 && leftAngle < 202.5)
                 {
@@ -180,7 +186,10 @@ namespace PasoKey
                 }
                 else if (leftAngle > 202.5 && leftAngle < 247.5)
                 {
-                    g.DrawLine(d, formCentreX, formCentreY, (angularEdge + formCentreX), (formCentreY - angularEdge));
+                    if (leftHypotenuse < formCentreX)
+                    {
+                        g.DrawLine(d, formCentreX, formCentreY, (angularEdge + formCentreX), (formCentreY - angularEdge));
+                    }
                 }
                 else if (leftAngle > 247.5 && leftAngle < 292.5)
                 {
@@ -188,7 +197,10 @@ namespace PasoKey
                 }
                 else if (leftAngle > 292.5 && leftAngle < 337.5)
                 {
-                    g.DrawLine(d, formCentreX, formCentreY, (angularEdge + formCentreX), (angularEdge + formCentreY));
+                    if (leftHypotenuse < formCentreX)
+                    {
+                        g.DrawLine(d, formCentreX, formCentreY, (angularEdge + formCentreX), (angularEdge + formCentreY));
+                    }
                 }
                 else
                 {
@@ -303,7 +315,10 @@ namespace PasoKey
                 }
                 else if (rightAngle > 22.5 && rightAngle < 67.5)
                 {
-                    g.DrawLine(d, formCentreX, formCentreY, (formCentreX - angularEdge), (angularEdge + formCentreY));
+                    if (leftHypotenuse < formCentreX)
+                    {
+                        g.DrawLine(d, formCentreX, formCentreY, (formCentreX - angularEdge), (angularEdge + formCentreY));
+                    }
                 }
                 else if (rightAngle > 67.5 && rightAngle < 112.5)
                 {
@@ -311,7 +326,10 @@ namespace PasoKey
                 }
                 else if (rightAngle > 112.5 && rightAngle < 157.5)
                 {
-                    g.DrawLine(d, formCentreX, formCentreY, (formCentreX - angularEdge), (formCentreY - angularEdge));
+                    if (leftHypotenuse < formCentreX)
+                    {
+                        g.DrawLine(d, formCentreX, formCentreY, (formCentreX - angularEdge), (formCentreY - angularEdge));
+                    }
                 }
                 else if (rightAngle > 157.5 && rightAngle < 202.5)
                 {
@@ -319,7 +337,10 @@ namespace PasoKey
                 }
                 else if (rightAngle > 202.5 && rightAngle < 247.5)
                 {
-                    g.DrawLine(d, formCentreX, formCentreY, (angularEdge + formCentreX), (formCentreY - angularEdge));
+                    if (leftHypotenuse < formCentreX)
+                    {
+                        g.DrawLine(d, formCentreX, formCentreY, (angularEdge + formCentreX), (formCentreY - angularEdge));
+                    }
                 }
                 else if (rightAngle > 247.5 && rightAngle < 292.5)
                 {
@@ -327,7 +348,10 @@ namespace PasoKey
                 }
                 else if (rightAngle > 292.5 && rightAngle < 337.5)
                 {
-                    g.DrawLine(d, formCentreX, formCentreY, (angularEdge + formCentreX), (angularEdge + formCentreY));
+                    if (leftHypotenuse < formCentreX)
+                    {
+                        g.DrawLine(d, formCentreX, formCentreY, (angularEdge + formCentreX), (angularEdge + formCentreY));
+                    }
                 }
                 else
                 {

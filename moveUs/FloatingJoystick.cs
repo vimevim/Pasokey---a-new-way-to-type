@@ -126,7 +126,6 @@ namespace PasoKey
             }
         }
 
-
         private void panelGuider_MouseMove(object sender, MouseEventArgs e)
         {
             if (e.Button == MouseButtons.Left)
