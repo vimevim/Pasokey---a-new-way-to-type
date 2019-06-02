@@ -98,11 +98,11 @@
     <Compile Include="FixedMarkingMenu.Designer.cs">
       <DependentUpon>FixedMarkingMenu.cs</DependentUpon>
     </Compile>
-    <Compile Include="FloatingJoystick.cs">
+    <Compile Include="Joystick.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FloatingJoystick.Designer.cs">
-      <DependentUpon>FloatingJoystick.cs</DependentUpon>
+    <Compile Include="Joystick.Designer.cs">
+      <DependentUpon>Joystick.cs</DependentUpon>
     </Compile>
     <Compile Include="FloatingMarkingMenu.cs">
       <SubType>Form</SubType>
@@ -128,12 +128,6 @@
     <Compile Include="PasoKeyMain.Designer.cs">
       <DependentUpon>PasoKeyMain.cs</DependentUpon>
     </Compile>
-    <Compile Include="DoubleJoystick.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="DoubleJoystick.Designer.cs">
-      <DependentUpon>DoubleJoystick.cs</DependentUpon>
-    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
@@ -146,17 +140,11 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
       <DependentUpon>ayarlar.settings</DependentUpon>
     </Compile>
-    <Compile Include="SingleJoystick.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="SingleJoystick.Designer.cs">
-      <DependentUpon>SingleJoystick.cs</DependentUpon>
-    </Compile>
     <EmbeddedResource Include="FixedMarkingMenu.resx">
       <DependentUpon>FixedMarkingMenu.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FloatingJoystick.resx">
-      <DependentUpon>FloatingJoystick.cs</DependentUpon>
+    <EmbeddedResource Include="Joystick.resx">
+      <DependentUpon>Joystick.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FloatingMarkingMenu.resx">
       <DependentUpon>FloatingMarkingMenu.cs</DependentUpon>
@@ -167,16 +155,10 @@
     <EmbeddedResource Include="PasoKeyMain.resx">
       <DependentUpon>PasoKeyMain.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="DoubleJoystick.resx">
-      <DependentUpon>DoubleJoystick.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
-    </EmbeddedResource>
-    <EmbeddedResource Include="SingleJoystick.resx">
-      <DependentUpon>SingleJoystick.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="PasoKey_TemporaryKey.pfx" />

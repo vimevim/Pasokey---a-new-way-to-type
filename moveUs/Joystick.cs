@@ -10,14 +10,14 @@ using System.Windows.Forms;
 
 namespace PasoKey
 {
-    public partial class FloatingJoystick : Form
+    public partial class Joystick : Form
     {
         int leftGuideX, leftGuideY, rightGuideX, rightGuideY;
         int cursorOriginX, cursorOriginY;
         double leftHypotenuse, leftAngle, rightHypotenuse, rightAngle;
         Point mouseDownLocation;
 
-        public FloatingJoystick()
+        public Joystick()
         {
             InitializeComponent();
         }
@@ -107,13 +107,49 @@ namespace PasoKey
             general_MouseUp(null, null);
         }
 
-        private void DualPanel_Load(object sender, EventArgs e)
+        public void DualPanel_Load(object sender, EventArgs e)
         {
-            this.Width = leftGuide.Width;//formun boyutu bir panel boyutuyla eşitlenir
-            rightGuide.Location = new Point(0, 50);//panel2 konumu panel1 ile üst üste getirilir
+            Changes();
+        }
+
+        public void Changes()
+        {
+            if (ayarlar.Default.joystickMod == "SingleJoystick")
+            {
+                panelGuider.Visible = false;
+                this.Width = leftGuide.Width;//formun boyutu bir panel boyutuyla eşitlenir
+                this.Height = leftGuide.Height;
+                leftGuide.Top = 0;
+                rightGuide.Top = 0;
+                this.Location = new Point(Screen.PrimaryScreen.Bounds.Width - this.Width, Screen.PrimaryScreen.Bounds.Height - this.Height);//formun konumu sağ alta sabitlenir
+                rightGuide.Location = new Point(0, 0);//panel2 konumu panel1 ile üst üste getirilir
+            }
+            else if (ayarlar.Default.joystickMod == "DoubleJoystick")
+            {
+                panelGuider.Visible = false;
+                this.Height = leftGuide.Height;
+                this.Width = Screen.PrimaryScreen.Bounds.Width;//formun genişliğini ekranın genişliğiyle eşitleyen komut
+                leftGuide.Top = 0;
+                rightGuide.Top = 0;
+                this.Location = new Point(Screen.PrimaryScreen.Bounds.Width - this.Width, Screen.PrimaryScreen.Bounds.Height - this.Height);//formun konumunu ekranın altına sabitleyen komut
+                rightGuide.Left = this.Width - rightGuide.Width;//panel2 konumunu başlangıçta sağa yaslayan komut.
+ 
+            }
+            else if (ayarlar.Default.joystickMod == "FloatingJoystick")
+            {
+                this.Left = (Screen.PrimaryScreen.Bounds.Width / 2)-(this.Width / 2);
+                this.Top = (Screen.PrimaryScreen.Bounds.Height / 2)-(this.Height/2);
+                panelGuider.Visible = true;
+                this.Width = leftGuide.Width;//formun boyutu bir panel boyutuyla eşitlenir
+                this.Height = 400;
+                rightGuide.Location = new Point(0, 50);//panel2 konumu panel1 ile üst üste getirilir
+                leftGuide.Location = new Point(0, 50);//panel2 konumu panel1 ile üst üste getirilir
+            }
             this.TransparencyKey = BackColor;
             leftGuide.BringToFront();
         }
+
+
         int panelGuiderLeft, panelGuiderTop;
 
 

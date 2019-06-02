@@ -15,11 +15,8 @@ namespace PasoKey
     public partial class PasoKeyMain : Form
     {
 
-        DoubleJoystick doubleJoystick = new DoubleJoystick();
 
-        SingleJoystick singleJoystick = new SingleJoystick();
-
-        FloatingJoystick floatingJoystick = new FloatingJoystick();
+        Joystick joystick = new Joystick();
 
         FloatingMarkingMenu floatingMarkingMenu = new FloatingMarkingMenu();
 
@@ -28,9 +25,6 @@ namespace PasoKey
 
         private void allHideAndFalse()
         {
-            doubleJoystick.Hide();
-            singleJoystick.Hide();
-            floatingJoystick.Hide();
             floatingMarkingMenu.Hide();
             fixedMarkingMenu.Hide();
             ((ToolStripMenuItem)contextMenuStrip1.Items[0]).Checked = false;
@@ -60,9 +54,9 @@ namespace PasoKey
 
             }
             Hook.GlobalEvents().MouseClick += async (sender, e) =>
-        {
-            if (ayarlar.Default.midBut == true)
             {
+                if (ayarlar.Default.midBut == true)
+                {
                     /*
                      * if (e.Button == MouseButtons.Middle)
                     {
@@ -85,22 +79,22 @@ namespace PasoKey
 
                     }
                     */
-                if (e.Button == MouseButtons.Middle)
-                {
-                    contextMenuStrip1.Show();
-                    contextMenuStrip1.Left = Cursor.Position.X;
-                    contextMenuStrip1.Top = Cursor.Position.Y;
-                }
-                else
-                {
+                    if (e.Button == MouseButtons.Middle)
+                    {
+                        contextMenuStrip1.Show();
+                        contextMenuStrip1.Left = Cursor.Position.X;
+                        contextMenuStrip1.Top = Cursor.Position.Y;
+                    }
+                    else
+                    {
                         //mouse, form kordinatları dışındaysa çalışır
                         if (Cursor.Position.X < contextMenuStrip1.Left || Cursor.Position.X > (contextMenuStrip1.Left + contextMenuStrip1.Width) || Cursor.Position.Y < contextMenuStrip1.Top || Cursor.Position.Y > (contextMenuStrip1.Top + contextMenuStrip1.Height))
-                    {
-                        contextMenuStrip1.Hide();
+                        {
+                            contextMenuStrip1.Hide();
+                        }
                     }
                 }
-            }
-        };
+            };
         }
 
         private void PasoKeyMain_Load(object sender, EventArgs e)
@@ -144,18 +138,23 @@ namespace PasoKey
 
         private void doubleJoystickToolStripMenuItem_Click(object sender, EventArgs e)
         {
+
             if (((ToolStripMenuItem)contextMenuStrip1.Items[3]).Checked == false)
             {
-                allHideAndFalse();
-
+                joystick.Show();
                 ((ToolStripMenuItem)contextMenuStrip1.Items[3]).Checked = true;
-
-                doubleJoystick.Show();
+                ((ToolStripMenuItem)contextMenuStrip1.Items[4]).Checked = false;
+                ((ToolStripMenuItem)contextMenuStrip1.Items[5]).Checked = false;
+                ayarlar.Default.joystickMod = "DoubleJoystick";
+                ayarlar.Default.Save();
+                joystick.Controls.Clear();
+                joystick.InitializeComponent();
+                joystick.DualPanel_Load(null, null);
             }
             else
             {
-
-                allHideAndFalse();
+                joystick.Hide();
+                ((ToolStripMenuItem)contextMenuStrip1.Items[3]).Checked = false;
             }
         }
 
@@ -163,14 +162,20 @@ namespace PasoKey
         {
             if (((ToolStripMenuItem)contextMenuStrip1.Items[4]).Checked == false)
             {
-                allHideAndFalse();
+                joystick.Show();
+                ((ToolStripMenuItem)contextMenuStrip1.Items[3]).Checked = false;
                 ((ToolStripMenuItem)contextMenuStrip1.Items[4]).Checked = true;
-
-                singleJoystick.Show();
+                ((ToolStripMenuItem)contextMenuStrip1.Items[5]).Checked = false;
+                ayarlar.Default.joystickMod = "SingleJoystick";
+                ayarlar.Default.Save();
+                joystick.Controls.Clear();
+                joystick.InitializeComponent();
+                joystick.DualPanel_Load(null, null);
             }
             else
             {
-                allHideAndFalse();
+                joystick.Hide();
+                ((ToolStripMenuItem)contextMenuStrip1.Items[4]).Checked = false;
             }
         }
 
@@ -178,14 +183,20 @@ namespace PasoKey
         {
             if (((ToolStripMenuItem)contextMenuStrip1.Items[5]).Checked == false)
             {
-                allHideAndFalse();
+                joystick.Show();
+                ((ToolStripMenuItem)contextMenuStrip1.Items[3]).Checked = false;
+                ((ToolStripMenuItem)contextMenuStrip1.Items[4]).Checked = false;
                 ((ToolStripMenuItem)contextMenuStrip1.Items[5]).Checked = true;
-
-                floatingJoystick.Show();
+                ayarlar.Default.joystickMod = "FloatingJoystick";
+                ayarlar.Default.Save();
+                joystick.Controls.Clear();
+                joystick.InitializeComponent();
+                joystick.DualPanel_Load(null, null);
             }
             else
             {
-                allHideAndFalse();
+                joystick.Hide();
+                ((ToolStripMenuItem)contextMenuStrip1.Items[5]).Checked = false;
             }
         }
 
@@ -251,17 +262,19 @@ namespace PasoKey
         private void notifyIcon1_MouseDoubleClick(object sender, MouseEventArgs e)
         {
             allHideAndFalse();
-            if(ayarlar.Default.notifyiIconClick== "FloatingJoystick")
+            if (ayarlar.Default.notifyiIconClick == "FloatingJoystick")
             {
-                floatingJoystick.Show();
+                joystick.Show();
             }
             else if (ayarlar.Default.notifyiIconClick == "SingleJoystick")
             {
-                singleJoystick.Show();
+                ayarlar.Default.joystickMod = ayarlar.Default.notifyiIconClick;
+                joystick.Show();
             }
             else if (ayarlar.Default.notifyiIconClick == "DoubleJoystick")
             {
-                doubleJoystick.Show();
+                ayarlar.Default.joystickMod = ayarlar.Default.notifyiIconClick;
+                joystick.Show();
             }
             else if (ayarlar.Default.notifyiIconClick == "FloatingMarkingMenu")
             {
