@@ -197,7 +197,7 @@
             this.FloatingMarkingMenu.UseVisualStyleBackColor = true;
             this.FloatingMarkingMenu.CheckedChanged += new System.EventHandler(this.FloatingMarkingMenu_CheckedChanged);
             // 
-            // options
+            // Options
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -214,7 +214,7 @@
             this.Controls.Add(this.materialLabel1);
             this.Controls.Add(this.middleButtonActivator);
             this.Controls.Add(this.runAtStartUp);
-            this.Name = "options";
+            this.Name = "Options";
             this.Text = "options";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);

@@ -22,7 +22,7 @@ namespace PasoKey
 
         FixedMarkingMenu fixedMarkingMenu = new FixedMarkingMenu();
 
-
+        Panel panel = new Panel();
         private void allHideAndFalse()
         {
             floatingMarkingMenu.Hide();
@@ -40,18 +40,20 @@ namespace PasoKey
             if (ayarlar.Default.panelMod == "left")
             {
                 ((ToolStripMenuItem)contextMenuStrip1.Items[7]).Checked = true;
+                panel.Show();
             }
             else if (ayarlar.Default.panelMod == "top")
             {
                 ((ToolStripMenuItem)contextMenuStrip1.Items[8]).Checked = true;
+                panel.Show();
             }
             else if (ayarlar.Default.panelMod == "right")
             {
-                ((ToolStripMenuItem)contextMenuStrip1.Items[8]).Checked = true;
+                ((ToolStripMenuItem)contextMenuStrip1.Items[9]).Checked = true;
+                panel.Show();
             }
             else if (ayarlar.Default.panelMod == "non")
             {
-
             }
             Hook.GlobalEvents().MouseClick += async (sender, e) =>
             {
@@ -149,7 +151,7 @@ namespace PasoKey
                 ayarlar.Default.Save();
                 joystick.Controls.Clear();
                 joystick.InitializeComponent();
-                joystick.DualPanel_Load(null, null);
+                joystick.joystickLoad(null, null);
             }
             else
             {
@@ -170,7 +172,7 @@ namespace PasoKey
                 ayarlar.Default.Save();
                 joystick.Controls.Clear();
                 joystick.InitializeComponent();
-                joystick.DualPanel_Load(null, null);
+                joystick.joystickLoad(null, null);
             }
             else
             {
@@ -191,7 +193,7 @@ namespace PasoKey
                 ayarlar.Default.Save();
                 joystick.Controls.Clear();
                 joystick.InitializeComponent();
-                joystick.DualPanel_Load(null, null);
+                joystick.joystickLoad(null, null);
             }
             else
             {
@@ -203,49 +205,67 @@ namespace PasoKey
 
         private void quickPanelLeftToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            panel.Show();
             if (ayarlar.Default.panelMod != "left")
             {
                 ayarlar.Default.panelMod = "left";
                 ((ToolStripMenuItem)contextMenuStrip1.Items[7]).Checked = true;
                 ((ToolStripMenuItem)contextMenuStrip1.Items[8]).Checked = false;
                 ((ToolStripMenuItem)contextMenuStrip1.Items[9]).Checked = false;
+                ayarlar.Default.Save();
+                panel.Changes();
             }
             else if (ayarlar.Default.panelMod == "left")
             {
                 ayarlar.Default.panelMod = "non";
+                ayarlar.Default.Save();
                 ((ToolStripMenuItem)contextMenuStrip1.Items[7]).Checked = false;
+                panel.Hide();
+
             }
         }
 
         private void quickPanelTopToolStripMenuItem_Click_1(object sender, EventArgs e)
         {
+            panel.Show();
             if (ayarlar.Default.panelMod != "top")
             {
                 ayarlar.Default.panelMod = "top";
                 ((ToolStripMenuItem)contextMenuStrip1.Items[7]).Checked = false;
                 ((ToolStripMenuItem)contextMenuStrip1.Items[8]).Checked = true;
                 ((ToolStripMenuItem)contextMenuStrip1.Items[9]).Checked = false;
+                ayarlar.Default.Save();
+                panel.Changes();
             }
             else if (ayarlar.Default.panelMod == "top")
             {
                 ayarlar.Default.panelMod = "non";
+                ayarlar.Default.Save();
                 ((ToolStripMenuItem)contextMenuStrip1.Items[8]).Checked = false;
+                panel.Hide();
             }
         }
 
         private void quickPanelRightToolStripMenuItem_Click_1(object sender, EventArgs e)
         {
+            panel.Show();
             if (ayarlar.Default.panelMod != "right")
             {
+
                 ayarlar.Default.panelMod = "right";
                 ((ToolStripMenuItem)contextMenuStrip1.Items[7]).Checked = false;
                 ((ToolStripMenuItem)contextMenuStrip1.Items[8]).Checked = false;
                 ((ToolStripMenuItem)contextMenuStrip1.Items[9]).Checked = true;
+                ayarlar.Default.Save();
+                panel.Changes();
             }
             else if (ayarlar.Default.panelMod == "right")
             {
                 ayarlar.Default.panelMod = "non";
+                ayarlar.Default.Save();
                 ((ToolStripMenuItem)contextMenuStrip1.Items[9]).Checked = false;
+                panel.Hide();
+
             }
         }
         private void optionsToolStripMenuItem_Click(object sender, EventArgs e)

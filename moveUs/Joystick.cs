@@ -107,7 +107,7 @@ namespace PasoKey
             general_MouseUp(null, null);
         }
 
-        public void DualPanel_Load(object sender, EventArgs e)
+        public void joystickLoad(object sender, EventArgs e)
         {
             Changes();
         }
@@ -133,12 +133,12 @@ namespace PasoKey
                 rightGuide.Top = 0;
                 this.Location = new Point(Screen.PrimaryScreen.Bounds.Width - this.Width, Screen.PrimaryScreen.Bounds.Height - this.Height);//formun konumunu ekranın altına sabitleyen komut
                 rightGuide.Left = this.Width - rightGuide.Width;//panel2 konumunu başlangıçta sağa yaslayan komut.
- 
+
             }
             else if (ayarlar.Default.joystickMod == "FloatingJoystick")
             {
-                this.Left = (Screen.PrimaryScreen.Bounds.Width / 2)-(this.Width / 2);
-                this.Top = (Screen.PrimaryScreen.Bounds.Height / 2)-(this.Height/2);
+                this.Left = (Screen.PrimaryScreen.Bounds.Width / 2) - (this.Width / 2);
+                this.Top = (Screen.PrimaryScreen.Bounds.Height / 2) - (this.Height / 2);
                 panelGuider.Visible = true;
                 this.Width = leftGuide.Width;//formun boyutu bir panel boyutuyla eşitlenir
                 this.Height = 400;
@@ -161,6 +161,8 @@ namespace PasoKey
                 panelGuiderTop = e.Y;
             }
         }
+
+
 
         private void panelGuider_MouseMove(object sender, MouseEventArgs e)
         {
