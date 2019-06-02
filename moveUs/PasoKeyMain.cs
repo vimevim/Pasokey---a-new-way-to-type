@@ -25,9 +25,6 @@ namespace PasoKey
 
         FixedMarkingMenu fixedMarkingMenu = new FixedMarkingMenu();
 
-        PanelRight panelRight = new PanelRight();
-
-        PanelTop panelTop = new PanelTop();
 
         private void allHideAndFalse()
         {
@@ -42,15 +39,30 @@ namespace PasoKey
             ((ToolStripMenuItem)contextMenuStrip1.Items[4]).Checked = false;
             ((ToolStripMenuItem)contextMenuStrip1.Items[5]).Checked = false;
         }
-        
+
         public PasoKeyMain()
         {
             InitializeComponent();
-
-            Hook.GlobalEvents().MouseClick += async (sender, e) =>
+            if (ayarlar.Default.panelMod == "left")
             {
-                if (ayarlar.Default.midBut == "activate")
-                {
+                ((ToolStripMenuItem)contextMenuStrip1.Items[7]).Checked = true;
+            }
+            else if (ayarlar.Default.panelMod == "top")
+            {
+                ((ToolStripMenuItem)contextMenuStrip1.Items[8]).Checked = true;
+            }
+            else if (ayarlar.Default.panelMod == "right")
+            {
+                ((ToolStripMenuItem)contextMenuStrip1.Items[8]).Checked = true;
+            }
+            else if (ayarlar.Default.panelMod == "non")
+            {
+
+            }
+            Hook.GlobalEvents().MouseClick += async (sender, e) =>
+        {
+            if (ayarlar.Default.midBut == true)
+            {
                     /*
                      * if (e.Button == MouseButtons.Middle)
                     {
@@ -73,64 +85,27 @@ namespace PasoKey
 
                     }
                     */
-                    if (e.Button == MouseButtons.Middle)
-                    {
-                        contextMenuStrip1.Show();
-                        contextMenuStrip1.Left = Cursor.Position.X;
-                        contextMenuStrip1.Top = Cursor.Position.Y;
-                    }
-                    else
-                    {
+                if (e.Button == MouseButtons.Middle)
+                {
+                    contextMenuStrip1.Show();
+                    contextMenuStrip1.Left = Cursor.Position.X;
+                    contextMenuStrip1.Top = Cursor.Position.Y;
+                }
+                else
+                {
                         //mouse, form kordinatları dışındaysa çalışır
                         if (Cursor.Position.X < contextMenuStrip1.Left || Cursor.Position.X > (contextMenuStrip1.Left + contextMenuStrip1.Width) || Cursor.Position.Y < contextMenuStrip1.Top || Cursor.Position.Y > (contextMenuStrip1.Top + contextMenuStrip1.Height))
-                        {
-                            contextMenuStrip1.Hide();
-                        }
+                    {
+                        contextMenuStrip1.Hide();
                     }
                 }
-            };
+            }
+        };
         }
 
         private void PasoKeyMain_Load(object sender, EventArgs e)
         {
             this.Hide();
-            try
-            {
-                RegistryKey key = Registry.CurrentUser.OpenSubKey(@"Software\Microsoft\Windows\CurrentVersion\Run", true);
-                if (key.GetValue("PasoKey").ToString() == "\"" + Application.ExecutablePath + "\"")
-                { // Eğer regeditte varsa, checkbox ı işaretle
-                    ((ToolStripMenuItem)contextMenuStrip1.Items[11]).Checked = true; //false;
-                }
-            }
-            catch
-            {
-
-            }
-            if (ayarlar.Default.midBut == "activate")
-            {
-                ((ToolStripMenuItem)contextMenuStrip1.Items[10]).Checked = true;
-            }
-            else if (ayarlar.Default.midBut == "deactivate")
-            {
-                ((ToolStripMenuItem)contextMenuStrip1.Items[10]).Checked = false;
-            }
-
-            if (ayarlar.Default.panelData == "non")
-            {
-                panelHide();
-            }
-            else if (ayarlar.Default.panelData == "top")
-            {
-                ((ToolStripMenuItem)contextMenuStrip1.Items[7]).Checked = true;
-                panelHide();
-                panelTop.Show();
-            }
-            else if (ayarlar.Default.panelData == "right")
-            {
-                ((ToolStripMenuItem)contextMenuStrip1.Items[8]).Checked = true;
-                panelHide();
-                panelRight.Show();
-            }
         }
 
         private void floatingMarkingMenuToolStripMenuItem_Click(object sender, EventArgs e)
@@ -162,7 +137,7 @@ namespace PasoKey
             }
             else
             {
- 
+
                 allHideAndFalse();
             }
         }
@@ -177,7 +152,7 @@ namespace PasoKey
 
                 doubleJoystick.Show();
             }
-           else
+            else
             {
 
                 allHideAndFalse();
@@ -214,101 +189,88 @@ namespace PasoKey
             }
         }
 
-        private void panelHide()
-        {
-            panelTop.Hide();
-            panelRight.Hide();
-        }
 
-
-        private void quickPanelTopToolStripMenuItem_Click(object sender, EventArgs e)
+        private void quickPanelLeftToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if (ayarlar.Default.panelData == "non")
+            if (ayarlar.Default.panelMod != "left")
             {
+                ayarlar.Default.panelMod = "left";
                 ((ToolStripMenuItem)contextMenuStrip1.Items[7]).Checked = true;
-                ayarlar.Default.panelData = "top";
-                panelHide();
-                panelTop.Show();
-            }
-            else if (ayarlar.Default.panelData == "right")
-            {
                 ((ToolStripMenuItem)contextMenuStrip1.Items[8]).Checked = false;
-                ((ToolStripMenuItem)contextMenuStrip1.Items[7]).Checked = true;
-                ayarlar.Default.panelData = "top";
-                panelHide();
-                panelTop.Show();
+                ((ToolStripMenuItem)contextMenuStrip1.Items[9]).Checked = false;
             }
-            else if (ayarlar.Default.panelData == "top")
+            else if (ayarlar.Default.panelMod == "left")
             {
+                ayarlar.Default.panelMod = "non";
                 ((ToolStripMenuItem)contextMenuStrip1.Items[7]).Checked = false;
-                ayarlar.Default.panelData = "non";
-                panelHide();
             }
-            ayarlar.Default.Save();
         }
 
-        private void quickPanelRightToolStripMenuItem_Click(object sender, EventArgs e)
+        private void quickPanelTopToolStripMenuItem_Click_1(object sender, EventArgs e)
         {
-            if (ayarlar.Default.panelData == "non")
+            if (ayarlar.Default.panelMod != "top")
             {
-                ((ToolStripMenuItem)contextMenuStrip1.Items[8]).Checked = true;
-                ayarlar.Default.panelData = "right";
-                panelHide();
-                panelRight.Show();
-            }
-            else if (ayarlar.Default.panelData == "top")
-            {
+                ayarlar.Default.panelMod = "top";
                 ((ToolStripMenuItem)contextMenuStrip1.Items[7]).Checked = false;
                 ((ToolStripMenuItem)contextMenuStrip1.Items[8]).Checked = true;
-                ayarlar.Default.panelData = "right";
-                panelHide();
-                panelRight.Show();
+                ((ToolStripMenuItem)contextMenuStrip1.Items[9]).Checked = false;
             }
-            else if (ayarlar.Default.panelData == "right")
+            else if (ayarlar.Default.panelMod == "top")
             {
+                ayarlar.Default.panelMod = "non";
                 ((ToolStripMenuItem)contextMenuStrip1.Items[8]).Checked = false;
-                ayarlar.Default.panelData = "non";
-                panelHide();
             }
-            ayarlar.Default.Save();
         }
 
-        private void middleButtonToolStripMenuItem_Click(object sender, EventArgs e)
+        private void quickPanelRightToolStripMenuItem_Click_1(object sender, EventArgs e)
         {
-            if (ayarlar.Default.midBut == "activate")
+            if (ayarlar.Default.panelMod != "right")
             {
-                ayarlar.Default.midBut = "deactivate";
-                ((ToolStripMenuItem)contextMenuStrip1.Items[10]).Checked = false;
+                ayarlar.Default.panelMod = "right";
+                ((ToolStripMenuItem)contextMenuStrip1.Items[7]).Checked = false;
+                ((ToolStripMenuItem)contextMenuStrip1.Items[8]).Checked = false;
+                ((ToolStripMenuItem)contextMenuStrip1.Items[9]).Checked = true;
             }
-            else if (ayarlar.Default.midBut == "deactivate")
+            else if (ayarlar.Default.panelMod == "right")
             {
-                ayarlar.Default.midBut = "activate";
-                ((ToolStripMenuItem)contextMenuStrip1.Items[10]).Checked = true;
+                ayarlar.Default.panelMod = "non";
+                ((ToolStripMenuItem)contextMenuStrip1.Items[9]).Checked = false;
             }
-            ayarlar.Default.Save();
-
         }
-
-        private void runAtStartUpToolStripMenuItem_Click(object sender, EventArgs e)
+        private void optionsToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if (((ToolStripMenuItem)contextMenuStrip1.Items[11]).Checked == false)
-            { //işaretlendi ise Regedit e açılışta çalıştır olarak ekle
-                RegistryKey key = Registry.CurrentUser.OpenSubKey(@"Software\Microsoft\Windows\CurrentVersion\Run", true);
-                key.SetValue("PasoKey", "\"" + Application.ExecutablePath + "\"");
-                ((ToolStripMenuItem)contextMenuStrip1.Items[11]).Checked = true; //false;
-            }
-            else
-            {  //işaret kaldırıldı ise Regeditten açılışta çalıştırılacaklardan kaldır
-                RegistryKey key = Registry.CurrentUser.OpenSubKey(@"Software\Microsoft\Windows\CurrentVersion\Run", true);
-                key.DeleteValue("PasoKey");
-                ((ToolStripMenuItem)contextMenuStrip1.Items[11]).Checked = false; //false;
-            }
+            Options options = new Options();
+            options.Show();
         }
-
         private void closeThePasoKeyToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Application.Exit();
             ayarlar.Default.Save();
+        }
+
+        private void notifyIcon1_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            allHideAndFalse();
+            if(ayarlar.Default.notifyiIconClick== "FloatingJoystick")
+            {
+                floatingJoystick.Show();
+            }
+            else if (ayarlar.Default.notifyiIconClick == "SingleJoystick")
+            {
+                singleJoystick.Show();
+            }
+            else if (ayarlar.Default.notifyiIconClick == "DoubleJoystick")
+            {
+                doubleJoystick.Show();
+            }
+            else if (ayarlar.Default.notifyiIconClick == "FloatingMarkingMenu")
+            {
+                floatingMarkingMenu.Show();
+            }
+            else if (ayarlar.Default.notifyiIconClick == "FixedMarkingMenu")
+            {
+                fixedMarkingMenu.Show();
+            }
         }
     }
 }

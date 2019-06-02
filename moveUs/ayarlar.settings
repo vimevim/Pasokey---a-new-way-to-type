@@ -2,14 +2,20 @@
 <SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="PasoKey" GeneratedClassName="ayarlar">
   <Profiles />
   <Settings>
-    <Setting Name="midBut" Type="System.String" Scope="User">
-      <Value Profile="(Default)">activate</Value>
+    <Setting Name="midBut" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
     </Setting>
-    <Setting Name="panelData" Type="System.String" Scope="User">
-      <Value Profile="(Default)">top</Value>
+    <Setting Name="panelMod" Type="System.String" Scope="User">
+      <Value Profile="(Default)">non</Value>
     </Setting>
-    <Setting Name="Setting" Type="System.String" Scope="User">
-      <Value Profile="(Default)" />
+    <Setting Name="opacity" Type="System.Double" Scope="User">
+      <Value Profile="(Default)">50</Value>
+    </Setting>
+    <Setting Name="notifyiIconClick" Type="System.String" Scope="User">
+      <Value Profile="(Default)">SingleJoystick</Value>
+    </Setting>
+    <Setting Name="theme" Type="System.Drawing.Color" Scope="User">
+      <Value Profile="(Default)">48, 47, 55</Value>
     </Setting>
   </Settings>
 </SettingsFile>

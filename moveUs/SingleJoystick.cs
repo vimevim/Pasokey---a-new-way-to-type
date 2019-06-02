@@ -12,6 +12,7 @@ namespace PasoKey
 {
     public partial class SingleJoystick : Form
     {
+
         int leftGuideX, leftGuideY, rightGuideX, rightGuideY;
         int cursorOriginX, cursorOriginY;
         double leftHypotenuse, leftAngle, rightHypotenuse, rightAngle;
@@ -118,7 +119,8 @@ namespace PasoKey
             this.TransparencyKey = BackColor;
             leftGuide.BringToFront();
         }
-        //butonları hareket ettirme komutları burada başlıyor
+
+
 
         private void leftGuide_MouseDown(object sender, MouseEventArgs e)
         {

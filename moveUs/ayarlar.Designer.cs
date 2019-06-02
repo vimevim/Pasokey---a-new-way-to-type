@@ -25,10 +25,10 @@ namespace PasoKey {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("activate")]
-        public string midBut {
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool midBut {
             get {
-                return ((string)(this["midBut"]));
+                return ((bool)(this["midBut"]));
             }
             set {
                 this["midBut"] = value;
@@ -37,13 +37,49 @@ namespace PasoKey {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("top")]
-        public string panelData {
+        [global::System.Configuration.DefaultSettingValueAttribute("non")]
+        public string panelMod {
             get {
-                return ((string)(this["panelData"]));
+                return ((string)(this["panelMod"]));
             }
             set {
-                this["panelData"] = value;
+                this["panelMod"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("50")]
+        public double opacity {
+            get {
+                return ((double)(this["opacity"]));
+            }
+            set {
+                this["opacity"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("SingleJoystick")]
+        public string notifyiIconClick {
+            get {
+                return ((string)(this["notifyiIconClick"]));
+            }
+            set {
+                this["notifyiIconClick"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("48, 47, 55")]
+        public global::System.Drawing.Color theme {
+            get {
+                return ((global::System.Drawing.Color)(this["theme"]));
+            }
+            set {
+                this["theme"] = value;
             }
         }
     }

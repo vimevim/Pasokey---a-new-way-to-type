@@ -38,13 +38,13 @@
             this.singleJoystickToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.floatingJoystickToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+            this.quickPanelLeftToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.quickPanelTopToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.quickPanelRightToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
-            this.middleButtonToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.runAtStartUpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.closeThePasokKeyToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.notifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
+            this.optionsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -59,14 +59,14 @@
             this.singleJoystickToolStripMenuItem,
             this.floatingJoystickToolStripMenuItem,
             this.toolStripSeparator2,
+            this.quickPanelLeftToolStripMenuItem,
             this.quickPanelTopToolStripMenuItem,
             this.quickPanelRightToolStripMenuItem,
             this.toolStripSeparator3,
-            this.middleButtonToolStripMenuItem,
-            this.runAtStartUpToolStripMenuItem,
+            this.optionsToolStripMenuItem,
             this.closeThePasokKeyToolStripMenuItem});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(287, 364);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(287, 338);
             // 
             // floatingMarkingMenuToolStripMenuItem
             // 
@@ -120,13 +120,21 @@
             this.toolStripSeparator2.Name = "toolStripSeparator2";
             this.toolStripSeparator2.Size = new System.Drawing.Size(283, 6);
             // 
+            // quickPanelLeftToolStripMenuItem
+            // 
+            this.quickPanelLeftToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.quickPanelLeftToolStripMenuItem.Name = "quickPanelLeftToolStripMenuItem";
+            this.quickPanelLeftToolStripMenuItem.Size = new System.Drawing.Size(286, 32);
+            this.quickPanelLeftToolStripMenuItem.Text = "Quick Panel Left";
+            this.quickPanelLeftToolStripMenuItem.Click += new System.EventHandler(this.quickPanelLeftToolStripMenuItem_Click);
+            // 
             // quickPanelTopToolStripMenuItem
             // 
             this.quickPanelTopToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.quickPanelTopToolStripMenuItem.Name = "quickPanelTopToolStripMenuItem";
             this.quickPanelTopToolStripMenuItem.Size = new System.Drawing.Size(286, 32);
             this.quickPanelTopToolStripMenuItem.Text = "Quick Panel Top";
-            this.quickPanelTopToolStripMenuItem.Click += new System.EventHandler(this.quickPanelTopToolStripMenuItem_Click);
+            this.quickPanelTopToolStripMenuItem.Click += new System.EventHandler(this.quickPanelTopToolStripMenuItem_Click_1);
             // 
             // quickPanelRightToolStripMenuItem
             // 
@@ -134,29 +142,12 @@
             this.quickPanelRightToolStripMenuItem.Name = "quickPanelRightToolStripMenuItem";
             this.quickPanelRightToolStripMenuItem.Size = new System.Drawing.Size(286, 32);
             this.quickPanelRightToolStripMenuItem.Text = "Quick Panel Right";
-            this.quickPanelRightToolStripMenuItem.Click += new System.EventHandler(this.quickPanelRightToolStripMenuItem_Click);
+            this.quickPanelRightToolStripMenuItem.Click += new System.EventHandler(this.quickPanelRightToolStripMenuItem_Click_1);
             // 
             // toolStripSeparator3
             // 
             this.toolStripSeparator3.Name = "toolStripSeparator3";
             this.toolStripSeparator3.Size = new System.Drawing.Size(283, 6);
-            // 
-            // middleButtonToolStripMenuItem
-            // 
-            this.middleButtonToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.middleButtonToolStripMenuItem.Name = "middleButtonToolStripMenuItem";
-            this.middleButtonToolStripMenuItem.Size = new System.Drawing.Size(286, 32);
-            this.middleButtonToolStripMenuItem.Text = "Middle Button";
-            this.middleButtonToolStripMenuItem.Click += new System.EventHandler(this.middleButtonToolStripMenuItem_Click);
-            // 
-            // runAtStartUpToolStripMenuItem
-            // 
-            this.runAtStartUpToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.runAtStartUpToolStripMenuItem.Name = "runAtStartUpToolStripMenuItem";
-            this.runAtStartUpToolStripMenuItem.Padding = new System.Windows.Forms.Padding(0);
-            this.runAtStartUpToolStripMenuItem.Size = new System.Drawing.Size(286, 30);
-            this.runAtStartUpToolStripMenuItem.Text = "Run At Startup";
-            this.runAtStartUpToolStripMenuItem.Click += new System.EventHandler(this.runAtStartUpToolStripMenuItem_Click);
             // 
             // closeThePasokKeyToolStripMenuItem
             // 
@@ -172,13 +163,22 @@
             this.notifyIcon1.Icon = ((System.Drawing.Icon)(resources.GetObject("notifyIcon1.Icon")));
             this.notifyIcon1.Text = "PasoKey";
             this.notifyIcon1.Visible = true;
+            this.notifyIcon1.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.notifyIcon1_MouseDoubleClick);
+            // 
+            // optionsToolStripMenuItem
+            // 
+            this.optionsToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.optionsToolStripMenuItem.Name = "optionsToolStripMenuItem";
+            this.optionsToolStripMenuItem.Size = new System.Drawing.Size(286, 32);
+            this.optionsToolStripMenuItem.Text = "Options";
+            this.optionsToolStripMenuItem.Click += new System.EventHandler(this.optionsToolStripMenuItem_Click);
             // 
             // PasoKeyMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(85, 180);
+            this.ClientSize = new System.Drawing.Size(212, 180);
             this.ForeColor = System.Drawing.SystemColors.Window;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -200,17 +200,17 @@
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.ToolStripMenuItem floatingMarkingMenuToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem doubleJoystickToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem runAtStartUpToolStripMenuItem;
         private System.Windows.Forms.NotifyIcon notifyIcon1;
         private System.Windows.Forms.ToolStripMenuItem closeThePasokKeyToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem fixedMarkingMenuToolStripMenuItem;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
         private System.Windows.Forms.ToolStripMenuItem singleJoystickToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem floatingJoystickToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem middleButtonToolStripMenuItem;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
         private System.Windows.Forms.ToolStripMenuItem quickPanelTopToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem quickPanelRightToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem quickPanelLeftToolStripMenuItem;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
+        private System.Windows.Forms.ToolStripMenuItem quickPanelRightToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem optionsToolStripMenuItem;
     }
 }
