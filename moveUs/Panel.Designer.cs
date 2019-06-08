@@ -147,6 +147,7 @@
             this.buttonElipse1.Name = "buttonElipse1";
             this.buttonElipse1.Size = new System.Drawing.Size(50, 50);
             this.buttonElipse1.TabIndex = 8;
+            this.buttonElipse1.Text = "d";
             this.buttonElipse1.UseVisualStyleBackColor = false;
             // 
             // Panel

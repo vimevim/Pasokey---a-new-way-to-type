@@ -26,7 +26,7 @@ namespace PasoKey
             GC.KeepAlive(mutex); //Nesneyi kaldırıyoruz. 
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new PasoKeyMain());
+            Application.Run(new GamepadMod());
         }
     }
 }

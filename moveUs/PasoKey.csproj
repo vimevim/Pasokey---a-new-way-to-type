@@ -71,6 +71,9 @@
     <Reference Include="MaterialSkin, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\MaterialSkin.0.2.1\lib\MaterialSkin.dll</HintPath>
     </Reference>
+    <Reference Include="OpenJigWare">
+      <HintPath>..\..\..\..\Downloads\Released_DLL\OpenJigWare.dll</HintPath>
+    </Reference>
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
     <Reference Include="System" />
@@ -97,6 +100,12 @@
     </Compile>
     <Compile Include="FixedMarkingMenu.Designer.cs">
       <DependentUpon>FixedMarkingMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GamepadMod.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GamepadMod.Designer.cs">
+      <DependentUpon>GamepadMod.cs</DependentUpon>
     </Compile>
     <Compile Include="Joystick.cs">
       <SubType>Form</SubType>
@@ -143,6 +152,9 @@
     <EmbeddedResource Include="FixedMarkingMenu.resx">
       <DependentUpon>FixedMarkingMenu.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GamepadMod.resx">
+      <DependentUpon>GamepadMod.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Joystick.resx">
       <DependentUpon>Joystick.cs</DependentUpon>
     </EmbeddedResource>
@@ -151,6 +163,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="options.resx">
       <DependentUpon>Options.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Panel.resx">
+      <DependentUpon>Panel.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PasoKeyMain.resx">
       <DependentUpon>PasoKeyMain.cs</DependentUpon>
