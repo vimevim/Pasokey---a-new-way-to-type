@@ -17,7 +17,7 @@
     <Setting Name="theme" Type="System.Drawing.Color" Scope="User">
       <Value Profile="(Default)">48, 47, 55</Value>
     </Setting>
-    <Setting Name="joystickMod" Type="System.String" Scope="User">
+    <Setting Name="theMod" Type="System.String" Scope="User">
       <Value Profile="(Default)">SingleJoystick</Value>
     </Setting>
   </Settings>

@@ -114,7 +114,7 @@ namespace PasoKey
 
         public void Changes()
         {
-            if (ayarlar.Default.joystickMod == "SingleJoystick")
+            if (ayarlar.Default.theMod == "SingleJoystick")
             {
                 panelGuider.Visible = false;
                 this.Width = leftGuide.Width;//formun boyutu bir panel boyutuyla eşitlenir
@@ -124,7 +124,7 @@ namespace PasoKey
                 this.Location = new Point(Screen.PrimaryScreen.Bounds.Width - this.Width, Screen.PrimaryScreen.Bounds.Height - this.Height);//formun konumu sağ alta sabitlenir
                 rightGuide.Location = new Point(0, 0);//panel2 konumu panel1 ile üst üste getirilir
             }
-            else if (ayarlar.Default.joystickMod == "DoubleJoystick")
+            else if (ayarlar.Default.theMod == "DoubleJoystick")
             {
                 panelGuider.Visible = false;
                 this.Height = leftGuide.Height;
@@ -135,7 +135,7 @@ namespace PasoKey
                 rightGuide.Left = this.Width - rightGuide.Width;//panel2 konumunu başlangıçta sağa yaslayan komut.
 
             }
-            else if (ayarlar.Default.joystickMod == "FloatingJoystick")
+            else if (ayarlar.Default.theMod == "FloatingJoystick")
             {
                 this.Left = (Screen.PrimaryScreen.Bounds.Width / 2) - (this.Width / 2);
                 this.Top = (Screen.PrimaryScreen.Bounds.Height / 2) - (this.Height / 2);

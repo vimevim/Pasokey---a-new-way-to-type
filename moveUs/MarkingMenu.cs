@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace PasoKey
 {
-    public partial class FloatingMarkingMenu : Form
+    public partial class MarkingMenu : Form
     {
         double leftHypotenuse, leftAngle, rightHypotenuse, rightAngle;
         int defaultOriginX, defaultOriginY;
@@ -75,7 +75,14 @@ namespace PasoKey
                     rightLbl7.Text = keyPadUpper[firstStep, 7];
                 }
                 rightGuide.BringToFront();//panel2 yi ön plana çıkartıyorum
-                FormFollowsCursor();
+                if (ayarlar.Default.theMod == "FloatingMarkingMenu")
+                {
+                    FormFollowsCursor();
+                }
+                else if (ayarlar.Default.theMod == "FixedMarkingMenu")
+                {
+                    CursorInTheCentre();
+                }
             }
         }
         //yansıtma yapılmış paneldeki aksiyona göre klavye girdisi veriyorum
@@ -99,9 +106,16 @@ namespace PasoKey
                 }
             }
             //panel1.BringToFront();
-            FormFollowsCursor();
+            if (ayarlar.Default.theMod == "FloatingMarkingMenu")
+            {
+                FormFollowsCursor();
+            }
+            else if (ayarlar.Default.theMod == "FixedMarkingMenu")
+            {
+                CursorInTheCentre();
+            }
         }
-        public FloatingMarkingMenu()
+        public MarkingMenu()
         {
             InitializeComponent();
             this.Width = leftGuide.Width;
@@ -111,23 +125,40 @@ namespace PasoKey
         }
         private void thisHide(object sender, MouseEventArgs e)
         {
-            this.Hide();//bu kod PasoKeyMain üzerindeki bir kod ile çakışmaktadır, PasoKeyMain üzerindeki tikleme olayını settings olarak kayıt edip düzeltmek daha akıllıca olacaktır.
+            this.Hide();
         }
 
-        private void FloatingMarkingMenu_Load(object sender, EventArgs e)
+        public void MarkingMenu_Load(object sender, EventArgs e)
         {
-            FormFollowsCursor();
-            leftGuide.Location = new Point(0, 0);
-            rightGuide.Location = new Point(0, 0);//panel2 konumu panel1 ile üst üste getirilir
-            this.TransparencyKey = BackColor;
-            leftGuide.BringToFront();
+            if (ayarlar.Default.theMod == "FloatingMarkingMenu")
+            {
+                FormFollowsCursor();
+                leftGuide.Location = new Point(0, 0);
+                rightGuide.Location = new Point(0, 0);//panel2 konumu panel1 ile üst üste getirilir
+                this.TransparencyKey = BackColor;
+                leftGuide.BringToFront();
+            }
+            else if (ayarlar.Default.theMod == "FixedMarkingMenu")
+            {
+                CursorInTheCentre();
+                leftGuide.Location = new Point(0, 0);
+                rightGuide.Location = new Point(0, 0);//panel2 konumu panel1 ile üst üste getirilir
+                this.TransparencyKey = BackColor;
+                leftGuide.BringToFront();
+            }
         }
 
         private void FormFollowsCursor()
         {//formun konumu 2 ye bölünüp farenin konumundan çıkartıldı,doğal olarak form farenin merkezine geçmiş oldu
             this.Location = new Point(Cursor.Position.X - formCentreX, Cursor.Position.Y - formCentreY);
         }
+        private void CursorInTheCentre()
+        {
 
+            Point pt = new Point(Screen.PrimaryScreen.WorkingArea.Width / 2, Screen.PrimaryScreen.WorkingArea.Height / 2);// değerleri ikiye bölüp
+            Cursor.Position = (pt);//merkeze atadık
+            this.Location = new Point(pt.X - formCentreX, pt.Y - formCentreY);
+        }
         private void leftGuide_MouseMove(object sender, MouseEventArgs e)
         {
             //Varsayılan orijin ataması yapılıyor
@@ -210,7 +241,14 @@ namespace PasoKey
             }
             else
             {
-                FormFollowsCursor();
+                if (ayarlar.Default.theMod == "FloatingMarkingMenu")
+                {
+                    FormFollowsCursor();
+                }
+                else if (ayarlar.Default.theMod == "FixedMarkingMenu")
+                {
+                    CursorInTheCentre();
+                }
             }
         }
 
@@ -275,7 +313,14 @@ namespace PasoKey
 
                     }
                 }
-                FormFollowsCursor();
+                if (ayarlar.Default.theMod == "FloatingMarkingMenu")
+                {
+                    FormFollowsCursor();
+                }
+                else if (ayarlar.Default.theMod == "FixedMarkingMenu")
+                {
+                    CursorInTheCentre();
+                }
             }
         }
 
@@ -361,7 +406,14 @@ namespace PasoKey
             }
             else
             {
-                FormFollowsCursor();
+                if (ayarlar.Default.theMod == "FloatingMarkingMenu")
+                {
+                    FormFollowsCursor();
+                }
+                else if (ayarlar.Default.theMod == "FixedMarkingMenu")
+                {
+                    CursorInTheCentre();
+                }
             }
         }
 
@@ -409,7 +461,14 @@ namespace PasoKey
                     }
                     else
                     {
-                        FormFollowsCursor();
+                        if (ayarlar.Default.theMod == "FloatingMarkingMenu")
+                        {
+                            FormFollowsCursor();
+                        }
+                        else if (ayarlar.Default.theMod == "FixedMarkingMenu")
+                        {
+                            CursorInTheCentre();
+                        }
                     }
                     TypeTheLetter();
                 }

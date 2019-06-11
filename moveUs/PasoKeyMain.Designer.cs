@@ -42,9 +42,10 @@
             this.quickPanelTopToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.quickPanelRightToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
+            this.gamePadModeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.optionsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.closeThePasokKeyToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.notifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
-            this.optionsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -63,10 +64,11 @@
             this.quickPanelTopToolStripMenuItem,
             this.quickPanelRightToolStripMenuItem,
             this.toolStripSeparator3,
+            this.gamePadModeToolStripMenuItem,
             this.optionsToolStripMenuItem,
             this.closeThePasokKeyToolStripMenuItem});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(287, 338);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(287, 370);
             // 
             // floatingMarkingMenuToolStripMenuItem
             // 
@@ -149,6 +151,22 @@
             this.toolStripSeparator3.Name = "toolStripSeparator3";
             this.toolStripSeparator3.Size = new System.Drawing.Size(283, 6);
             // 
+            // gamePadModeToolStripMenuItem
+            // 
+            this.gamePadModeToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.gamePadModeToolStripMenuItem.Name = "gamePadModeToolStripMenuItem";
+            this.gamePadModeToolStripMenuItem.Size = new System.Drawing.Size(286, 32);
+            this.gamePadModeToolStripMenuItem.Text = "Gamepad Mode";
+            this.gamePadModeToolStripMenuItem.Click += new System.EventHandler(this.gamePadModeToolStripMenuItem_Click);
+            // 
+            // optionsToolStripMenuItem
+            // 
+            this.optionsToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.optionsToolStripMenuItem.Name = "optionsToolStripMenuItem";
+            this.optionsToolStripMenuItem.Size = new System.Drawing.Size(286, 32);
+            this.optionsToolStripMenuItem.Text = "Options";
+            this.optionsToolStripMenuItem.Click += new System.EventHandler(this.optionsToolStripMenuItem_Click);
+            // 
             // closeThePasokKeyToolStripMenuItem
             // 
             this.closeThePasokKeyToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 12F);
@@ -164,14 +182,6 @@
             this.notifyIcon1.Text = "PasoKey";
             this.notifyIcon1.Visible = true;
             this.notifyIcon1.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.notifyIcon1_MouseDoubleClick);
-            // 
-            // optionsToolStripMenuItem
-            // 
-            this.optionsToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.optionsToolStripMenuItem.Name = "optionsToolStripMenuItem";
-            this.optionsToolStripMenuItem.Size = new System.Drawing.Size(286, 32);
-            this.optionsToolStripMenuItem.Text = "Options";
-            this.optionsToolStripMenuItem.Click += new System.EventHandler(this.optionsToolStripMenuItem_Click);
             // 
             // PasoKeyMain
             // 
@@ -212,5 +222,6 @@
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
         private System.Windows.Forms.ToolStripMenuItem quickPanelRightToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem optionsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem gamePadModeToolStripMenuItem;
     }
 }

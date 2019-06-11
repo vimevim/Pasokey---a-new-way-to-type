@@ -86,12 +86,12 @@ namespace PasoKey {
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("SingleJoystick")]
-        public string joystickMod {
+        public string theMod {
             get {
-                return ((string)(this["joystickMod"]));
+                return ((string)(this["theMod"]));
             }
             set {
-                this["joystickMod"] = value;
+                this["theMod"] = value;
             }
         }
     }

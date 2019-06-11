@@ -1,6 +1,6 @@
 ﻿namespace PasoKey
 {
-    partial class FloatingMarkingMenu
+    partial class MarkingMenu
     {
         /// <summary>
         /// Required designer variable.
@@ -26,9 +26,9 @@
         /// Required method for Designer support - do not modify
         /// the contents of this method with the code editor.
         /// </summary>
-        private void InitializeComponent()
+        public void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FloatingMarkingMenu));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MarkingMenu));
             this.rightGuide = new System.Windows.Forms.Panel();
             this.rightLblCentre = new System.Windows.Forms.Label();
             this.rightLbl7 = new System.Windows.Forms.Label();
@@ -332,7 +332,7 @@
             this.leftLbl0.TabIndex = 54;
             this.leftLbl0.Text = "×";
             // 
-            // FloatingMarkingMenu
+            // MarkingMenu
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
@@ -341,12 +341,13 @@
             this.Controls.Add(this.leftGuide);
             this.ForeColor = System.Drawing.Color.Black;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "FloatingMarkingMenu";
+            this.Name = "MarkingMenu";
             this.Opacity = 0.9D;
             this.ShowIcon = false;
             this.ShowInTaskbar = false;
-            this.Text = "FloatingMarkingMenu";
-            this.Load += new System.EventHandler(this.FloatingMarkingMenu_Load);
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "MarkingMenu";
+            this.Load += new System.EventHandler(this.MarkingMenu_Load);
             this.rightGuide.ResumeLayout(false);
             this.rightGuide.PerformLayout();
             this.leftGuide.ResumeLayout(false);

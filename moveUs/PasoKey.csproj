@@ -95,12 +95,6 @@
     <Compile Include="ButtonElipse.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="FixedMarkingMenu.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FixedMarkingMenu.Designer.cs">
-      <DependentUpon>FixedMarkingMenu.cs</DependentUpon>
-    </Compile>
     <Compile Include="GamepadMod.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -113,11 +107,11 @@
     <Compile Include="Joystick.Designer.cs">
       <DependentUpon>Joystick.cs</DependentUpon>
     </Compile>
-    <Compile Include="FloatingMarkingMenu.cs">
+    <Compile Include="MarkingMenu.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FloatingMarkingMenu.Designer.cs">
-      <DependentUpon>FloatingMarkingMenu.cs</DependentUpon>
+    <Compile Include="MarkingMenu.Designer.cs">
+      <DependentUpon>MarkingMenu.cs</DependentUpon>
     </Compile>
     <Compile Include="Options.cs">
       <SubType>Form</SubType>
@@ -149,17 +143,14 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
       <DependentUpon>ayarlar.settings</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="FixedMarkingMenu.resx">
-      <DependentUpon>FixedMarkingMenu.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="GamepadMod.resx">
       <DependentUpon>GamepadMod.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Joystick.resx">
       <DependentUpon>Joystick.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FloatingMarkingMenu.resx">
-      <DependentUpon>FloatingMarkingMenu.cs</DependentUpon>
+    <EmbeddedResource Include="MarkingMenu.resx">
+      <DependentUpon>MarkingMenu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="options.resx">
       <DependentUpon>Options.cs</DependentUpon>
