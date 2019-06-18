@@ -17,9 +17,6 @@ namespace PasoKey
 
 
         Joystick joystick = new Joystick();
-
-        GamepadMod gamepadMod = new GamepadMod();
-
         MarkingMenu markingMenu = new MarkingMenu();
 
         Panel panel = new Panel();
@@ -303,6 +300,7 @@ namespace PasoKey
 
         private void gamePadModeToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            GamepadMod gamepadMod = new GamepadMod();
             gamepadMod.Show();
         }
     }

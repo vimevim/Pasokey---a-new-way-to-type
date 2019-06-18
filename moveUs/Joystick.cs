@@ -149,10 +149,8 @@ namespace PasoKey
             leftGuide.BringToFront();
         }
 
-
+        //move it down
         int panelGuiderLeft, panelGuiderTop;
-
-
         private void panelGuider_MouseDown(object sender, MouseEventArgs e)
         {
             if (e.Button == MouseButtons.Left)
@@ -161,9 +159,6 @@ namespace PasoKey
                 panelGuiderTop = e.Y;
             }
         }
-
-
-
         private void panelGuider_MouseMove(object sender, MouseEventArgs e)
         {
             if (e.Button == MouseButtons.Left)
@@ -173,8 +168,7 @@ namespace PasoKey
             }
         }
 
-        //butonları hareket ettirme komutları burada başlıyor
-
+        
         private void leftGuide_MouseDown(object sender, MouseEventArgs e)
         {
             if (e.Button == MouseButtons.Left)

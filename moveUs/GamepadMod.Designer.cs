@@ -31,12 +31,18 @@
             this.components = new System.ComponentModel.Container();
             this.leftGuide = new System.Windows.Forms.Panel();
             this.movingPartLeft = new PasoKey.ButtonElipse();
+            this.pictureBoxCapsLock = new System.Windows.Forms.PictureBox();
+            this.pictureBoxEnter = new System.Windows.Forms.PictureBox();
+            this.pictureBoxBackSpace = new System.Windows.Forms.PictureBox();
+            this.pictureBoxSpace = new System.Windows.Forms.PictureBox();
             this.leftLbl6 = new System.Windows.Forms.Label();
             this.leftLbl4 = new System.Windows.Forms.Label();
             this.leftLbl2 = new System.Windows.Forms.Label();
             this.leftLbl0 = new System.Windows.Forms.Label();
             this.buttonElipse1 = new PasoKey.ButtonElipse();
             this.panelGuider = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.lbJoystick = new System.Windows.Forms.Label();
             this.rightGuide = new System.Windows.Forms.Panel();
             this.movingPartRight = new PasoKey.ButtonElipse();
             this.rightLbl7 = new System.Windows.Forms.Label();
@@ -48,20 +54,16 @@
             this.rightLbl1 = new System.Windows.Forms.Label();
             this.rightLbl0 = new System.Windows.Forms.Label();
             this.buttonElipse11 = new PasoKey.ButtonElipse();
-            this.pictureBoxCapsLock = new System.Windows.Forms.PictureBox();
-            this.pictureBoxEnter = new System.Windows.Forms.PictureBox();
-            this.pictureBoxBackSpace = new System.Windows.Forms.PictureBox();
-            this.pictureBoxSpace = new System.Windows.Forms.PictureBox();
-            this.lbJoystick = new System.Windows.Forms.Label();
-            this.joystickTimer = new System.Windows.Forms.Timer(this.components);
-            this.label1 = new System.Windows.Forms.Label();
+            this.joystickHook = new System.Windows.Forms.Timer(this.components);
+            this.buttonTimer = new System.Windows.Forms.Timer(this.components);
+            this.mouseTimer = new System.Windows.Forms.Timer(this.components);
             this.leftGuide.SuspendLayout();
-            this.panelGuider.SuspendLayout();
-            this.rightGuide.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxCapsLock)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxEnter)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBackSpace)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxSpace)).BeginInit();
+            this.panelGuider.SuspendLayout();
+            this.rightGuide.SuspendLayout();
             this.SuspendLayout();
             // 
             // leftGuide
@@ -101,6 +103,54 @@
             this.movingPartLeft.TabIndex = 67;
             this.movingPartLeft.Text = "×";
             this.movingPartLeft.UseVisualStyleBackColor = false;
+            // 
+            // pictureBoxCapsLock
+            // 
+            this.pictureBoxCapsLock.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(47)))), ((int)(((byte)(55)))));
+            this.pictureBoxCapsLock.BackgroundImage = global::PasoKey.Properties.Resources.caps_lock_white_fw;
+            this.pictureBoxCapsLock.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBoxCapsLock.Enabled = false;
+            this.pictureBoxCapsLock.Location = new System.Drawing.Point(81, 221);
+            this.pictureBoxCapsLock.Name = "pictureBoxCapsLock";
+            this.pictureBoxCapsLock.Size = new System.Drawing.Size(48, 48);
+            this.pictureBoxCapsLock.TabIndex = 63;
+            this.pictureBoxCapsLock.TabStop = false;
+            // 
+            // pictureBoxEnter
+            // 
+            this.pictureBoxEnter.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(47)))), ((int)(((byte)(55)))));
+            this.pictureBoxEnter.BackgroundImage = global::PasoKey.Properties.Resources.enter_white_fw;
+            this.pictureBoxEnter.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBoxEnter.Enabled = false;
+            this.pictureBoxEnter.Location = new System.Drawing.Point(221, 221);
+            this.pictureBoxEnter.Name = "pictureBoxEnter";
+            this.pictureBoxEnter.Size = new System.Drawing.Size(48, 48);
+            this.pictureBoxEnter.TabIndex = 64;
+            this.pictureBoxEnter.TabStop = false;
+            // 
+            // pictureBoxBackSpace
+            // 
+            this.pictureBoxBackSpace.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(47)))), ((int)(((byte)(55)))));
+            this.pictureBoxBackSpace.BackgroundImage = global::PasoKey.Properties.Resources.backspace_white_fw;
+            this.pictureBoxBackSpace.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBoxBackSpace.Enabled = false;
+            this.pictureBoxBackSpace.Location = new System.Drawing.Point(221, 81);
+            this.pictureBoxBackSpace.Name = "pictureBoxBackSpace";
+            this.pictureBoxBackSpace.Size = new System.Drawing.Size(48, 48);
+            this.pictureBoxBackSpace.TabIndex = 65;
+            this.pictureBoxBackSpace.TabStop = false;
+            // 
+            // pictureBoxSpace
+            // 
+            this.pictureBoxSpace.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(47)))), ((int)(((byte)(55)))));
+            this.pictureBoxSpace.BackgroundImage = global::PasoKey.Properties.Resources.space_bar_white_fw;
+            this.pictureBoxSpace.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBoxSpace.Enabled = false;
+            this.pictureBoxSpace.Location = new System.Drawing.Point(81, 81);
+            this.pictureBoxSpace.Name = "pictureBoxSpace";
+            this.pictureBoxSpace.Size = new System.Drawing.Size(48, 48);
+            this.pictureBoxSpace.TabIndex = 66;
+            this.pictureBoxSpace.TabStop = false;
             // 
             // leftLbl6
             // 
@@ -176,6 +226,24 @@
             this.panelGuider.Name = "panelGuider";
             this.panelGuider.Size = new System.Drawing.Size(700, 50);
             this.panelGuider.TabIndex = 5;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Malgun Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label1.Location = new System.Drawing.Point(367, 7);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(0, 41);
+            this.label1.TabIndex = 6;
+            // 
+            // lbJoystick
+            // 
+            this.lbJoystick.AutoSize = true;
+            this.lbJoystick.Font = new System.Drawing.Font("Malgun Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.lbJoystick.Location = new System.Drawing.Point(33, 7);
+            this.lbJoystick.Name = "lbJoystick";
+            this.lbJoystick.Size = new System.Drawing.Size(0, 41);
+            this.lbJoystick.TabIndex = 6;
             // 
             // rightGuide
             // 
@@ -339,75 +407,19 @@
             this.buttonElipse11.TabIndex = 44;
             this.buttonElipse11.UseVisualStyleBackColor = false;
             // 
-            // pictureBoxCapsLock
+            // joystickHook
             // 
-            this.pictureBoxCapsLock.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(47)))), ((int)(((byte)(55)))));
-            this.pictureBoxCapsLock.BackgroundImage = global::PasoKey.Properties.Resources.caps_lock_white_fw;
-            this.pictureBoxCapsLock.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBoxCapsLock.Enabled = false;
-            this.pictureBoxCapsLock.Location = new System.Drawing.Point(81, 221);
-            this.pictureBoxCapsLock.Name = "pictureBoxCapsLock";
-            this.pictureBoxCapsLock.Size = new System.Drawing.Size(48, 48);
-            this.pictureBoxCapsLock.TabIndex = 63;
-            this.pictureBoxCapsLock.TabStop = false;
+            this.joystickHook.Tick += new System.EventHandler(this.joystickHook_Tick);
             // 
-            // pictureBoxEnter
+            // buttonTimer
             // 
-            this.pictureBoxEnter.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(47)))), ((int)(((byte)(55)))));
-            this.pictureBoxEnter.BackgroundImage = global::PasoKey.Properties.Resources.enter_white_fw;
-            this.pictureBoxEnter.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBoxEnter.Enabled = false;
-            this.pictureBoxEnter.Location = new System.Drawing.Point(221, 221);
-            this.pictureBoxEnter.Name = "pictureBoxEnter";
-            this.pictureBoxEnter.Size = new System.Drawing.Size(48, 48);
-            this.pictureBoxEnter.TabIndex = 64;
-            this.pictureBoxEnter.TabStop = false;
+            this.buttonTimer.Interval = 120;
+            this.buttonTimer.Tick += new System.EventHandler(this.buttonTimer_Tick);
             // 
-            // pictureBoxBackSpace
+            // mouseTimer
             // 
-            this.pictureBoxBackSpace.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(47)))), ((int)(((byte)(55)))));
-            this.pictureBoxBackSpace.BackgroundImage = global::PasoKey.Properties.Resources.backspace_white_fw;
-            this.pictureBoxBackSpace.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBoxBackSpace.Enabled = false;
-            this.pictureBoxBackSpace.Location = new System.Drawing.Point(221, 81);
-            this.pictureBoxBackSpace.Name = "pictureBoxBackSpace";
-            this.pictureBoxBackSpace.Size = new System.Drawing.Size(48, 48);
-            this.pictureBoxBackSpace.TabIndex = 65;
-            this.pictureBoxBackSpace.TabStop = false;
-            // 
-            // pictureBoxSpace
-            // 
-            this.pictureBoxSpace.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(47)))), ((int)(((byte)(55)))));
-            this.pictureBoxSpace.BackgroundImage = global::PasoKey.Properties.Resources.space_bar_white_fw;
-            this.pictureBoxSpace.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBoxSpace.Enabled = false;
-            this.pictureBoxSpace.Location = new System.Drawing.Point(81, 81);
-            this.pictureBoxSpace.Name = "pictureBoxSpace";
-            this.pictureBoxSpace.Size = new System.Drawing.Size(48, 48);
-            this.pictureBoxSpace.TabIndex = 66;
-            this.pictureBoxSpace.TabStop = false;
-            // 
-            // lbJoystick
-            // 
-            this.lbJoystick.AutoSize = true;
-            this.lbJoystick.Font = new System.Drawing.Font("Malgun Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.lbJoystick.Location = new System.Drawing.Point(33, 7);
-            this.lbJoystick.Name = "lbJoystick";
-            this.lbJoystick.Size = new System.Drawing.Size(0, 41);
-            this.lbJoystick.TabIndex = 6;
-            // 
-            // joystickTimer
-            // 
-            this.joystickTimer.Tick += new System.EventHandler(this.joystickTimer_Tick);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Malgun Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label1.Location = new System.Drawing.Point(367, 7);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(0, 41);
-            this.label1.TabIndex = 6;
+            this.mouseTimer.Interval = 10;
+            this.mouseTimer.Tick += new System.EventHandler(this.mouseTimer_Tick);
             // 
             // GamepadMod
             // 
@@ -427,14 +439,14 @@
             this.Load += new System.EventHandler(this.GamepadMod_Load);
             this.leftGuide.ResumeLayout(false);
             this.leftGuide.PerformLayout();
-            this.panelGuider.ResumeLayout(false);
-            this.panelGuider.PerformLayout();
-            this.rightGuide.ResumeLayout(false);
-            this.rightGuide.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxCapsLock)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxEnter)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBackSpace)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxSpace)).EndInit();
+            this.panelGuider.ResumeLayout(false);
+            this.panelGuider.PerformLayout();
+            this.rightGuide.ResumeLayout(false);
+            this.rightGuide.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -464,7 +476,9 @@
         private ButtonElipse movingPartLeft;
         private System.Windows.Forms.Panel panelGuider;
         private System.Windows.Forms.Label lbJoystick;
-        private System.Windows.Forms.Timer joystickTimer;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Timer joystickHook;
+        private System.Windows.Forms.Timer buttonTimer;
+        private System.Windows.Forms.Timer mouseTimer;
     }
 }
