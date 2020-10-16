@@ -8,3 +8,5 @@ Bilgisayarlar kullanırken, büyük ekranlı tablet kullanırken, sanal gerçekl
 Pasokey ile tuşlu klavyelerde yazı yazamayan, yazarken rahatsızlık çeken bireylere yardım etmeyi amaçlıyoruz. Pasokey isminin herhangi bir manası bulunmamakta, kulağa biraz hoş geliyor sadece, bu.
 
 Pasokeyin çeşitli engellere sahip bireyler için benzersiz olmasının sebebi çok basit hareketlerle yazı yazılmasını sağlamasıdır. Ellerinden birini kaybetmiş yada bir el ile dünyaya gelmiş bir birey tekli çember sistemiyle yukarı doğru iki kaydırma hareketi yaparak “a” harfini tuşlayabilir. Ellerinin ikisini de kaybetmiş yada onlar olmadan dünyaya gelmiş bir birey ayakları vasıtasıyla, sol ayak ileri, sağ ayak ileri, şeklinde bir hareket çizelgesini takip ederek “a” harfini tuşlayabilir. Aynı şekilde fiziksel kabiliyetlerinin hiç birine sahip olmayan bir birey basit göz hareketleriyle yazı yazabilir. Evet bu sistem daha önce bildiğiniz üzere Stephan Hawking’in bilgisayar sisteminde kullanılmaktaydı. Benim sunduğum sistemin farkı Stephan’ın kullandığı karmaşık tablolu harf düzeninden daha basit, daha hızlı kullanılmasıdır.
+
+OpenJigWare kütüphanesi kullanılmıştır.
