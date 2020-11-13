@@ -32,21 +32,14 @@ namespace PasoKey
         int secondStep;//ikinci basamağımız
         string upOrLow = "low";//büyük küçük harf seçici
         //küçük harf kümesi
-        string[,] keyPadLower = new string[5, 8] {
+        string[,] keyPad = new string[5, 8] {
             {"a","b","c","d","e","f","g","h"},
             {"i","j","k","l","m","n","o","p"},
             {"q","r","s","t","u","v","w","x"},
             {"y","z","1","2","3","4","5","6"},
             {"7","8","9","0",".",",","!","?"}
         };
-        //büyük harf kümesi
-        string[,] keyPadUpper = new string[5, 8] {
-            {"A","B","C","D","D","F","G","H"},
-            {"I","J","K","L","M","N","O","P"},
-            {"Q","R","S","T","U","V","W","X"},
-            {"Y","Z","1","2","3","4","5","6"},
-            {"7","8","9","0",".",",","!","?"}
-        };
+
         //İlk girdiye göre ikinci panele yansıtma yapıyorum.
         private void WriteFirstStepToLbl()
         {
@@ -54,25 +47,25 @@ namespace PasoKey
             {
                 if (upOrLow == "low")//büyük küçük harf kümesini seçiyorum
                 {
-                    rightLbl0.Text = keyPadLower[firstStep, 0];
-                    rightLbl1.Text = keyPadLower[firstStep, 1];
-                    rightLbl2.Text = keyPadLower[firstStep, 2];
-                    rightLbl3.Text = keyPadLower[firstStep, 3];
-                    rightLbl4.Text = keyPadLower[firstStep, 4];
-                    rightLbl5.Text = keyPadLower[firstStep, 5];
-                    rightLbl6.Text = keyPadLower[firstStep, 6];
-                    rightLbl7.Text = keyPadLower[firstStep, 7];
+                    rightLbl0.Text = keyPad[firstStep, 0];
+                    rightLbl1.Text = keyPad[firstStep, 1];
+                    rightLbl2.Text = keyPad[firstStep, 2];
+                    rightLbl3.Text = keyPad[firstStep, 3];
+                    rightLbl4.Text = keyPad[firstStep, 4];
+                    rightLbl5.Text = keyPad[firstStep, 5];
+                    rightLbl6.Text = keyPad[firstStep, 6];
+                    rightLbl7.Text = keyPad[firstStep, 7];
                 }
                 else
                 {
-                    rightLbl0.Text = keyPadUpper[firstStep, 0];
-                    rightLbl1.Text = keyPadUpper[firstStep, 1];
-                    rightLbl2.Text = keyPadUpper[firstStep, 2];
-                    rightLbl3.Text = keyPadUpper[firstStep, 3];
-                    rightLbl4.Text = keyPadUpper[firstStep, 4];
-                    rightLbl5.Text = keyPadUpper[firstStep, 5];
-                    rightLbl6.Text = keyPadUpper[firstStep, 6];
-                    rightLbl7.Text = keyPadUpper[firstStep, 7];
+                    rightLbl0.Text = keyPad[firstStep, 0].ToUpper();
+                    rightLbl1.Text = keyPad[firstStep, 1].ToUpper();
+                    rightLbl2.Text = keyPad[firstStep, 2].ToUpper();
+                    rightLbl3.Text = keyPad[firstStep, 3].ToUpper();
+                    rightLbl4.Text = keyPad[firstStep, 4].ToUpper();
+                    rightLbl5.Text = keyPad[firstStep, 5].ToUpper();
+                    rightLbl6.Text = keyPad[firstStep, 6].ToUpper();
+                    rightLbl7.Text = keyPad[firstStep, 7].ToUpper();
                 }
                 rightGuide.BringToFront();//panel2 yi ön plana çıkartıyorum
                 if (ayarlar.Default.theMod == "FloatingMarkingMenu")
@@ -96,13 +89,13 @@ namespace PasoKey
             {
                 if (upOrLow == "low")
                 {
-                    SendKeys.Send(keyPadLower[firstStep, secondStep]);//klavye girdisi gönderiliyor
-                    rightLblCentre.Text = keyPadLower[firstStep, secondStep];//seçilen karakter hafızada buton değeri olarak tutuluyor
+                    SendKeys.Send(keyPad[firstStep, secondStep]);//klavye girdisi gönderiliyor
+                    rightLblCentre.Text = keyPad[firstStep, secondStep];//seçilen karakter hafızada buton değeri olarak tutuluyor
                 }
                 else
                 {
-                    SendKeys.Send(keyPadUpper[firstStep, secondStep]);
-                    rightLblCentre.Text = keyPadUpper[firstStep, secondStep];
+                    SendKeys.Send(keyPad[firstStep, secondStep].ToUpper());
+                    rightLblCentre.Text = keyPad[firstStep, secondStep].ToUpper();
                 }
             }
             //panel1.BringToFront();

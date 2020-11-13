@@ -119,6 +119,7 @@
     <Compile Include="options.Designer.cs">
       <DependentUpon>Options.cs</DependentUpon>
     </Compile>
+    <Compile Include="ortakSinif.cs" />
     <Compile Include="Panel.cs">
       <SubType>Form</SubType>
     </Compile>
