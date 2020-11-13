@@ -31,6 +31,8 @@ namespace PasoKey
                 return param;
             }
         }
+        //ortak sınıfı çağırıyoruz
+        ortakSinif ortaksinif = new ortakSinif();
 
         //Klavye kodları.
         int firstStep = 5;//ilk basamağımız
@@ -77,28 +79,6 @@ namespace PasoKey
             }
         }
         //yansıtma yapılmış paneldeki aksiyona göre klavye girdisi veriyorum
-        private void TypeTheLetter()
-        {
-            if (firstStep == 5)//ilk aksiyonumuz gerçekleşmediyse ikinci aksiyona geçmeyi engelliyorum
-            {
-                //MessageBox.Show("Lütfen ilk adımı giriniz.");
-            }
-            else
-            {
-                if (upOrLow == "low")
-                {
-                    SendKeys.Send(keyPad[firstStep, secondStep]);//klavye girdisi gönderiliyor
-                    movingPartRight.Text = keyPad[firstStep, secondStep];//seçilen karakter hafızada buton değeri olarak tutuluyor
-                }
-                else
-                {
-                    SendKeys.Send(keyPad[firstStep, secondStep].ToUpper());
-                    movingPartRight.Text = keyPad[firstStep, secondStep].ToUpper();
-                }
-            }
-            //panel1.BringToFront();
-            general_MouseUp(null, null);
-        }
 
         public void joystickLoad(object sender, EventArgs e)
         {
@@ -161,7 +141,7 @@ namespace PasoKey
             }
         }
 
-        
+
         private void leftGuide_MouseDown(object sender, MouseEventArgs e)
         {
             if (e.Button == MouseButtons.Left)
@@ -251,43 +231,12 @@ namespace PasoKey
             }
             else
             {
-                if (rightAngle > 337.5 || rightAngle < 22.5)
-                {
-                    secondStep = 4;
-                }
-                else if (rightAngle > 22.5 && rightAngle < 67.5)
-                {
-                    secondStep = 5;
-                }
-                else if (rightAngle > 67.5 && rightAngle < 112.5)
-                {
-                    secondStep = 6;
-                }
-                else if (rightAngle > 112.5 && rightAngle < 157.5)
-                {
-                    secondStep = 7;
-                }
-                else if (rightAngle > 157.5 && rightAngle < 202.5)
-                {
-                    secondStep = 0;
-                }
-                else if (rightAngle > 202.5 && rightAngle < 247.5)
-                {
-                    secondStep = 1;
-                }
-                else if (rightAngle > 247.5 && rightAngle < 292.5)
-                {
-                    secondStep = 2;
-                }
-                else if (rightAngle > 292.5 && rightAngle < 337.5)
-                {
-                    secondStep = 3;
-                }
-                else
-                {
-                    general_MouseUp(null, null);
-                }
-                TypeTheLetter();
+                //secondStep değişkenini decSecondStep methoduna rightAngle açısı vererek atadık
+                secondStep = ortaksinif.DeclareSecondStep(rightAngle);
+                //secondStep elimizde olduğu için TypeTheLetter methoduyla harf yazdırdık
+                SendKeys.Send(ortaksinif.TypeTheLetter(firstStep, secondStep, upOrLow));
+                movingPartRight.Text = ortaksinif.TypeTheLetter(firstStep, secondStep, upOrLow);
+                general_MouseUp(null, null);
             }
         }
 

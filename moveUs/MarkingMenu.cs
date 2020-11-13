@@ -16,7 +16,14 @@ namespace PasoKey
         int defaultOriginX, defaultOriginY;
         int formOriginX, formOriginY;
         int formCentreX, formCentreY;
+        public MarkingMenu()
+        {
+            InitializeComponent();
+            this.Width = leftGuide.Width;
+            formCentreX = this.Width / 2;
+            formCentreY = this.Height / 2;
 
+        }
         protected override CreateParams CreateParams
         {
             get
@@ -26,6 +33,8 @@ namespace PasoKey
                 return param;
             }
         }
+        ortakSinif ortaksinif = new ortakSinif();
+
 
         //Klavye kodları.
         int firstStep = 5;//ilk basamağımız
@@ -79,43 +88,7 @@ namespace PasoKey
             }
         }
         //yansıtma yapılmış paneldeki aksiyona göre klavye girdisi veriyorum
-        private void TypeTheLetter()
-        {
-            if (firstStep == 5)//ilk aksiyonumuz gerçekleşmediyse ikinci aksiyona geçmeyi engelliyorum
-            {
-                //MessageBox.Show("Lütfen ilk adımı giriniz.");
-            }
-            else
-            {
-                if (upOrLow == "low")
-                {
-                    SendKeys.Send(keyPad[firstStep, secondStep]);//klavye girdisi gönderiliyor
-                    rightLblCentre.Text = keyPad[firstStep, secondStep];//seçilen karakter hafızada buton değeri olarak tutuluyor
-                }
-                else
-                {
-                    SendKeys.Send(keyPad[firstStep, secondStep].ToUpper());
-                    rightLblCentre.Text = keyPad[firstStep, secondStep].ToUpper();
-                }
-            }
-            //panel1.BringToFront();
-            if (ayarlar.Default.theMod == "FloatingMarkingMenu")
-            {
-                FormFollowsCursor();
-            }
-            else if (ayarlar.Default.theMod == "FixedMarkingMenu")
-            {
-                CursorInTheCentre();
-            }
-        }
-        public MarkingMenu()
-        {
-            InitializeComponent();
-            this.Width = leftGuide.Width;
-            formCentreX = this.Width / 2;
-            formCentreY = this.Height / 2;
 
-        }
         private void thisHide(object sender, MouseEventArgs e)
         {
             this.Hide();
@@ -420,50 +393,17 @@ namespace PasoKey
                 }
                 else
                 {
-                    if (rightAngle > 337.5 || rightAngle < 22.5)
+                    secondStep = ortaksinif.DeclareSecondStep(rightAngle);
+                    SendKeys.Send(ortaksinif.TypeTheLetter(firstStep, secondStep, upOrLow));
+                    rightLblCentre.Text = ortaksinif.TypeTheLetter(firstStep, secondStep, upOrLow);
+                    if (ayarlar.Default.theMod == "FloatingMarkingMenu")
                     {
-                        secondStep = 4;
+                        FormFollowsCursor();
                     }
-                    else if (rightAngle > 22.5 && rightAngle < 67.5)
+                    else if (ayarlar.Default.theMod == "FixedMarkingMenu")
                     {
-                        secondStep = 5;
+                        CursorInTheCentre();
                     }
-                    else if (rightAngle > 67.5 && rightAngle < 112.5)
-                    {
-                        secondStep = 6;
-                    }
-                    else if (rightAngle > 112.5 && rightAngle < 157.5)
-                    {
-                        secondStep = 7;
-                    }
-                    else if (rightAngle > 157.5 && rightAngle < 202.5)
-                    {
-                        secondStep = 0;
-                    }
-                    else if (rightAngle > 202.5 && rightAngle < 247.5)
-                    {
-                        secondStep = 1;
-                    }
-                    else if (rightAngle > 247.5 && rightAngle < 292.5)
-                    {
-                        secondStep = 2;
-                    }
-                    else if (rightAngle > 292.5 && rightAngle < 337.5)
-                    {
-                        secondStep = 3;
-                    }
-                    else
-                    {
-                        if (ayarlar.Default.theMod == "FloatingMarkingMenu")
-                        {
-                            FormFollowsCursor();
-                        }
-                        else if (ayarlar.Default.theMod == "FixedMarkingMenu")
-                        {
-                            CursorInTheCentre();
-                        }
-                    }
-                    TypeTheLetter();
                 }
             }
         }
