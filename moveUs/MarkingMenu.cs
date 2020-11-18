@@ -77,14 +77,7 @@ namespace PasoKey
                     rightLbl7.Text = keyPad[firstStep, 7].ToUpper();
                 }
                 rightGuide.BringToFront();//panel2 yi ön plana çıkartıyorum
-                if (ayarlar.Default.theMod == "FloatingMarkingMenu")
-                {
-                    FormFollowsCursor();
-                }
-                else if (ayarlar.Default.theMod == "FixedMarkingMenu")
-                {
-                    CursorInTheCentre();
-                }
+                pickFormOrCursor();
             }
         }
         //yansıtma yapılmış paneldeki aksiyona göre klavye girdisi veriyorum
@@ -96,9 +89,9 @@ namespace PasoKey
 
         public void MarkingMenu_Load(object sender, EventArgs e)
         {
+            pickFormOrCursor();
             if (ayarlar.Default.theMod == "FloatingMarkingMenu")
             {
-                FormFollowsCursor();
                 leftGuide.Location = new Point(0, 0);
                 rightGuide.Location = new Point(0, 0);//panel2 konumu panel1 ile üst üste getirilir
                 this.TransparencyKey = BackColor;
@@ -106,24 +99,27 @@ namespace PasoKey
             }
             else if (ayarlar.Default.theMod == "FixedMarkingMenu")
             {
-                CursorInTheCentre();
                 leftGuide.Location = new Point(0, 0);
                 rightGuide.Location = new Point(0, 0);//panel2 konumu panel1 ile üst üste getirilir
                 this.TransparencyKey = BackColor;
                 leftGuide.BringToFront();
             }
         }
-
-        private void FormFollowsCursor()
-        {//formun konumu 2 ye bölünüp farenin konumundan çıkartıldı,doğal olarak form farenin merkezine geçmiş oldu
-            this.Location = new Point(Cursor.Position.X - formCentreX, Cursor.Position.Y - formCentreY);
-        }
-        private void CursorInTheCentre()
+        private void pickFormOrCursor()
         {
-
-            Point pt = new Point(Screen.PrimaryScreen.WorkingArea.Width / 2, Screen.PrimaryScreen.WorkingArea.Height / 2);// değerleri ikiye bölüp
-            Cursor.Position = (pt);//merkeze atadık
-            this.Location = new Point(pt.X - formCentreX, pt.Y - formCentreY);
+            if (ayarlar.Default.theMod == "FloatingMarkingMenu")
+            {
+                //FormFollowsCursor();
+                //formun konumu 2 ye bölünüp farenin konumundan çıkartıldı,doğal olarak form farenin merkezine geçmiş oldu
+                this.Location = new Point(Cursor.Position.X - formCentreX, Cursor.Position.Y - formCentreY);
+            }
+            else if (ayarlar.Default.theMod == "FixedMarkingMenu")
+            {
+                //CursorInTheCentre();
+                Point pt = new Point(Screen.PrimaryScreen.WorkingArea.Width / 2, Screen.PrimaryScreen.WorkingArea.Height / 2);// değerleri ikiye bölüp
+                Cursor.Position = (pt);//merkeze atadık
+                this.Location = new Point(pt.X - formCentreX, pt.Y - formCentreY);
+            }
         }
         private void leftGuide_MouseMove(object sender, MouseEventArgs e)
         {
@@ -207,14 +203,7 @@ namespace PasoKey
             }
             else
             {
-                if (ayarlar.Default.theMod == "FloatingMarkingMenu")
-                {
-                    FormFollowsCursor();
-                }
-                else if (ayarlar.Default.theMod == "FixedMarkingMenu")
-                {
-                    CursorInTheCentre();
-                }
+                pickFormOrCursor();
             }
         }
 
@@ -279,14 +268,7 @@ namespace PasoKey
 
                     }
                 }
-                if (ayarlar.Default.theMod == "FloatingMarkingMenu")
-                {
-                    FormFollowsCursor();
-                }
-                else if (ayarlar.Default.theMod == "FixedMarkingMenu")
-                {
-                    CursorInTheCentre();
-                }
+                pickFormOrCursor();
             }
         }
 
@@ -372,14 +354,7 @@ namespace PasoKey
             }
             else
             {
-                if (ayarlar.Default.theMod == "FloatingMarkingMenu")
-                {
-                    FormFollowsCursor();
-                }
-                else if (ayarlar.Default.theMod == "FixedMarkingMenu")
-                {
-                    CursorInTheCentre();
-                }
+                pickFormOrCursor();
             }
         }
 
@@ -396,16 +371,10 @@ namespace PasoKey
                     secondStep = ortaksinif.DeclareSecondStep(rightAngle);
                     SendKeys.Send(ortaksinif.TypeTheLetter(firstStep, secondStep, upOrLow));
                     rightLblCentre.Text = ortaksinif.TypeTheLetter(firstStep, secondStep, upOrLow);
-                    if (ayarlar.Default.theMod == "FloatingMarkingMenu")
-                    {
-                        FormFollowsCursor();
-                    }
-                    else if (ayarlar.Default.theMod == "FixedMarkingMenu")
-                    {
-                        CursorInTheCentre();
-                    }
+                    pickFormOrCursor();
                 }
             }
         }
+
     }
 }
